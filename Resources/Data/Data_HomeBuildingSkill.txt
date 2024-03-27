@@ -1,0 +1,70 @@
+TextAsset Base
+	string m_Name = "Data_HomeBuildingSkill"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [100001] = {
+        [1] = {
+            100001,
+            1,
+            "HomeBuildingSkill_SkillName_100001_1",
+            {
+                1
+            }
+        }
+    },
+    [100002] = {
+        [1] = {
+            100002,
+            1,
+            "HomeBuildingSkill_SkillName_100002_1",
+            {
+                2
+            }
+        }
+    },
+    [100003] = {
+        [1] = {
+            100003,
+            1,
+            "HomeBuildingSkill_SkillName_100003_1",
+            {
+                3,
+                500
+            }
+        }
+    },
+    [100004] = {
+        [1] = {
+            100004,
+            1,
+            "HomeBuildingSkill_SkillName_100004_1",
+            {
+                4
+            }
+        }
+    },
+    [100005] = {
+        [1] = {
+            100005,
+            1,
+            "HomeBuildingSkill_SkillName_100005_1",
+            {
+                5,
+                1000
+            }
+        }
+    },
+    [100006] = {
+        [1] = {
+            100006,
+            1,
+            "HomeBuildingSkill_SkillName_100006_1",
+            {
+                6,
+                0
+            }
+        }
+    }
+}
+return require('Config/Data/Class_HomeBuildingSkill')(data)
+"

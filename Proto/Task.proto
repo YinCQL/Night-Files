@@ -1,0 +1,14 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+message Task {
+  int32 id = 1;
+  int32 stage_id = 2;
+  repeated int32 process = 3;
+  int32 status = 4;
+  int64 expired_time = 5;
+}

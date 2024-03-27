@@ -1,0 +1,14 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message B2BD_Allocated {
+  int32 room = 1;
+  int32 dungeon = 2;
+  int32 ret = 3;
+  int32 my_state = 4;
+  string my_state_str = 5;
+}

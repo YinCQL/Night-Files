@@ -1,0 +1,16 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "MailData.proto";
+
+message L2C_MailData {
+  int32 type = 1;
+  int64 max_version = 2;
+  int32 count = 3;
+  int32 index = 4;
+  repeated MailData mails = 5;
+}

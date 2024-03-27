@@ -1,0 +1,75 @@
+TextAsset Base
+	string m_Name = "Class_ChapterDetail"
+	string m_Script = "---@class Class_ChapterDetail table
+---@field DungeonID number 节ID
+---@field DungeonNameCN lang 节中文名
+---@field DungeonNameEN string 节英文名
+---@field DungeonNum string 章-小节编号
+---@field Type number 玩法类型
+---@field GroupID number 关id\n（包含子玩法）
+---@field ChapterID number 章ID
+---@field DisplayType number 关卡显示类型
+---@field Level number 推荐等级
+---@field ChapterStory lang 节故事简述
+---@field SpecialDescribe table<number, Struct_SkillNameDes> 特殊机制描述
+---@field MainEnemyID table<number, Struct_Int4> 主要敌方单位
+---@field CostEnergy table<number, Struct_IDNum> 进入关卡的消耗物和数量
+---@field FirstClearAward table<number, Struct_IDNum> 首通奖励
+---@field StarAward table<number, Struct_Int3> 星级挑战奖励
+---@field DropGroupId table<number, number> 掉落奖励的包id
+---@field ItemID table<number, number> 掉落道具预览ID
+---@field GridPosition Struct_Float2 网格坐标
+---@field GridNum number 图像显示值
+---@field LastLevelID number 上一节ID
+---@field NextLevelID number 下一节ID
+---@field Verts table<number, Struct_Float2> 选框坐标
+---@field MaxComplete number 每日最大奖励次数
+---@field CostType number 消耗类型
+local util = require('Config/Data/Util')
+local lang_get         = require('Config/Data/Languages/'..languageData.currentLanguage)
+local SkillNameDes_get = require('Config/Data/Struct_SkillNameDes')
+local Int4_get         = require('Config/Data/Struct_Int4')
+local IDNum_get        = require('Config/Data/Struct_IDNum')
+local Int3_get         = require('Config/Data/Struct_Int3')
+local Float2_get       = require('Config/Data/Struct_Float2')
+local title = {
+    DungeonID       = 1,
+    DungeonNameCN   = 2,
+    DungeonNameEN   = 3,
+    DungeonNum      = 4,
+    Type            = 5,
+    GroupID         = 6,
+    ChapterID       = 7,
+    DisplayType     = 8,
+    Level           = 9,
+    ChapterStory    = 10,
+    SpecialDescribe = 11,
+    MainEnemyID     = 12,
+    CostEnergy      = 13,
+    FirstClearAward = 14,
+    StarAward       = 15,
+    DropGroupId     = 16,
+    ItemID          = 17,
+    GridPosition    = 18,
+    GridNum         = 19,
+    LastLevelID     = 20,
+    NextLevelID     = 21,
+    Verts           = 22,
+    MaxComplete     = 23,
+    CostType        = 24,
+}
+local set = {
+    DungeonNameCN   = lang_get,
+    ChapterStory    = lang_get,
+    SpecialDescribe = util.array_set(SkillNameDes_get),
+    MainEnemyID     = util.array_set(Int4_get),
+    CostEnergy      = util.array_set(IDNum_get),
+    FirstClearAward = util.array_set(IDNum_get),
+    StarAward       = util.array_set(Int3_get),
+    GridPosition    = Float2_get,
+    Verts           = util.array_set(Float2_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

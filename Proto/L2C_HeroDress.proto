@@ -1,0 +1,14 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message L2C_HeroDress {
+  int32 operate = 1;
+  int32 hero_id = 2;
+  int64 equip_uid = 3;
+  int32 ret = 4;
+  int32 sub_type = 5;
+}

@@ -1,0 +1,20 @@
+TextAsset Base
+	string m_Name = "Class_HomeSCPBubble"
+	string m_Script = "---@class Class_HomeSCPBubble table
+---@field SCPID number 异常ID
+---@field BubbleID number 气泡ID
+---@field BubbleText lang 气泡文本
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    SCPID      = 1,
+    BubbleID   = 2,
+    BubbleText = 3,
+}
+local set = {
+    BubbleText = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

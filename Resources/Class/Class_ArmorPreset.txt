@@ -1,0 +1,29 @@
+TextAsset Base
+	string m_Name = "Class_ArmorPreset"
+	string m_Script = "---@class Class_ArmorPreset table
+---@field ArmorID number 礼装ID
+---@field ID number 序号
+---@field ArmorLevel number 礼装等级
+---@field ArmorMainAttribute number 礼装主属性
+---@field ArmorEntry table<number, Struct_IDNum> 礼装词条
+---@field ArmorSpecialEntry table<number, Struct_IDNum> 礼装特殊词条
+---@field ArmorInheritEntry number 礼装继承词条
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    ArmorID            = 1,
+    ID                 = 2,
+    ArmorLevel         = 3,
+    ArmorMainAttribute = 4,
+    ArmorEntry         = 5,
+    ArmorSpecialEntry  = 6,
+    ArmorInheritEntry  = 7,
+}
+local set = {
+    ArmorEntry        = util.array_set(IDNum_get),
+    ArmorSpecialEntry = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

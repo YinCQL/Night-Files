@@ -1,0 +1,22 @@
+TextAsset Base
+	string m_Name = "Class_CharacterSANInterval"
+	string m_Script = "---@class Class_CharacterSANInterval table
+---@field ID number ID
+---@field SANInterval Struct_Int2 当前san值百分比区间\n（闭区间，区间大必须>=区间小））
+---@field SANIntervalAdd table<number, Struct_BattleAttrValue> 区间内属性增加
+local util = require('Config/Data/Util')
+local Int2_get            = require('Config/Data/Struct_Int2')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    ID             = 1,
+    SANInterval    = 2,
+    SANIntervalAdd = 3,
+}
+local set = {
+    SANInterval    = Int2_get,
+    SANIntervalAdd = util.array_set(BattleAttrValue_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

@@ -1,0 +1,469 @@
+TextAsset Base
+	string m_Name = "Data_EpisodeSummarize"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [101] = {
+        101,
+        "GR1-1",
+        "EpisodeSummarize_EpisodeName_101",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_101"
+    },
+    [102] = {
+        102,
+        "GR1-2",
+        "EpisodeSummarize_EpisodeName_102",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_102"
+    },
+    [103] = {
+        103,
+        "GR1-3",
+        "EpisodeSummarize_EpisodeName_103",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_103"
+    },
+    [104] = {
+        104,
+        "GR1-4",
+        "EpisodeSummarize_EpisodeName_104",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_104"
+    },
+    [105] = {
+        105,
+        "GR1-5",
+        "EpisodeSummarize_EpisodeName_105",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_105"
+    },
+    [106] = {
+        106,
+        "HGDJA-1",
+        "EpisodeSummarize_EpisodeName_106",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_106"
+    },
+    [107] = {
+        107,
+        "HGDJA-2",
+        "EpisodeSummarize_EpisodeName_107",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_107"
+    },
+    [108] = {
+        108,
+        "HGDJA-3",
+        "EpisodeSummarize_EpisodeName_108",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_108"
+    },
+    [109] = {
+        109,
+        "HGDJA-4",
+        "EpisodeSummarize_EpisodeName_109",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_109"
+    },
+    [110] = {
+        110,
+        "HGDJA-5",
+        "EpisodeSummarize_EpisodeName_110",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_110"
+    },
+    [111] = {
+        111,
+        "HGDJA-6",
+        "EpisodeSummarize_EpisodeName_111",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_111"
+    },
+    [112] = {
+        112,
+        "HGDYLK-1",
+        "EpisodeSummarize_EpisodeName_112",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_112"
+    },
+    [113] = {
+        113,
+        "HGDYLK-2",
+        "EpisodeSummarize_EpisodeName_113",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_113"
+    },
+    [114] = {
+        114,
+        "HGDYLK-3",
+        "EpisodeSummarize_EpisodeName_114",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_114"
+    },
+    [115] = {
+        115,
+        "HGDYLK-4",
+        "EpisodeSummarize_EpisodeName_115",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_115"
+    },
+    [116] = {
+        116,
+        "HGDYLK-5",
+        "EpisodeSummarize_EpisodeName_116",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_116"
+    },
+    [117] = {
+        117,
+        "HGDYLK-6",
+        "EpisodeSummarize_EpisodeName_117",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_117"
+    },
+    [118] = {
+        118,
+        "MGHGD-1",
+        "EpisodeSummarize_EpisodeName_118",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_118"
+    },
+    [119] = {
+        119,
+        "MGHGD-2",
+        "EpisodeSummarize_EpisodeName_119",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_119"
+    },
+    [120] = {
+        120,
+        "MGHGD-3",
+        "EpisodeSummarize_EpisodeName_120",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_120"
+    },
+    [121] = {
+        121,
+        "MGHGD-4",
+        "EpisodeSummarize_EpisodeName_121",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_121"
+    },
+    [122] = {
+        122,
+        "MGHGD-5",
+        "EpisodeSummarize_EpisodeName_122",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_122"
+    },
+    [123] = {
+        123,
+        "MGHGD-6",
+        "EpisodeSummarize_EpisodeName_123",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_123"
+    },
+    [124] = {
+        124,
+        "SSHGD-1",
+        "EpisodeSummarize_EpisodeName_124",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_124"
+    },
+    [125] = {
+        125,
+        "SSHGD-2",
+        "EpisodeSummarize_EpisodeName_125",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_125"
+    },
+    [126] = {
+        126,
+        "SSHGD-3",
+        "EpisodeSummarize_EpisodeName_126",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_126"
+    },
+    [127] = {
+        127,
+        "SSHGD-4",
+        "EpisodeSummarize_EpisodeName_127",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_127"
+    },
+    [128] = {
+        128,
+        "SSHGD-5",
+        "EpisodeSummarize_EpisodeName_128",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_128"
+    },
+    [129] = {
+        129,
+        "SSHGD-6",
+        "EpisodeSummarize_EpisodeName_129",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_129"
+    },
+    [130] = {
+        130,
+        "LM-1",
+        "EpisodeSummarize_EpisodeName_130",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_130"
+    },
+    [131] = {
+        131,
+        "LM-2",
+        "EpisodeSummarize_EpisodeName_131",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_131"
+    },
+    [132] = {
+        132,
+        "LM-3",
+        "EpisodeSummarize_EpisodeName_132",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_132"
+    },
+    [133] = {
+        133,
+        "LM-4",
+        "EpisodeSummarize_EpisodeName_133",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_133"
+    },
+    [134] = {
+        134,
+        "LM-5",
+        "EpisodeSummarize_EpisodeName_134",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_134"
+    },
+    [135] = {
+        135,
+        "LM-6",
+        "EpisodeSummarize_EpisodeName_135",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_135"
+    },
+    [136] = {
+        136,
+        "LM-7",
+        "EpisodeSummarize_EpisodeName_136",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_136"
+    },
+    [137] = {
+        137,
+        "LM-8",
+        "EpisodeSummarize_EpisodeName_137",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_137"
+    },
+    [138] = {
+        138,
+        "纯剧情关",
+        "EpisodeSummarize_EpisodeName_138",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_138"
+    },
+    [139] = {
+        139,
+        "LM-9",
+        "EpisodeSummarize_EpisodeName_139",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_139"
+    },
+    [140] = {
+        140,
+        "LM-10",
+        "EpisodeSummarize_EpisodeName_140",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_140"
+    },
+    [141] = {
+        141,
+        "LM-11",
+        "EpisodeSummarize_EpisodeName_141",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_141"
+    },
+    [142] = {
+        142,
+        "LM-12",
+        "EpisodeSummarize_EpisodeName_142",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_142"
+    },
+    [143] = {
+        143,
+        "LMHGD-1",
+        "EpisodeSummarize_EpisodeName_143",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_143"
+    },
+    [144] = {
+        144,
+        "LMHGD-2",
+        "EpisodeSummarize_EpisodeName_144",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_144"
+    },
+    [145] = {
+        145,
+        "LMHGD-3",
+        "EpisodeSummarize_EpisodeName_145",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_145"
+    },
+    [146] = {
+        146,
+        "LMHGD-4",
+        "EpisodeSummarize_EpisodeName_146",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_146"
+    },
+    [147] = {
+        147,
+        "LMHGD-5",
+        "EpisodeSummarize_EpisodeName_147",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_147"
+    },
+    [148] = {
+        148,
+        "LMHGD-6",
+        "EpisodeSummarize_EpisodeName_148",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_148"
+    },
+    [149] = {
+        149,
+        "JA-1",
+        "EpisodeSummarize_EpisodeName_149",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_149"
+    },
+    [150] = {
+        150,
+        "JA-2",
+        "EpisodeSummarize_EpisodeName_150",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_150"
+    },
+    [151] = {
+        151,
+        "JA-3",
+        "EpisodeSummarize_EpisodeName_151",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_151"
+    },
+    [152] = {
+        152,
+        "JA-4",
+        "EpisodeSummarize_EpisodeName_152",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_152"
+    },
+    [153] = {
+        153,
+        "JA-5",
+        "EpisodeSummarize_EpisodeName_153",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_153"
+    },
+    [154] = {
+        154,
+        "JA-6",
+        "EpisodeSummarize_EpisodeName_150",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_154"
+    },
+    [155] = {
+        155,
+        "JA-7",
+        "EpisodeSummarize_EpisodeName_155",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_155"
+    },
+    [156] = {
+        156,
+        "JA-8",
+        "EpisodeSummarize_EpisodeName_156",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_156"
+    },
+    [157] = {
+        157,
+        "X276-1",
+        "EpisodeSummarize_EpisodeName_157",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_157"
+    },
+    [158] = {
+        158,
+        "X276-2",
+        "EpisodeSummarize_EpisodeName_158",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_158"
+    },
+    [159] = {
+        159,
+        "X276-3",
+        "EpisodeSummarize_EpisodeName_159",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_159"
+    },
+    [160] = {
+        160,
+        "X276-4",
+        "EpisodeSummarize_EpisodeName_160",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_160"
+    },
+    [161] = {
+        161,
+        "X276-5",
+        "EpisodeSummarize_EpisodeName_161",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_161"
+    },
+    [162] = {
+        162,
+        "X276-6",
+        "EpisodeSummarize_EpisodeName_162",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_162"
+    },
+    [163] = {
+        163,
+        "X276-7",
+        "EpisodeSummarize_EpisodeName_163",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_163"
+    },
+    [164] = {
+        164,
+        "X276-8",
+        "EpisodeSummarize_EpisodeName_164",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_164"
+    },
+    [165] = {
+        165,
+        "X276-9",
+        "EpisodeSummarize_EpisodeName_165",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_165"
+    },
+    [166] = {
+        166,
+        "X276-10",
+        "EpisodeSummarize_EpisodeName_166",
+        "EpisodeSummarize_EpisodeType_101",
+        "EpisodeSummarize_EpisodeText_166"
+    }
+}
+return require('Config/Data/Class_EpisodeSummarize')(data)
+"

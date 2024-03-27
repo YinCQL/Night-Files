@@ -1,0 +1,14 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "KV.proto";
+
+message C2L_WeaponUpgrade {
+  int64 uid = 1;
+  repeated KV costs = 2;
+  repeated KV returns = 3;
+}

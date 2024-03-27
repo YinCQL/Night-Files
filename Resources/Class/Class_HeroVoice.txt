@@ -1,0 +1,33 @@
+TextAsset Base
+	string m_Name = "Class_HeroVoice"
+	string m_Script = "---@class Class_HeroVoice table
+---@field HeroID number 角色ID
+---@field VoiceID number 语音ID
+---@field VoiceType number 语音类型
+---@field UnlockType number 解锁类型
+---@field Unlock table<number, Struct_IDNum> 解锁条件
+---@field VoiceName lang 语音标题
+---@field VoiceDesc lang 语音内容
+---@field VoiceFile string 语音文件
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    HeroID     = 1,
+    VoiceID    = 2,
+    VoiceType  = 3,
+    UnlockType = 4,
+    Unlock     = 5,
+    VoiceName  = 6,
+    VoiceDesc  = 7,
+    VoiceFile  = 8,
+}
+local set = {
+    Unlock    = util.array_set(IDNum_get),
+    VoiceName = lang_get,
+    VoiceDesc = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

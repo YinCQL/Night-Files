@@ -1,0 +1,18 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message S2C_Damage {
+  int32 index = 1;
+  float damage = 2;
+  bool is_crit = 3;
+  uint32 attr_source = 4;
+  int32 damage_source = 5;
+  int32 damage_i_d = 6;
+  bool mirror = 7;
+  bool combo = 8;
+  bool no_fly_text = 9;
+}

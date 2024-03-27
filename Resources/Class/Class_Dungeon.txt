@@ -1,0 +1,77 @@
+TextAsset Base
+	string m_Name = "Class_Dungeon"
+	string m_Script = "---@class Class_Dungeon table
+---@field ID number 节ID
+---@field ConfigID number 关卡配置器ID
+---@field Name string 名称\n（Battle显示）
+---@field SceneRes string 场景资源
+---@field Tag table<number, Enum_DungeonTag> 特性标签
+---@field TeamTypeID number 编队类型ID
+---@field ForceHero table<number, Struct_IDNum> 预设编队
+---@field Assistant table<number, number> 助战角色
+---@field BottonPreset number 按钮预设
+---@field ForceMachine table<number, Struct_IDNum> 预设辅助机
+---@field Attribute table<number, number> 推荐属性
+---@field DungeonType number 玩法类型
+---@field GameType number 关卡类型\n1=纯推图\n2=回廊\n3=纯剧情(可以0消耗)
+---@field EndType number 结算类型\n0=正常结算流程\n1=不显示结算界面
+---@field ChapterTime number 关卡倒计时\n＜0表示正计时\n0=无计时组件\n正数为倒计时时长\n（单位：秒）
+---@field ChapterTarget table<number, number> 关卡目标
+---@field DungeonConditionID table<number, number> 关卡通关/失败条件
+---@field DungeonBuffToHero table<number, number> 关卡角色初始BuffID
+---@field MonsterLevel number 关卡怪物等级
+---@field StartTalk number 开始前对话
+---@field EndTalk number 结束后对话
+---@field BGM string BGM
+---@field Have_Guard number 有无守护物\n0=无 1=有
+---@field Have_Tower number 有无放塔\n0=无 1=有
+---@field StartStory number 关卡开始剧情
+---@field EndStory number 关卡结束剧情
+---@field BirthAct number 播放基础角色出生动作\n1=播放\n0=不播放
+---@field DungeonNameCN lang 关卡中文名
+---@field DungeonNameEN string 关卡英文名
+---@field DungeonNum string 章-小节编号
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID                 = 1,
+    ConfigID           = 2,
+    Name               = 3,
+    SceneRes           = 4,
+    Tag                = 5,
+    TeamTypeID         = 6,
+    ForceHero          = 7,
+    Assistant          = 8,
+    BottonPreset       = 9,
+    ForceMachine       = 10,
+    Attribute          = 11,
+    DungeonType        = 12,
+    GameType           = 13,
+    EndType            = 14,
+    ChapterTime        = 15,
+    ChapterTarget      = 16,
+    DungeonConditionID = 17,
+    DungeonBuffToHero  = 18,
+    MonsterLevel       = 19,
+    StartTalk          = 20,
+    EndTalk            = 21,
+    BGM                = 22,
+    Have_Guard         = 23,
+    Have_Tower         = 24,
+    StartStory         = 25,
+    EndStory           = 26,
+    BirthAct           = 27,
+    DungeonNameCN      = 28,
+    DungeonNameEN      = 29,
+    DungeonNum         = 30,
+}
+local set = {
+    ForceHero     = util.array_set(IDNum_get),
+    ForceMachine  = util.array_set(IDNum_get),
+    DungeonNameCN = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

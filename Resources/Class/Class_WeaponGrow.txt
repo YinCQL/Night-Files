@@ -1,0 +1,33 @@
+TextAsset Base
+	string m_Name = "Class_WeaponGrow"
+	string m_Script = "---@class Class_WeaponGrow table
+---@field ID number 武器itemID
+---@field Level number 武器等级
+---@field NeedExp number 升级所需经验
+---@field NeedStone number 物品本身的经验
+---@field RecastReturnExe table<number, Struct_IDNum> 毁灭额外返还
+---@field LevelAtt table<number, Struct_BattleAttrValue> 第一属性
+---@field BattlePower number 强化提升战斗力
+---@field NeedMoney Struct_IDNum 资源消耗系数
+local util = require('Config/Data/Util')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    ID              = 1,
+    Level           = 2,
+    NeedExp         = 3,
+    NeedStone       = 4,
+    RecastReturnExe = 5,
+    LevelAtt        = 6,
+    BattlePower     = 7,
+    NeedMoney       = 8,
+}
+local set = {
+    RecastReturnExe = util.array_set(IDNum_get),
+    LevelAtt        = util.array_set(BattleAttrValue_get),
+    NeedMoney       = IDNum_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

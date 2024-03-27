@@ -1,0 +1,22 @@
+TextAsset Base
+	string m_Name = "Class_HomeBuildingSkill"
+	string m_Script = "---@class Class_HomeBuildingSkill table
+---@field SkillID number 技能ID
+---@field SkillLevel number 技能等级
+---@field SkillName lang 技能名称
+---@field SkillEffect table<number, number> 技能效果
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    SkillID     = 1,
+    SkillLevel  = 2,
+    SkillName   = 3,
+    SkillEffect = 4,
+}
+local set = {
+    SkillName = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

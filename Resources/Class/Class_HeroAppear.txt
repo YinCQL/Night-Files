@@ -1,0 +1,93 @@
+TextAsset Base
+	string m_Name = "Class_HeroAppear"
+	string m_Script = "---@class Class_HeroAppear table
+---@field AppearID number 外观ID
+---@field HeroID number 所属角色ID
+---@field AppearName lang 外观名称
+---@field ItemID number 所属物品ID
+---@field GetType number 获取类型
+---@field Quality number 外观品质
+---@field AppearDes lang 外观简述
+---@field AppearStory lang 外观故事
+---@field AppearGetDes table<number, Struct_IDDes> 外观获取方式
+---@field AppearHead string 外观头像
+---@field BattleHead string 战斗界面头像
+---@field AppearEye string 眼部特写
+---@field AppearShoulder string 肩部特写
+---@field AppearBust string 外观胸像（证件照）
+---@field AppearLable string 角色列表
+---@field AppearFashion string 时装展示胸像
+---@field AppearCloth1 string 时装布料展示1
+---@field AppearPicture string 外观立绘
+---@field AppearPicturePoint1 Struct_Int2 抽卡立绘锚点
+---@field AppearPicturePoint2 Struct_Int2 角色详情立绘锚点
+---@field AppearBackground string 立绘背景
+---@field RecruitBackground string 抽卡立绘背景
+---@field HeroPerformSys string 外观预制体
+---@field Heroperform number 外观预制体
+---@field HeroTimeline string 展示Timeline
+---@field HeroTheme string 主题曲
+---@field RecruitVideo string 抽卡动画
+---@field Path string 对话立绘路径
+---@field HeroNoWeapon string 角色去武器
+---@field QHero string Q版角色
+---@field HeroIdle0 string 角色待机动作0（编队）
+---@field HeroIdle1 string 角色待机动作1
+---@field HeroIdle2 string 角色待机动作2
+---@field HeroIdle3 string 角色待机动作3
+---@field QHeroIdle0 string Q版角色待机动作0
+---@field Painter string 画师
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDDes_get = require('Config/Data/Struct_IDDes')
+local Int2_get  = require('Config/Data/Struct_Int2')
+local title = {
+    AppearID            = 1,
+    HeroID              = 2,
+    AppearName          = 3,
+    ItemID              = 4,
+    GetType             = 5,
+    Quality             = 6,
+    AppearDes           = 7,
+    AppearStory         = 8,
+    AppearGetDes        = 9,
+    AppearHead          = 10,
+    BattleHead          = 11,
+    AppearEye           = 12,
+    AppearShoulder      = 13,
+    AppearBust          = 14,
+    AppearLable         = 15,
+    AppearFashion       = 16,
+    AppearCloth1        = 17,
+    AppearPicture       = 18,
+    AppearPicturePoint1 = 19,
+    AppearPicturePoint2 = 20,
+    AppearBackground    = 21,
+    RecruitBackground   = 22,
+    HeroPerformSys      = 23,
+    Heroperform         = 24,
+    HeroTimeline        = 25,
+    HeroTheme           = 26,
+    RecruitVideo        = 27,
+    Path                = 28,
+    HeroNoWeapon        = 29,
+    QHero               = 30,
+    HeroIdle0           = 31,
+    HeroIdle1           = 32,
+    HeroIdle2           = 33,
+    HeroIdle3           = 34,
+    QHeroIdle0          = 35,
+    Painter             = 36,
+}
+local set = {
+    AppearName          = lang_get,
+    AppearDes           = lang_get,
+    AppearStory         = lang_get,
+    AppearGetDes        = util.array_set(IDDes_get),
+    AppearPicturePoint1 = Int2_get,
+    AppearPicturePoint2 = Int2_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

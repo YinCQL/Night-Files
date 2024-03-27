@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_HomeHero"
+	string m_Script = "---@class Class_HomeHero table
+---@field SkillID number ID
+---@field HomeHeroAttribute table<number, Struct_BattleAttrValue> 角色家园属性
+local util = require('Config/Data/Util')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    SkillID           = 1,
+    HomeHeroAttribute = 2,
+}
+local set = {
+    HomeHeroAttribute = util.array_set(BattleAttrValue_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

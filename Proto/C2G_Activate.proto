@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cg";
+
+message C2G_Activate {
+  string token = 1;
+  string code = 2;
+  uint64 server_id = 3;
+}

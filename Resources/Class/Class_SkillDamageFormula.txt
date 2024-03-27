@@ -1,0 +1,16 @@
+TextAsset Base
+	string m_Name = "Class_SkillDamageFormula"
+	string m_Script = "---@class Class_SkillDamageFormula table
+---@field ID number ID
+---@field Formula string 公式
+local util = require('Config/Data/Util')
+local title = {
+    ID      = 1,
+    Formula = 2,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

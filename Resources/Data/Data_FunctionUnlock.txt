@@ -1,0 +1,343 @@
+TextAsset Base
+	string m_Name = "Data_FunctionUnlock"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        "FunctionUnlock_FunctionName_1",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        100,
+        1,
+        1
+    },
+    [2] = {
+        2,
+        "FunctionUnlock_FunctionName_2",
+        {
+            3000007
+        },
+        "FunctionUnlock_ConditionDes_2",
+        "-1",
+        101,
+        1,
+        1
+    },
+    [3] = {
+        3,
+        "FunctionUnlock_FunctionName_3",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        122,
+        2,
+        1
+    },
+    [4] = {
+        4,
+        "FunctionUnlock_FunctionName_4",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        122,
+        2,
+        1
+    },
+    [11] = {
+        11,
+        "FunctionUnlock_FunctionName_11",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        110,
+        1,
+        1
+    },
+    [12] = {
+        12,
+        "FunctionUnlock_FunctionName_12",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        111,
+        1,
+        1
+    },
+    [13] = {
+        13,
+        "FunctionUnlock_FunctionName_13",
+        {
+            3000019
+        },
+        "FunctionUnlock_ConditionDes_13",
+        "-1",
+        112,
+        1,
+        1
+    },
+    [14] = {
+        14,
+        "FunctionUnlock_FunctionName_14",
+        {
+            3000006
+        },
+        "FunctionUnlock_ConditionDes_14",
+        "-1",
+        113,
+        1,
+        1
+    },
+    [15] = {
+        15,
+        "FunctionUnlock_FunctionName_15",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [16] = {
+        16,
+        "FunctionUnlock_FunctionName_16",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [21] = {
+        21,
+        "FunctionUnlock_FunctionName_21",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [101] = {
+        101,
+        "FunctionUnlock_FunctionName_101",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [102] = {
+        102,
+        "FunctionUnlock_FunctionName_102",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [103] = {
+        103,
+        "FunctionUnlock_FunctionName_103",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [104] = {
+        104,
+        "FunctionUnlock_FunctionName_104",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [201] = {
+        201,
+        "FunctionUnlock_FunctionName_201",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [202] = {
+        202,
+        "FunctionUnlock_FunctionName_202",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [501] = {
+        501,
+        "FunctionUnlock_FunctionName_501",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [502] = {
+        502,
+        "FunctionUnlock_FunctionName_502",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1001] = {
+        1001,
+        "FunctionUnlock_FunctionName_1001",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1002] = {
+        1002,
+        "FunctionUnlock_FunctionName_1002",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1003] = {
+        1003,
+        "FunctionUnlock_FunctionName_1003",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1004] = {
+        1004,
+        "FunctionUnlock_FunctionName_1004",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1005] = {
+        1005,
+        "FunctionUnlock_FunctionName_1005",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1006] = {
+        1006,
+        "FunctionUnlock_FunctionName_1006",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [1007] = {
+        1007,
+        "FunctionUnlock_FunctionName_1007",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [2001] = {
+        2001,
+        "FunctionUnlock_FunctionName_2001",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    },
+    [2004] = {
+        2004,
+        "FunctionUnlock_FunctionName_2004",
+        {
+            1010001
+        },
+        "FunctionUnlock_ConditionDes_1",
+        "-1",
+        0,
+        0,
+        1
+    }
+}
+return require('Config/Data/Class_FunctionUnlock')(data)
+"

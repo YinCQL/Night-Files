@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_Drop"
+	string m_Script = "---@class Class_Drop table
+---@field SubPackId number 子包id
+---@field Id number 序号
+---@field GoodsTypeId table<number, number> 物品
+---@field TypeValue number 权重值or概率值
+---@field RandomInterval table<number, Struct_Int2> 数量随机区间
+---@field Step table<number, number> 随机步长
+local util = require('Config/Data/Util')
+local Int2_get = require('Config/Data/Struct_Int2')
+local title = {
+    SubPackId      = 1,
+    Id             = 2,
+    GoodsTypeId    = 3,
+    TypeValue      = 4,
+    RandomInterval = 5,
+    Step           = 6,
+}
+local set = {
+    RandomInterval = util.array_set(Int2_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

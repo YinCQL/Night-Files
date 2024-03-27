@@ -1,0 +1,20 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Home";
+
+import "KV32.proto";
+
+message BuildingInfo {
+  int64 uid = 1;
+  int32 config_id = 2;
+  int32 exp = 3;
+  int32 level = 4;
+  int64 scp_uid = 5;
+  int32 hero_id = 6;
+  repeated KV32 attrs = 7;
+  int64 investigate_point = 8;
+  int64 investigate_point_recover_time = 9;
+}

@@ -1,0 +1,32 @@
+TextAsset Base
+	string m_Name = "Class_ButtonList"
+	string m_Script = "---@class Class_ButtonList table
+---@field ID number ID
+---@field ArgsReference table<number, number> 赋值参照
+---@field WindowID number 所属Window
+---@field ButtonPath string 按钮路径
+---@field FunctionUnlockID number 功能解锁ID
+---@field RedResource string 红点资源
+---@field RedDotPosition number 红点坐标
+---@field RedDotLayer number 红点层
+---@field RedDotScale Struct_Float3 红点缩放比例
+local util = require('Config/Data/Util')
+local Float3_get = require('Config/Data/Struct_Float3')
+local title = {
+    ID               = 1,
+    ArgsReference    = 2,
+    WindowID         = 3,
+    ButtonPath       = 4,
+    FunctionUnlockID = 5,
+    RedResource      = 6,
+    RedDotPosition   = 7,
+    RedDotLayer      = 8,
+    RedDotScale      = 9,
+}
+local set = {
+    RedDotScale = Float3_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

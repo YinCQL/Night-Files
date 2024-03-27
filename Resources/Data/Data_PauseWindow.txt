@@ -1,0 +1,25 @@
+TextAsset Base
+	string m_Name = "Data_PauseWindow"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        "PauseWindow_Name_1",
+        "Plot To Review",
+        "ui_icon_pause_selected_01",
+        "item_taskDetail",
+        "go_taskDetail",
+        "UI/Battle/BattleTaskInfoView"
+    },
+    [2] = {
+        2,
+        "PauseWindow_Name_2",
+        "",
+        "ui_icon_pause_selected_03",
+        "item_systemSetting",
+        "go_systemSetting",
+        "UI/Setting/SettingWindow"
+    }
+}
+return require('Config/Data/Class_PauseWindow')(data)
+"

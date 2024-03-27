@@ -1,0 +1,126 @@
+TextAsset Base
+	string m_Name = "Data_Bag"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        "Bag_BagPageName_1",
+        "Bag_BagPageName_EN_1",
+        {
+            200,
+            500
+        },
+        0,
+        1,
+        "Bag_Weapon_Max",
+        "Bag_BagMaxDes_1"
+    },
+    [2] = {
+        2,
+        "Bag_BagPageName_2",
+        "Bag_BagPageName_EN_2",
+        {
+            211,
+            212,
+            213,
+            214,
+            215,
+            217,
+            511,
+            512,
+            513,
+            514,
+            515,
+            517
+        },
+        0,
+        1,
+        "Bag_Armor_Max",
+        "Bag_BagMaxDes_2"
+    },
+    [3] = {
+        3,
+        "Bag_BagPageName_3",
+        "Bag_BagPageName_EN_3",
+        {
+            241,
+            541
+        },
+        0,
+        1,
+        "Bag_Machine_Max",
+        "Bag_BagMaxDes_3"
+    },
+    [4] = {
+        4,
+        "Bag_BagPageName_4",
+        "Bag_BagPageName_EN_4",
+        {
+            321,
+            322,
+            323,
+            324,
+            330,
+            332,
+            334,
+            336,
+            337,
+            340,
+            630
+        },
+        1,
+        0,
+        "Bag_General_Max",
+        "Bag_BagMaxDes_4"
+    },
+    [5] = {
+        5,
+        "Bag_BagPageName_5",
+        "Bag_BagPageName_EN_5",
+        {
+            331,
+            350,
+            351,
+            352,
+            325
+        },
+        1,
+        0,
+        "Bag_General_Max",
+        "Bag_BagMaxDes_4"
+    },
+    [6] = {
+        6,
+        "Bag_BagPageName_6",
+        "Bag_BagPageName_EN_6",
+        {
+            390
+        },
+        0,
+        0,
+        "Bag_General_Max",
+        "Bag_BagMaxDes_4"
+    },
+    [7] = {
+        7,
+        "Bag_BagPageName_7",
+        "Bag_BagPageName_EN_7",
+        {
+            301,
+            310,
+            311,
+            312,
+            360,
+            361,
+            610,
+            611,
+            612
+        },
+        1,
+        0,
+        "Bag_General_Max",
+        "Bag_BagMaxDes_4"
+    }
+}
+return require('Config/Data/Class_Bag')(data)
+"

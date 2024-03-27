@@ -1,0 +1,20 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+import "PB_Vector3D.proto";
+import "PB_Vector4D.proto";
+
+message S2C_ActorBulletHit {
+  int32 index = 1;
+  int32 skill = 2;
+  int32 bullet = 3;
+  int32 target = 4;
+  int32 box_index = 5;
+  PB_Vector3D box_pos = 6;
+  PB_Vector4D box_rot = 7;
+  PB_Vector3D box_size = 8;
+}

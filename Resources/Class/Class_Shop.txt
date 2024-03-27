@@ -1,0 +1,60 @@
+TextAsset Base
+	string m_Name = "Class_Shop"
+	string m_Script = "---@class Class_Shop table
+---@field ShopID number 商店ID
+---@field ShopName lang 商店名称
+---@field ShopNameEN string 商店英文名
+---@field ShopTab number 商店所属页签
+---@field ShopViewType number 商店界面
+---@field SonShop table<number, number> 子商店
+---@field FatherShop number 上级商店
+---@field ShopType number 商店类型
+---@field RandomGoods table<number, Struct_Int4> 随机商品组
+---@field FixedGoods table<number, number> 固定商品
+---@field TimeLimitGoods table<number, number> 限时商品
+---@field MoneyType table<number, number> 对应货币
+---@field Unlock table<number, number> 商店解锁条件
+---@field ShopOpenDay table<number, Struct_Int3> 商店开启时间
+---@field ShopRefreshTime number 商店自动刷新时间（秒）
+---@field ManRefreshCost table<number, Struct_IDNum> 商店手动刷新消耗
+---@field ManRefreshLimt number 商店手动刷新次数上限
+---@field ManRefreshReset Struct_Int2 商店手动刷新重置
+---@field Open number 商店是否开放
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local Int4_get  = require('Config/Data/Struct_Int4')
+local Int3_get  = require('Config/Data/Struct_Int3')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local Int2_get  = require('Config/Data/Struct_Int2')
+local title = {
+    ShopID          = 1,
+    ShopName        = 2,
+    ShopNameEN      = 3,
+    ShopTab         = 4,
+    ShopViewType    = 5,
+    SonShop         = 6,
+    FatherShop      = 7,
+    ShopType        = 8,
+    RandomGoods     = 9,
+    FixedGoods      = 10,
+    TimeLimitGoods  = 11,
+    MoneyType       = 12,
+    Unlock          = 13,
+    ShopOpenDay     = 14,
+    ShopRefreshTime = 15,
+    ManRefreshCost  = 16,
+    ManRefreshLimt  = 17,
+    ManRefreshReset = 18,
+    Open            = 19,
+}
+local set = {
+    ShopName        = lang_get,
+    RandomGoods     = util.array_set(Int4_get),
+    ShopOpenDay     = util.array_set(Int3_get),
+    ManRefreshCost  = util.array_set(IDNum_get),
+    ManRefreshReset = Int2_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

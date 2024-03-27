@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message S2C_ActorSkillStart {
+  int32 index = 1;
+  int32 skill = 2;
+  int32 target = 3;
+}

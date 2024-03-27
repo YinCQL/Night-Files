@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Class_AchieveGroup"
+	string m_Script = "---@class Class_AchieveGroup table
+---@field AchieveGroupID number 成就组ID
+---@field AchieveGroupName lang 成就组名称
+---@field AchieveGroupDes lang 成就组描述
+---@field AchieveType number 成就组类型
+---@field FinishAward table<number, Struct_IDNum> 套组完成奖励
+---@field FinishDes lang 套组奖励描述
+---@field MedalWall string 勋章墙底板
+---@field MedalAchieve table<number, number> 勋章成就
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    AchieveGroupID   = 1,
+    AchieveGroupName = 2,
+    AchieveGroupDes  = 3,
+    AchieveType      = 4,
+    FinishAward      = 5,
+    FinishDes        = 6,
+    MedalWall        = 7,
+    MedalAchieve     = 8,
+}
+local set = {
+    AchieveGroupName = lang_get,
+    AchieveGroupDes  = lang_get,
+    FinishAward      = util.array_set(IDNum_get),
+    FinishDes        = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

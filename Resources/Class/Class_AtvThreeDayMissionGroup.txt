@@ -1,0 +1,25 @@
+TextAsset Base
+	string m_Name = "Class_AtvThreeDayMissionGroup"
+	string m_Script = "---@class Class_AtvThreeDayMissionGroup table
+---@field MissionGroupID number 任务组ID
+---@field MissionGroupName lang 任务组名称
+---@field MissionDes lang 任务组描述
+---@field UnlockTime Struct_Int3 开放时间
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local Int3_get = require('Config/Data/Struct_Int3')
+local title = {
+    MissionGroupID   = 1,
+    MissionGroupName = 2,
+    MissionDes       = 3,
+    UnlockTime       = 4,
+}
+local set = {
+    MissionGroupName = lang_get,
+    MissionDes       = lang_get,
+    UnlockTime       = Int3_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

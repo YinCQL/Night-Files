@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_BGM"
+	string m_Script = "---@class Class_BGM table
+---@field ID number ID
+---@field Type number 类型
+---@field MediaSoundBank string MediaSoundBank
+---@field EventSoundBank string EventSoundBank
+---@field EventName string 事件名称
+---@field StateGroup1 table<number, string> 集1
+---@field StateGroup2 table<number, string> 集2
+local util = require('Config/Data/Util')
+local title = {
+    ID             = 1,
+    Type           = 2,
+    MediaSoundBank = 3,
+    EventSoundBank = 4,
+    EventName      = 5,
+    StateGroup1    = 6,
+    StateGroup2    = 7,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

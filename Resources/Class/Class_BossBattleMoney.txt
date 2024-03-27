@@ -1,0 +1,20 @@
+TextAsset Base
+	string m_Name = "Class_BossBattleMoney"
+	string m_Script = "---@class Class_BossBattleMoney table
+---@field MoneyID number 积分币ID
+---@field Rank number 阶段
+---@field ScoreRange number 积分段位
+---@field BaseMoney number 基础奖励
+local util = require('Config/Data/Util')
+local title = {
+    MoneyID    = 1,
+    Rank       = 2,
+    ScoreRange = 3,
+    BaseMoney  = 4,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

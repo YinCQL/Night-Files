@@ -1,0 +1,21 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Mail";
+
+import "MailItem.proto";
+
+message MailBase {
+  int32 mail_type = 1;
+  int32 mail_class = 2;
+  int64 created_time = 3;
+  int64 expired_time = 4;
+  string event = 5;
+  string sender = 6;
+  string mail_title = 7;
+  string mail_body = 8;
+  repeated MailItem items = 9;
+  int64 effective_time = 10;
+}

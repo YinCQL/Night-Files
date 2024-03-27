@@ -1,0 +1,28 @@
+TextAsset Base
+	string m_Name = "Class_Recruit"
+	string m_Script = "---@class Class_Recruit table
+---@field PoolID number 卡池ID
+---@field ID number ID
+---@field PoolSubType number 物品类型
+---@field ItemID number 物品ID
+---@field ItemNum number 物品产出数量
+---@field Weight number 物品产出权重
+---@field ExtraProduct table<number, Struct_IDNum> 额外产物
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    PoolID       = 1,
+    ID           = 2,
+    PoolSubType  = 3,
+    ItemID       = 4,
+    ItemNum      = 5,
+    Weight       = 6,
+    ExtraProduct = 7,
+}
+local set = {
+    ExtraProduct = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

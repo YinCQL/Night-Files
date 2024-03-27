@@ -1,0 +1,18 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Home";
+
+import "HomeBaseInfo.proto";
+import "ScpInfo.proto";
+import "HeroInfo.proto";
+import "BuildingInfo.proto";
+
+message HomeInfo {
+  repeated HomeBaseInfo base = 1;
+  repeated ScpInfo scps = 2;
+  repeated HeroInfo hero = 3;
+  repeated BuildingInfo building = 4;
+}

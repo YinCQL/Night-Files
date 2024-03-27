@@ -1,0 +1,43 @@
+TextAsset Base
+	string m_Name = "Class_Armor"
+	string m_Script = "---@class Class_Armor table
+---@field ArmorID number 礼装ID
+---@field StartLevel number 初始等级
+---@field MaxLevel number 最高等级
+---@field SuitID number 套装ID
+---@field MainEntryLibrary table<number, Struct_IDNum> 主属性词条库
+---@field EntryNum table<number, Struct_IDNum> 词条数量和概率
+---@field SubEntryLibrary table<number, Struct_IDNum> 词条属性词条库
+---@field SpecialEntryLbrary table<number, Struct_IDNum> 特殊词条库
+---@field SpecialEntryProb number 特殊词条概率
+---@field InheritEntryProb number 继承词条概率
+---@field ArmorPerform string 礼装模型
+---@field ArmorMapping string 礼装模型贴图
+---@field ArmorMappingCG string 礼装CG
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    ArmorID            = 1,
+    StartLevel         = 2,
+    MaxLevel           = 3,
+    SuitID             = 4,
+    MainEntryLibrary   = 5,
+    EntryNum           = 6,
+    SubEntryLibrary    = 7,
+    SpecialEntryLbrary = 8,
+    SpecialEntryProb   = 9,
+    InheritEntryProb   = 10,
+    ArmorPerform       = 11,
+    ArmorMapping       = 12,
+    ArmorMappingCG     = 13,
+}
+local set = {
+    MainEntryLibrary   = util.array_set(IDNum_get),
+    EntryNum           = util.array_set(IDNum_get),
+    SubEntryLibrary    = util.array_set(IDNum_get),
+    SpecialEntryLbrary = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

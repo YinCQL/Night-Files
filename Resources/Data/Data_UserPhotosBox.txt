@@ -1,0 +1,19 @@
+TextAsset Base
+	string m_Name = "Data_UserPhotosBox"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [2001] = {
+        2001,
+        "UserPhotosBox_ResourcesName_2001",
+        "UserPhotosBox_ResourcesDes_2001",
+        "ui_k_head01"
+    },
+    [2002] = {
+        2002,
+        "UserPhotosBox_ResourcesName_2002",
+        "UserPhotosBox_ResourcesDes_2001",
+        "ui_k_head01"
+    }
+}
+return require('Config/Data/Class_UserPhotosBox')(data)
+"

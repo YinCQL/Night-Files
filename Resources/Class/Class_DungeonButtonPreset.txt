@@ -1,0 +1,16 @@
+TextAsset Base
+	string m_Name = "Class_DungeonButtonPreset"
+	string m_Script = "---@class Class_DungeonButtonPreset table
+---@field ID number 按钮预设ID
+---@field Setting table<number, number> 使用的按钮
+local util = require('Config/Data/Util')
+local title = {
+    ID      = 1,
+    Setting = 2,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

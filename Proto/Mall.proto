@@ -1,0 +1,17 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+import "MallGoods.proto";
+
+message Mall {
+  int32 id = 1;
+  int32 refresh_times = 2;
+  int64 next_refresh_time = 3;
+  int64 next_add_refresh_time = 4;
+  repeated MallGoods goods_list = 5;
+  repeated int32 lock_condition = 6;
+}

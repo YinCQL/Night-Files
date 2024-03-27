@@ -1,0 +1,61 @@
+TextAsset Base
+	string m_Name = "Data_HomeFormula"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [100] = {
+        100,
+        "Home_Physical / ($Home_Physical + Home_Physical)",
+        "HomeFormula_Des_100",
+        0
+    },
+    [101] = {
+        101,
+        "Home_Physical / $Home_Physical",
+        "HomeFormula_Des_100",
+        0
+    },
+    [102] = {
+        102,
+        "Home_Force / $Home_Force",
+        "HomeFormula_Des_100",
+        0
+    },
+    [103] = {
+        103,
+        "Home_Intell / $Home_Intell",
+        "HomeFormula_Des_100",
+        0
+    },
+    [104] = {
+        104,
+        "Home_Acute / $Home_Acute",
+        "HomeFormula_Des_100",
+        0
+    },
+    [1001] = {
+        1001,
+        "0",
+        "HomeFormula_Des_1001",
+        100
+    },
+    [1002] = {
+        1002,
+        "0",
+        "HomeFormula_Des_1002",
+        100
+    },
+    [1003] = {
+        1003,
+        "0",
+        "HomeFormula_Des_1003",
+        100
+    },
+    [1004] = {
+        1004,
+        "0",
+        "HomeFormula_Des_1004",
+        1
+    }
+}
+return require('Config/Data/Class_HomeFormula')(data)
+"

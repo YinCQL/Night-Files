@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "KV32.proto";
+
+message L2C_RedPointInfo {
+  repeated KV32 ids = 1;
+}

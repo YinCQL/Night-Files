@@ -1,0 +1,32 @@
+TextAsset Base
+	string m_Name = "Class_TeamType"
+	string m_Script = "---@class Class_TeamType table
+---@field TeamTypeID number 队伍类型ID
+---@field TeamSaveType number 队伍保存类型
+---@field TeamSaveID number 队伍保存ID
+---@field TeamViewType number 界面类型
+---@field GroupNumber number 小队数
+---@field MaxHero table<number, number> 每小队最大角色数
+---@field MinHero table<number, number> 每小队最低角色数
+---@field CaptainSkillSwitch number 队长技
+---@field Assistant number 助战人数
+---@field MaxUser number 用户最大人数
+local util = require('Config/Data/Util')
+local title = {
+    TeamTypeID         = 1,
+    TeamSaveType       = 2,
+    TeamSaveID         = 3,
+    TeamViewType       = 4,
+    GroupNumber        = 5,
+    MaxHero            = 6,
+    MinHero            = 7,
+    CaptainSkillSwitch = 8,
+    Assistant          = 9,
+    MaxUser            = 10,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

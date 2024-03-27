@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Class_ChapterGroup"
+	string m_Script = "---@class Class_ChapterGroup table
+---@field GroupID number 关ID
+---@field GroupName string 关名称
+---@field Stars number 总星数
+---@field DungeonID table<number, number> 包含节ID
+---@field UnlockID number 解锁条件
+---@field AwardID number 奖励ID
+---@field Item table<number, Struct_IDNum> 关奖励道具和数量
+---@field GridPosition Struct_Float2 网格坐标
+---@field DropGroupId number 主包id
+local util = require('Config/Data/Util')
+local IDNum_get  = require('Config/Data/Struct_IDNum')
+local Float2_get = require('Config/Data/Struct_Float2')
+local title = {
+    GroupID      = 1,
+    GroupName    = 2,
+    Stars        = 3,
+    DungeonID    = 4,
+    UnlockID     = 5,
+    AwardID      = 6,
+    Item         = 7,
+    GridPosition = 8,
+    DropGroupId  = 9,
+}
+local set = {
+    Item         = util.array_set(IDNum_get),
+    GridPosition = Float2_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

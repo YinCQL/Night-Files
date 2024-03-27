@@ -1,0 +1,38 @@
+TextAsset Base
+	string m_Name = "Class_HomeReceptionEvent"
+	string m_Script = "---@class Class_HomeReceptionEvent table
+---@field SCPID number 异常ID
+---@field EventID number 事件ID
+---@field EventProbability number 事件概率
+---@field EventSort number 触发优先级
+---@field InvestigationProgress table<number, Struct_Int2> 收容进度
+---@field RequireEvent table<number, number> 前置事件需求
+---@field ConditionID table<number, number> 解锁条件
+---@field Trigger number 触发方式
+---@field EndingTimeLine2D number 结局剧情2DTL
+---@field OnceReward table<number, number> 唯一产出
+---@field RepeatReward table<number, number> 重复产出
+---@field Open number 开放
+local util = require('Config/Data/Util')
+local Int2_get = require('Config/Data/Struct_Int2')
+local title = {
+    SCPID                 = 1,
+    EventID               = 2,
+    EventProbability      = 3,
+    EventSort             = 4,
+    InvestigationProgress = 5,
+    RequireEvent          = 6,
+    ConditionID           = 7,
+    Trigger               = 8,
+    EndingTimeLine2D      = 9,
+    OnceReward            = 10,
+    RepeatReward          = 11,
+    Open                  = 12,
+}
+local set = {
+    InvestigationProgress = util.array_set(Int2_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

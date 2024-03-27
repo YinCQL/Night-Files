@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message S2C_Settle {
+  int32 stage = 1;
+  int32 star = 2;
+  bool result = 3;
+  int32 language_i_d = 4;
+}

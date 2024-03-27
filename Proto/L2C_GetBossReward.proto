@@ -1,0 +1,15 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "Reward.proto";
+
+message L2C_GetBossReward {
+  uint32 ret = 1;
+  uint32 stage_id = 2;
+  int32 boss_id = 3;
+  Reward reward = 4;
+}

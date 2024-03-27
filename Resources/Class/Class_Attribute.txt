@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Class_Attribute"
+	string m_Script = "---@class Class_Attribute table
+---@field ID number ID
+---@field Name lang 属性中文名
+---@field NameEng lang 属性英文名
+---@field Type number 类型
+---@field ViewType number 显示类型
+---@field Sort number 权重
+---@field Form number 数值构成
+---@field Describe lang 描述
+---@field Icon string 属性图标
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID       = 1,
+    Name     = 2,
+    NameEng  = 3,
+    Type     = 4,
+    ViewType = 5,
+    Sort     = 6,
+    Form     = 7,
+    Describe = 8,
+    Icon     = 9,
+}
+local set = {
+    Name     = lang_get,
+    NameEng  = lang_get,
+    Describe = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

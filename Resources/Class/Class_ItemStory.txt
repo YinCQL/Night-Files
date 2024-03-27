@@ -1,0 +1,41 @@
+TextAsset Base
+	string m_Name = "Class_ItemStory"
+	string m_Script = "---@class Class_ItemStory table
+---@field ItemId number 物品ID
+---@field StoryNum number 故事数量
+---@field Story1Title lang 故事1标题
+---@field Story1 lang 故事1
+---@field Story2Title lang 故事2标题
+---@field Story2 lang 故事2
+---@field Story3Title lang 故事3标题
+---@field Story3 lang 故事3
+---@field Story4Title lang 故事4标题
+---@field Story4 lang 故事4
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ItemId      = 1,
+    StoryNum    = 2,
+    Story1Title = 3,
+    Story1      = 4,
+    Story2Title = 5,
+    Story2      = 6,
+    Story3Title = 7,
+    Story3      = 8,
+    Story4Title = 9,
+    Story4      = 10,
+}
+local set = {
+    Story1Title = lang_get,
+    Story1      = lang_get,
+    Story2Title = lang_get,
+    Story2      = lang_get,
+    Story3Title = lang_get,
+    Story3      = lang_get,
+    Story4Title = lang_get,
+    Story4      = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

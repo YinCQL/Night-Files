@@ -1,0 +1,15 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message S2C_InterActionCheck {
+  int32 interaction_i_d = 1;
+  int32 index = 2;
+  int32 region_i_d = 3;
+  bool open = 4;
+  float duration = 5;
+  bool occupy = 6;
+}

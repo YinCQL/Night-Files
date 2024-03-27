@@ -1,0 +1,38 @@
+TextAsset Base
+	string m_Name = "Class_BattleGrow"
+	string m_Script = "---@class Class_BattleGrow table
+---@field GrowID number 词条ID
+---@field TypeDes lang 类型描述
+---@field TypeBackGround string 类型底图
+---@field GrowLevel number 词条等级
+---@field NameCN lang 词条名称（中文）
+---@field NameEN string 词条名称（英文）
+---@field Type table<number, Enum_BattleGrowType> 词条关联类型
+---@field Description lang 词条效果
+---@field BuffId number Buff ID
+---@field Target table<number, number> buff作用对象
+---@field Icon string buff图标资源
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    GrowID         = 1,
+    TypeDes        = 2,
+    TypeBackGround = 3,
+    GrowLevel      = 4,
+    NameCN         = 5,
+    NameEN         = 6,
+    Type           = 7,
+    Description    = 8,
+    BuffId         = 9,
+    Target         = 10,
+    Icon           = 11,
+}
+local set = {
+    TypeDes     = lang_get,
+    NameCN      = lang_get,
+    Description = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

@@ -1,0 +1,11 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Gm";
+
+message GMS2GM_Mail_Send_Reward {
+  int32 ret = 1;
+  int64 uid = 2;
+}

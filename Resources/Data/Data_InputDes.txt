@@ -1,0 +1,61 @@
+TextAsset Base
+	string m_Name = "Data_InputDes"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [60000] = {
+        60000,
+        "InputDes_InputTouch_60000",
+        "InputDes_InputPC_60000",
+        "InputDes_InputGamepad_60000"
+    },
+    [60001] = {
+        60001,
+        "InputDes_InputTouch_60001",
+        "InputDes_InputPC_60001",
+        "InputDes_InputGamepad_60001"
+    },
+    [60002] = {
+        60002,
+        "InputDes_InputTouch_60002",
+        "InputDes_InputPC_60002",
+        "InputDes_InputGamepad_60002"
+    },
+    [60003] = {
+        60003,
+        "InputDes_InputTouch_60002",
+        "InputDes_InputPC_60003",
+        "InputDes_InputGamepad_60003"
+    },
+    [60004] = {
+        60004,
+        "InputDes_InputTouch_60002",
+        "InputDes_InputPC_60004",
+        "InputDes_InputGamepad_60004"
+    },
+    [60005] = {
+        60005,
+        "InputDes_InputTouch_60005",
+        "InputDes_InputPC_60005",
+        "InputDes_InputGamepad_60005"
+    },
+    [60006] = {
+        60006,
+        "InputDes_InputTouch_60006",
+        "InputDes_InputPC_60006",
+        "InputDes_InputGamepad_60006"
+    },
+    [60007] = {
+        60007,
+        "InputDes_InputTouch_60007",
+        "InputDes_InputPC_60007",
+        "InputDes_InputGamepad_60007"
+    },
+    [60008] = {
+        60008,
+        "InputDes_InputTouch_60008",
+        "InputDes_InputPC_60008",
+        "InputDes_InputGamepad_60008"
+    }
+}
+return require('Config/Data/Class_InputDes')(data)
+"

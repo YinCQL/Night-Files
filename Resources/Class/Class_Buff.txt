@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Class_Buff"
+	string m_Script = "---@class Class_Buff table
+---@field BuffID number BuffID
+---@field BuffName lang Buff名称
+---@field BuffDes lang Buff描述
+---@field BuffIcon string Buff图标
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    BuffID   = 1,
+    BuffName = 2,
+    BuffDes  = 3,
+    BuffIcon = 4,
+}
+local set = {
+    BuffName = lang_get,
+    BuffDes  = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

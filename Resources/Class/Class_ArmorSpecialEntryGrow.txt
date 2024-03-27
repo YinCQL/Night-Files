@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_ArmorSpecialEntryGrow"
+	string m_Script = "---@class Class_ArmorSpecialEntryGrow table
+---@field SpecialEntryID number 特殊词条ID
+---@field EntryLevel number 词条等级
+---@field SpecialEntryName lang 特殊词条名称
+---@field SpecialEntryDes lang 特殊词条描述
+---@field SpecialEntryLevel table<number, Struct_IDNum> 特殊词条等级（加值ID）
+---@field NeedExp number 升级所需经验
+---@field ContainExp number 词条本身的经验
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    SpecialEntryID    = 1,
+    EntryLevel        = 2,
+    SpecialEntryName  = 3,
+    SpecialEntryDes   = 4,
+    SpecialEntryLevel = 5,
+    NeedExp           = 6,
+    ContainExp        = 7,
+}
+local set = {
+    SpecialEntryName  = lang_get,
+    SpecialEntryDes   = lang_get,
+    SpecialEntryLevel = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

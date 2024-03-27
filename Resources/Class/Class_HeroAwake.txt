@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Class_HeroAwake"
+	string m_Script = "---@class Class_HeroAwake table
+---@field HeroID number 角色id
+---@field AwakeLevel number 觉醒阶段
+---@field AwakeNeed table<number, Struct_IDNum> 碎片所需数量
+---@field AwakeAdd table<number, Struct_BattleAttrValue> 觉醒后增加属性
+---@field AwakeSkill table<number, Struct_IDNum> 觉醒改变技能
+---@field AwakeAddition table<number, Struct_IDNum> 觉醒加值（当前等级总效果）
+---@field AwakeDesc string 描述
+---@field AwakeVoiceID table<number, number> 觉醒语音（觉醒到该等级）
+local util = require('Config/Data/Util')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    HeroID        = 1,
+    AwakeLevel    = 2,
+    AwakeNeed     = 3,
+    AwakeAdd      = 4,
+    AwakeSkill    = 5,
+    AwakeAddition = 6,
+    AwakeDesc     = 7,
+    AwakeVoiceID  = 8,
+}
+local set = {
+    AwakeNeed     = util.array_set(IDNum_get),
+    AwakeAdd      = util.array_set(BattleAttrValue_get),
+    AwakeSkill    = util.array_set(IDNum_get),
+    AwakeAddition = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

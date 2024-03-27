@@ -1,0 +1,37 @@
+TextAsset Base
+	string m_Name = "Class_WeaponRefine"
+	string m_Script = "---@class Class_WeaponRefine table
+---@field WeaponID number 武器id
+---@field Level number 精炼等级
+---@field ConsumeItem Struct_IDNum 可能消耗的物品
+---@field DecomposeReturn Struct_IDNum 分解额外返还
+---@field RefineProperty Struct_BattleAttrValue 精炼特效属性
+---@field SkillID table<number, Struct_IDNum> 附加技能描述
+---@field AdditionID table<number, Struct_IDNum> 加值ID
+---@field BuffID table<number, number> buffID
+---@field Fight number 战斗力增加
+local util = require('Config/Data/Util')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    WeaponID        = 1,
+    Level           = 2,
+    ConsumeItem     = 3,
+    DecomposeReturn = 4,
+    RefineProperty  = 5,
+    SkillID         = 6,
+    AdditionID      = 7,
+    BuffID          = 8,
+    Fight           = 9,
+}
+local set = {
+    ConsumeItem     = IDNum_get,
+    DecomposeReturn = IDNum_get,
+    RefineProperty  = BattleAttrValue_get,
+    SkillID         = util.array_set(IDNum_get),
+    AdditionID      = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

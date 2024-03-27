@@ -1,0 +1,382 @@
+TextAsset Base
+	string m_Name = "Data_BattleGrow"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [10001] = {
+        [1] = {
+            10001,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10001_1",
+            "ATTACT UP",
+            {
+                2
+            },
+            "BattleGrow_NameCN_10001_1",
+            12000027,
+            {
+                90201
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10002] = {
+        [1] = {
+            10002,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10002_1",
+            "ATTACT UP",
+            {
+                2
+            },
+            "BattleGrow_Description_10002_1",
+            12000002,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        },
+        [2] = {
+            10002,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            2,
+            "BattleGrow_NameCN_10002_1",
+            "ATTACT UP",
+            {
+                2
+            },
+            "BattleGrow_Description_10002_2",
+            12000003,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        },
+        [3] = {
+            10002,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            3,
+            "BattleGrow_NameCN_10002_1",
+            "ATTACT UP",
+            {
+                2
+            },
+            "BattleGrow_Description_10002_3",
+            12000004,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10003] = {
+        [1] = {
+            10003,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10003_1",
+            "ATTACT SPEED UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10003_1",
+            12000005,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        },
+        [2] = {
+            10003,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            2,
+            "BattleGrow_NameCN_10003_1",
+            "ATTACT SPEED UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10003_2",
+            12000006,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        },
+        [3] = {
+            10003,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            3,
+            "BattleGrow_NameCN_10003_1",
+            "ATTACT SPEED UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10003_3",
+            12000007,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10004] = {
+        [1] = {
+            10004,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10004_1",
+            "BULLET PLUS",
+            {
+                1
+            },
+            "BattleGrow_Description_10004_1",
+            12000008,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10005] = {
+        [1] = {
+            10005,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10005_1",
+            "ATTACT MODE CHANGE",
+            {
+                2
+            },
+            "BattleGrow_Description_10005_1",
+            12000014,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10006] = {
+        [1] = {
+            10006,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10006_1",
+            "ATTACT CHANGE",
+            {
+                2
+            },
+            "BattleGrow_Description_10006_1",
+            12000016,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10007] = {
+        [1] = {
+            10007,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10007_1",
+            "TOWER ATTACT RANGE UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10007_1",
+            12000027,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10008] = {
+        [1] = {
+            10008,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10008_1",
+            "CRITICAL CHANCE UP",
+            {
+                0
+            },
+            "BattleGrow_Description_10008_1",
+            12000009,
+            {
+                999
+            },
+            "ui_icon_exbattle_001"
+        },
+        [2] = {
+            10008,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            2,
+            "BattleGrow_NameCN_10008_1",
+            "CRITICAL CHANCE UP",
+            {
+                0
+            },
+            "BattleGrow_Description_10008_2",
+            12000010,
+            {
+                999
+            },
+            "ui_icon_exbattle_001"
+        },
+        [3] = {
+            10008,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            3,
+            "BattleGrow_NameCN_10008_1",
+            "CRITICAL CHANCE UP",
+            {
+                0
+            },
+            "BattleGrow_Description_10008_3",
+            12000011,
+            {
+                999
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10009] = {
+        [1] = {
+            10009,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10009_1",
+            "ATTACT SPEED UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10003_1",
+            12000005,
+            {
+                10409
+            },
+            "ui_icon_exbattle_001"
+        },
+        [2] = {
+            10009,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            2,
+            "BattleGrow_NameCN_10009_1",
+            "ATTACT SPEED UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10003_2",
+            12000006,
+            {
+                10409
+            },
+            "ui_icon_exbattle_001"
+        },
+        [3] = {
+            10009,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            3,
+            "BattleGrow_NameCN_10009_1",
+            "ATTACT SPEED UP",
+            {
+                1
+            },
+            "BattleGrow_Description_10003_3",
+            12000007,
+            {
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10010] = {
+        [1] = {
+            10010,
+            "BattleGrow_TypeDes_10010_1",
+            "ui_img_black01",
+            1,
+            "BattleGrow_NameCN_10010_1",
+            "CHARACTER HEAL",
+            {
+                0
+            },
+            "BattleGrow_Description_10010_1",
+            12000013,
+            {
+                999
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10011] = {
+        [1] = {
+            10011,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10011_1",
+            "GUARDIAN HEAL",
+            {
+                0
+            },
+            "BattleGrow_Description_10011_1",
+            12000023,
+            {
+                10401
+            },
+            "ui_icon_exbattle_001"
+        }
+    },
+    [10012] = {
+        [1] = {
+            10012,
+            "BattleGrow_TypeDes_10001_1",
+            "ui_img_black",
+            1,
+            "BattleGrow_NameCN_10012_1",
+            "DOUBLE ATTACT",
+            {
+                1
+            },
+            "BattleGrow_Description_10012_1",
+            12000018,
+            {
+                10408,
+                10409
+            },
+            "ui_icon_exbattle_001"
+        }
+    }
+}
+return require('Config/Data/Class_BattleGrow')(data)
+"

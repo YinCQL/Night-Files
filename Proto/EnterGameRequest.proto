@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Sdk";
+
+message EnterGameRequest {
+  string base_info_map = 1;
+  string osdk_user_id = 2;
+  string request_param_map = 3;
+}

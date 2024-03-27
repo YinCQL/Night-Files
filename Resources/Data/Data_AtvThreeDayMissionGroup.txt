@@ -1,0 +1,37 @@
+TextAsset Base
+	string m_Name = "Data_AtvThreeDayMissionGroup"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [101] = {
+        101,
+        "AtvThreeDayMissionGroup_MissionGroupName_101",
+        "AtvThreeDayMissionGroup_MissionDes_101",
+        {
+            7,
+            1673294400,
+            1697054400
+        }
+    },
+    [102] = {
+        102,
+        "AtvThreeDayMissionGroup_MissionGroupName_102",
+        "AtvThreeDayMissionGroup_MissionDes_102",
+        {
+            7,
+            1673380800,
+            1697054400
+        }
+    },
+    [103] = {
+        103,
+        "AtvThreeDayMissionGroup_MissionGroupName_103",
+        "AtvThreeDayMissionGroup_MissionDes_103",
+        {
+            7,
+            1673467200,
+            1697054400
+        }
+    }
+}
+return require('Config/Data/Class_AtvThreeDayMissionGroup')(data)
+"

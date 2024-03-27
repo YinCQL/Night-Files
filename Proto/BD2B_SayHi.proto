@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message BD2B_SayHi {
+  uint32 my_type = 1;
+  int32 my_state = 2;
+  int32 ret = 3;
+}

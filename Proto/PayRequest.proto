@@ -1,0 +1,18 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Sdk";
+
+message PayRequest {
+  string amount = 1;
+  string currency = 2;
+  string server_id = 3;
+  string product_id = 4;
+  string product_name = 5;
+  string game_role_id = 6;
+  string custom_data = 7;
+  string server_name = 8;
+  string game_role_name = 9;
+}

@@ -1,0 +1,36 @@
+TextAsset Base
+	string m_Name = "Class_InterAction"
+	string m_Script = "---@class Class_InterAction table
+---@field ID number ID
+---@field Name string 名称
+---@field ScriptName string 交互类型
+---@field Radius number 范围
+---@field Height number 高度
+---@field des string 介绍
+---@field Duration number 持续时间（单位：帧）
+---@field Icon string 按钮图标资源
+---@field StartActionAPI string 交互开始调用API
+---@field StartActionParam string 开始调用参数
+---@field EndActionAPI string 结束调用参数
+---@field EndActionParam string 结束调用参数
+local util = require('Config/Data/Util')
+local title = {
+    ID               = 1,
+    Name             = 2,
+    ScriptName       = 3,
+    Radius           = 4,
+    Height           = 5,
+    des              = 6,
+    Duration         = 7,
+    Icon             = 8,
+    StartActionAPI   = 9,
+    StartActionParam = 10,
+    EndActionAPI     = 11,
+    EndActionParam   = 12,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

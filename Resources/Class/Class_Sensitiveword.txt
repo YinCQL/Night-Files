@@ -1,0 +1,16 @@
+TextAsset Base
+	string m_Name = "Class_Sensitiveword"
+	string m_Script = "---@class Class_Sensitiveword table
+---@field Word string 屏蔽词
+---@field Value number 值
+local util = require('Config/Data/Util')
+local title = {
+    Word  = 1,
+    Value = 2,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

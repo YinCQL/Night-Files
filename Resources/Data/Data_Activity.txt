@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Data_Activity"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [22102201] = {
+        22102201,
+        "Activity_ActivityName_22102201",
+        "Activity_ActivityDes_22102201",
+        {
+            {
+                7,
+                1665518400,
+                1697054400
+            }
+        },
+        {
+            {
+                35100101,
+                10
+            },
+            {
+                35100102,
+                20
+            },
+            {
+                40500100,
+                15
+            }
+        },
+        ""
+    }
+}
+return require('Config/Data/Class_Activity')(data)
+"

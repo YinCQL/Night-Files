@@ -1,0 +1,179 @@
+TextAsset Base
+	string m_Name = "Data_BossBattleHighestScore"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [20001] = {
+        [1] = {
+            20001,
+            1,
+            4001,
+            1,
+            4000,
+            {
+                {
+                    45000101,
+                    150
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [2] = {
+            20001,
+            2,
+            4001,
+            1,
+            7000,
+            {
+                {
+                    45000101,
+                    375
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [3] = {
+            20001,
+            3,
+            4001,
+            1,
+            12000,
+            {
+                {
+                    45000101,
+                    750
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [4] = {
+            20001,
+            4,
+            4001,
+            1,
+            18000,
+            {
+                {
+                    45000101,
+                    1200
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [5] = {
+            20001,
+            5,
+            4001,
+            1,
+            25000,
+            {
+                {
+                    45000101,
+                    1500
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [6] = {
+            20001,
+            6,
+            4001,
+            1,
+            30000,
+            {
+                {
+                    45000101,
+                    2000
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        }
+    },
+    [20002] = {
+        [1] = {
+            20002,
+            1,
+            4002,
+            1,
+            4000,
+            {
+                {
+                    45000101,
+                    150
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [2] = {
+            20002,
+            2,
+            4002,
+            1,
+            7000,
+            {
+                {
+                    45000101,
+                    375
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [3] = {
+            20002,
+            3,
+            4002,
+            1,
+            12000,
+            {
+                {
+                    45000101,
+                    750
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [4] = {
+            20002,
+            4,
+            4002,
+            1,
+            18000,
+            {
+                {
+                    45000101,
+                    1200
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [5] = {
+            20002,
+            5,
+            4002,
+            1,
+            25000,
+            {
+                {
+                    45000101,
+                    1500
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        },
+        [6] = {
+            20002,
+            6,
+            4002,
+            1,
+            30000,
+            {
+                {
+                    45000101,
+                    2000
+                }
+            },
+            "BossBattleHighestScore_Des_20001_1"
+        }
+    }
+}
+return require('Config/Data/Class_BossBattleHighestScore')(data)
+"

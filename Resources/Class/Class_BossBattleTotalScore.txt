@@ -1,0 +1,30 @@
+TextAsset Base
+	string m_Name = "Class_BossBattleTotalScore"
+	string m_Script = "---@class Class_BossBattleTotalScore table
+---@field ScoreID number 积分ID
+---@field ID number ID
+---@field BossID number BOSSID
+---@field CountType number 计数类型
+---@field ScoreNum number 积分数量
+---@field Award table<number, Struct_IDNum> 积分奖励
+---@field Des lang 描述内容
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ScoreID   = 1,
+    ID        = 2,
+    BossID    = 3,
+    CountType = 4,
+    ScoreNum  = 5,
+    Award     = 6,
+    Des       = 7,
+}
+local set = {
+    Award = util.array_set(IDNum_get),
+    Des   = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

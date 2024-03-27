@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_Activity"
+	string m_Script = "---@class Class_Activity table
+---@field ActivityID number 活动ID
+---@field ActivityName lang 活动名称
+---@field ActivityDes lang 活动描述
+---@field OpenTime table<number, Struct_Int3> 活动开放时间
+---@field Award table<number, Struct_IDNum> 活动奖励展示
+---@field SkipTo string 跳转界面
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local Int3_get  = require('Config/Data/Struct_Int3')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    ActivityID   = 1,
+    ActivityName = 2,
+    ActivityDes  = 3,
+    OpenTime     = 4,
+    Award        = 5,
+    SkipTo       = 6,
+}
+local set = {
+    ActivityName = lang_get,
+    ActivityDes  = lang_get,
+    OpenTime     = util.array_set(Int3_get),
+    Award        = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

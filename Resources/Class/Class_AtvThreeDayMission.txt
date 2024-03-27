@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_AtvThreeDayMission"
+	string m_Script = "---@class Class_AtvThreeDayMission table
+---@field MissionID number 任务ID
+---@field MissionGroup number 任务组ID
+---@field MissionName lang 任务名称
+---@field MissionDes lang 任务描述
+---@field ConditionID number 条件ID
+---@field Award table<number, Struct_IDNum> 任务奖励
+---@field SkipTo string 跳转界面
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    MissionID    = 1,
+    MissionGroup = 2,
+    MissionName  = 3,
+    MissionDes   = 4,
+    ConditionID  = 5,
+    Award        = 6,
+    SkipTo       = 7,
+}
+local set = {
+    MissionName = lang_get,
+    MissionDes  = lang_get,
+    Award       = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

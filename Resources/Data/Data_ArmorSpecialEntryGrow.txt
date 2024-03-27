@@ -1,0 +1,151 @@
+TextAsset Base
+	string m_Name = "Data_ArmorSpecialEntryGrow"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [26710001] = {
+        [1] = {
+            26710001,
+            1,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710001_1",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710001,
+                    1
+                }
+            },
+            10,
+            10
+        },
+        [2] = {
+            26710001,
+            2,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710001_2",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710001,
+                    2
+                }
+            },
+            10,
+            20
+        },
+        [3] = {
+            26710001,
+            3,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710001_3",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710001,
+                    3
+                }
+            },
+            10,
+            30
+        },
+        [4] = {
+            26710001,
+            4,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710001_4",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710001,
+                    4
+                }
+            },
+            10,
+            40
+        },
+        [5] = {
+            26710001,
+            5,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710001_5",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710001,
+                    5
+                }
+            },
+            0,
+            50
+        }
+    },
+    [26710005] = {
+        [1] = {
+            26710005,
+            1,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710005_1",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710005,
+                    1
+                }
+            },
+            50,
+            50
+        },
+        [2] = {
+            26710005,
+            2,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710005_2",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710005,
+                    2
+                }
+            },
+            50,
+            100
+        },
+        [3] = {
+            26710005,
+            3,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710005_3",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710005,
+                    3
+                }
+            },
+            50,
+            150
+        },
+        [4] = {
+            26710005,
+            4,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710005_4",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710005,
+                    4
+                }
+            },
+            50,
+            200
+        },
+        [5] = {
+            26710005,
+            5,
+            "ArmorSpecialEntryGrow_SpecialEntryName_26710005_5",
+            "ArmorSpecialEntryGrow_SpecialEntryDes_26710001_1",
+            {
+                {
+                    26710005,
+                    5
+                }
+            },
+            0,
+            250
+        }
+    }
+}
+return require('Config/Data/Class_ArmorSpecialEntryGrow')(data)
+"

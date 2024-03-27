@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_CampRelation"
+	string m_Script = "---@class Class_CampRelation table
+---@field CampA Enum_CampType ID
+---@field CampB Enum_CampType 名称
+---@field CanAttack bool 可否攻击
+local util = require('Config/Data/Util')
+local title = {
+    CampA     = 1,
+    CampB     = 2,
+    CanAttack = 3,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

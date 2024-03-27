@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Class_HomeSCPReport"
+	string m_Script = "---@class Class_HomeSCPReport table
+---@field SCPID number 异常ID
+---@field ReportID number 报告ID
+---@field ReportName lang 报告名称
+---@field ReportText lang 报告内容
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    SCPID      = 1,
+    ReportID   = 2,
+    ReportName = 3,
+    ReportText = 4,
+}
+local set = {
+    ReportName = lang_get,
+    ReportText = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

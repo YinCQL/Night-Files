@@ -1,0 +1,36 @@
+TextAsset Base
+	string m_Name = "Class_Scene"
+	string m_Script = "---@class Class_Scene table
+---@field ID string 场景名
+---@field Type number 类型\n0=主场景\n1=关卡场景
+---@field Name string 场景名
+---@field NavMesh string NavMesh
+---@field NavRes string 导航网格
+---@field BGM string 场景背景音乐
+---@field Success_Position Struct_Float3 胜利动作播放坐标
+---@field Success_Rotation number 胜利动作角色朝向\ny轴
+---@field Res_Dynamic string 额外物件预制件\n（没有则为空）
+---@field Desc string 场景描述
+---@field ResName string 3D资源文件
+local util = require('Config/Data/Util')
+local Float3_get = require('Config/Data/Struct_Float3')
+local title = {
+    ID               = 1,
+    Type             = 2,
+    Name             = 3,
+    NavMesh          = 4,
+    NavRes           = 5,
+    BGM              = 6,
+    Success_Position = 7,
+    Success_Rotation = 8,
+    Res_Dynamic      = 9,
+    Desc             = 10,
+    ResName          = 11,
+}
+local set = {
+    Success_Position = Float3_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

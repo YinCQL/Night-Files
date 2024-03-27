@@ -1,0 +1,14 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message C2L_MallBuy {
+  int32 id = 1;
+  int32 times = 2;
+  int32 mall_id = 3;
+  int32 goods_id = 4;
+  int32 money_id = 5;
+}

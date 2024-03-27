@@ -1,0 +1,27 @@
+TextAsset Base
+	string m_Name = "Class_GuideBook"
+	string m_Script = "---@class Class_GuideBook table
+---@field ID number ID
+---@field SubID number 序号
+---@field GuideName lang 教程标题
+---@field GuideDes lang 教程描述
+---@field GuidePicture string 教程图片
+---@field GuidePage number 教程页签
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID           = 1,
+    SubID        = 2,
+    GuideName    = 3,
+    GuideDes     = 4,
+    GuidePicture = 5,
+    GuidePage    = 6,
+}
+local set = {
+    GuideName = lang_get,
+    GuideDes  = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

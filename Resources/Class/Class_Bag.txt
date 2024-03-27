@@ -1,0 +1,32 @@
+TextAsset Base
+	string m_Name = "Class_Bag"
+	string m_Script = "---@class Class_Bag table
+---@field BagPageID number 背包页签ID
+---@field BagPageName lang 背包页签名称
+---@field BagPageName_EN lang 背包页签名称（英文）
+---@field ItemSubType table<number, number> 物品子类型
+---@field CanFilter number 是否有筛选功能
+---@field CanSort number 是否有排序功能
+---@field BagMaxID string 上限ID（对应Constant表）
+---@field BagMaxDes lang 背包上限描述
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    BagPageID      = 1,
+    BagPageName    = 2,
+    BagPageName_EN = 3,
+    ItemSubType    = 4,
+    CanFilter      = 5,
+    CanSort        = 6,
+    BagMaxID       = 7,
+    BagMaxDes      = 8,
+}
+local set = {
+    BagPageName    = lang_get,
+    BagPageName_EN = lang_get,
+    BagMaxDes      = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

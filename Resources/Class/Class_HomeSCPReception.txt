@@ -1,0 +1,58 @@
+TextAsset Base
+	string m_Name = "Class_HomeSCPReception"
+	string m_Script = "---@class Class_HomeSCPReception table
+---@field SCPID number 异常ID
+---@field InvestigationTime number 调查所需时间
+---@field WorkTimes number 单次操作次数
+---@field AppeaseSuccessRate Struct_Int3 安抚成功率
+---@field AppeaseResult table<number, Struct_Int4> 安抚结果
+---@field ObserveSuccessRate Struct_Int3 观察
+---@field ObserveResult table<number, Struct_Int4> 观察结果
+---@field SuppressSuccessRate Struct_Int3 压制
+---@field SuppressResult table<number, Struct_Int4> 压制结果
+---@field CommunicateSuccessRate Struct_Int3 沟通
+---@field CommunicateResult table<number, Struct_Int4> 沟通结果
+---@field InvestigationProgress table<number, number> 调查推进进度
+---@field InvestigationPoint table<number, number> 调查档案点奖励
+---@field AwardD table<number, number> D级调查奖励
+---@field AwardC table<number, number> C级调查奖励
+---@field AwardB table<number, number> B级调查奖励
+---@field AwardA table<number, number> A级调查奖励
+---@field AwardS table<number, number> S级调查奖励
+local util = require('Config/Data/Util')
+local Int3_get = require('Config/Data/Struct_Int3')
+local Int4_get = require('Config/Data/Struct_Int4')
+local title = {
+    SCPID                  = 1,
+    InvestigationTime      = 2,
+    WorkTimes              = 3,
+    AppeaseSuccessRate     = 4,
+    AppeaseResult          = 5,
+    ObserveSuccessRate     = 6,
+    ObserveResult          = 7,
+    SuppressSuccessRate    = 8,
+    SuppressResult         = 9,
+    CommunicateSuccessRate = 10,
+    CommunicateResult      = 11,
+    InvestigationProgress  = 12,
+    InvestigationPoint     = 13,
+    AwardD                 = 14,
+    AwardC                 = 15,
+    AwardB                 = 16,
+    AwardA                 = 17,
+    AwardS                 = 18,
+}
+local set = {
+    AppeaseSuccessRate     = Int3_get,
+    AppeaseResult          = util.array_set(Int4_get),
+    ObserveSuccessRate     = Int3_get,
+    ObserveResult          = util.array_set(Int4_get),
+    SuppressSuccessRate    = Int3_get,
+    SuppressResult         = util.array_set(Int4_get),
+    CommunicateSuccessRate = Int3_get,
+    CommunicateResult      = util.array_set(Int4_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

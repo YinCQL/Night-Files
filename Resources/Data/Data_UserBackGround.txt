@@ -1,0 +1,56 @@
+TextAsset Base
+	string m_Name = "Data_UserBackGround"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [3001] = {
+        3001,
+        "UserBackGround_ResourcesName_3001",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_001",
+        "User/ui_gifsmall_user_001"
+    },
+    [3002] = {
+        3002,
+        "UserBackGround_ResourcesName_3002",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_002",
+        "User/ui_gifsmall_user_002"
+    },
+    [3003] = {
+        3003,
+        "UserBackGround_ResourcesName_3003",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_003",
+        "User/ui_gifsmall_user_003"
+    },
+    [3004] = {
+        3004,
+        "UserBackGround_ResourcesName_3004",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_004",
+        "User/ui_gifsmall_user_004"
+    },
+    [3005] = {
+        3005,
+        "UserBackGround_ResourcesName_3005",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_005",
+        "User/ui_gifsmall_user_005"
+    },
+    [3006] = {
+        3006,
+        "UserBackGround_ResourcesName_3006",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_006",
+        "User/ui_gifsmall_user_006"
+    },
+    [3007] = {
+        3007,
+        "UserBackGround_ResourcesName_3007",
+        "UserBackGround_ResourcesDes_3001",
+        "UserBg/ui_gif_user_007",
+        "User/ui_gifsmall_user_007"
+    }
+}
+return require('Config/Data/Class_UserBackGround')(data)
+"

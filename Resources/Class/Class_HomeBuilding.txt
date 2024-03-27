@@ -1,0 +1,61 @@
+TextAsset Base
+	string m_Name = "Class_HomeBuilding"
+	string m_Script = "---@class Class_HomeBuilding table
+---@field ID number 建筑ID
+---@field BuildLevel number 建筑等级
+---@field BuildName lang 建筑名称
+---@field BuildDes lang 建筑描述
+---@field BuildType number 建筑类型
+---@field BuildBase number 建造地基类型
+---@field Unlock number 解锁/升级条件（到当前等级）
+---@field UpGradeNeed table<number, Struct_IDNum> 建造/升级需要道具（到当前等级）
+---@field CanUpGrade table<number, Struct_Int2> 可升级选项
+---@field TechPoints number 科技点数（总）
+---@field TechTreeID number 科技树ID
+---@field Electricity number 占用电力
+---@field BasicFunction table<number, Struct_Int2> 基础功能
+---@field OperationButton table<number, number> 操作按钮
+---@field ManagerNum number 管理员数
+---@field TeamNum number 进驻小队数
+---@field MainAttribute table<number, number> 关联属性
+---@field MainAttributeAdd table<number, Struct_Int2> 关联属性加成
+---@field InvestigationRefresh number 调查次数恢复时间
+---@field Open number 是否开放
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local Int2_get  = require('Config/Data/Struct_Int2')
+local title = {
+    ID                   = 1,
+    BuildLevel           = 2,
+    BuildName            = 3,
+    BuildDes             = 4,
+    BuildType            = 5,
+    BuildBase            = 6,
+    Unlock               = 7,
+    UpGradeNeed          = 8,
+    CanUpGrade           = 9,
+    TechPoints           = 10,
+    TechTreeID           = 11,
+    Electricity          = 12,
+    BasicFunction        = 13,
+    OperationButton      = 14,
+    ManagerNum           = 15,
+    TeamNum              = 16,
+    MainAttribute        = 17,
+    MainAttributeAdd     = 18,
+    InvestigationRefresh = 19,
+    Open                 = 20,
+}
+local set = {
+    BuildName        = lang_get,
+    BuildDes         = lang_get,
+    UpGradeNeed      = util.array_set(IDNum_get),
+    CanUpGrade       = util.array_set(Int2_get),
+    BasicFunction    = util.array_set(Int2_get),
+    MainAttributeAdd = util.array_set(Int2_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

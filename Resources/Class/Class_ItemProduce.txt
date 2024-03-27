@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_ItemProduce"
+	string m_Script = "---@class Class_ItemProduce table
+---@field ID number 物品ID
+---@field ChapterDrop table<number, number> 关卡掉落
+---@field ShopID table<number, number> 商店购买
+---@field Function table<number, Enum_Function> 功能产出
+---@field ActivityID table<number, number> 活动ID
+---@field ExtraDes lang 额外描述
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID          = 1,
+    ChapterDrop = 2,
+    ShopID      = 3,
+    Function    = 4,
+    ActivityID  = 5,
+    ExtraDes    = 6,
+}
+local set = {
+    ExtraDes = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

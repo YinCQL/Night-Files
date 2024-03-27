@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_DropGroup"
+	string m_Script = "---@class Class_DropGroup table
+---@field DropGroupId number 主包id
+---@field OpenTimes number 随机次数
+---@field IsRepeat number 是否重复
+---@field ChanceType number 随机类型
+---@field SubPackId number 子包id
+---@field BoxDes lang 宝箱说明
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    DropGroupId = 1,
+    OpenTimes   = 2,
+    IsRepeat    = 3,
+    ChanceType  = 4,
+    SubPackId   = 5,
+    BoxDes      = 6,
+}
+local set = {
+    BoxDes = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

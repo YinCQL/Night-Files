@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_EpisodeSummarize"
+	string m_Script = "---@class Class_EpisodeSummarize table
+---@field Id number 概括文本ID
+---@field EpisodeId string 章节计数名
+---@field EpisodeName lang 段落概括名
+---@field EpisodeType lang 章节类型
+---@field EpisodeText lang 概括文本
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    Id          = 1,
+    EpisodeId   = 2,
+    EpisodeName = 3,
+    EpisodeType = 4,
+    EpisodeText = 5,
+}
+local set = {
+    EpisodeName = lang_get,
+    EpisodeType = lang_get,
+    EpisodeText = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

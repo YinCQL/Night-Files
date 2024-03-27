@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_RedDotControl"
+	string m_Script = "---@class Class_RedDotControl table
+---@field ID number ID
+---@field DotButton table<number, number> 红点显示（穿透）
+---@field DotControl table<number, number> 红点控制
+local util = require('Config/Data/Util')
+local title = {
+    ID         = 1,
+    DotButton  = 2,
+    DotControl = 3,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

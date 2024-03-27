@@ -1,0 +1,36 @@
+TextAsset Base
+	string m_Name = "Class_HeroBreach"
+	string m_Script = "---@class Class_HeroBreach table
+---@field HeroID number 角色id
+---@field BreachLevel number 突破阶段
+---@field IntensifyLevelLimit number 突破所需装角色等级限制
+---@field BreachMaterial table<number, Struct_IDNum> 突破材料
+---@field NeedMoney Struct_IDNum 下一级突破消耗的金币和数量
+---@field BreachAdd table<number, Struct_BattleAttrValue> 突破增加
+---@field BreachSkill table<number, Struct_IDNum> 突破改变技能
+---@field BreachAvatar number 突破改变外观
+---@field BreachVoiceID table<number, number> 突破到该阶段语音
+local util = require('Config/Data/Util')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    HeroID              = 1,
+    BreachLevel         = 2,
+    IntensifyLevelLimit = 3,
+    BreachMaterial      = 4,
+    NeedMoney           = 5,
+    BreachAdd           = 6,
+    BreachSkill         = 7,
+    BreachAvatar        = 8,
+    BreachVoiceID       = 9,
+}
+local set = {
+    BreachMaterial = util.array_set(IDNum_get),
+    NeedMoney      = IDNum_get,
+    BreachAdd      = util.array_set(BattleAttrValue_get),
+    BreachSkill    = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

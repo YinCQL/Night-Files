@@ -1,0 +1,47 @@
+TextAsset Base
+	string m_Name = "Class_ArmorEntry"
+	string m_Script = "---@class Class_ArmorEntry table
+---@field EntryID number 词条ID
+---@field EntryName lang 词条名称
+---@field EntryDes lang 词条描述
+---@field EntryPosition table<number, number> 词条部位
+---@field EntryType number 词条类型
+---@field EntryGroup number 词条组
+---@field EntryQuality number 词条品质
+---@field EntryBaseAttribute table<number, Struct_BattleAttrValue> 词条初始属性
+---@field EntryMaxAttribute number 词条最高属性
+---@field SpecialEntry number 特殊词条加值ID
+---@field BaseSpecialEntry number 特殊词条初始等级
+---@field MaxSpecialEntry number 特殊词条最终等级
+---@field InheritProb number 继承权重
+---@field ExchangeCost table<number, Struct_IDNum> 词条替换消耗
+local util = require('Config/Data/Util')
+local lang_get            = require('Config/Data/Languages/'..languageData.currentLanguage)
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local title = {
+    EntryID            = 1,
+    EntryName          = 2,
+    EntryDes           = 3,
+    EntryPosition      = 4,
+    EntryType          = 5,
+    EntryGroup         = 6,
+    EntryQuality       = 7,
+    EntryBaseAttribute = 8,
+    EntryMaxAttribute  = 9,
+    SpecialEntry       = 10,
+    BaseSpecialEntry   = 11,
+    MaxSpecialEntry    = 12,
+    InheritProb        = 13,
+    ExchangeCost       = 14,
+}
+local set = {
+    EntryName          = lang_get,
+    EntryDes           = lang_get,
+    EntryBaseAttribute = util.array_set(BattleAttrValue_get),
+    ExchangeCost       = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

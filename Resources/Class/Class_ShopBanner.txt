@@ -1,0 +1,41 @@
+TextAsset Base
+	string m_Name = "Class_ShopBanner"
+	string m_Script = "---@class Class_ShopBanner table
+---@field BannerID number 广告ID
+---@field BannerName lang 广告标题
+---@field BannerNameEng lang 广告标题（英文）
+---@field BannerIMG_CN string 广告图（中文）
+---@field BannerIMG_JP string 广告图（日文）
+---@field BannerIMG_EN string 广告图（英语）
+---@field ShopID number 对应商店
+---@field ShopGoodsID number 对应商品
+---@field TimeLimit Struct_Int2 限时时间
+---@field Tag table<number, number> 标签
+---@field Sort number 排序权重
+---@field Open number 开放
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local Int2_get = require('Config/Data/Struct_Int2')
+local title = {
+    BannerID      = 1,
+    BannerName    = 2,
+    BannerNameEng = 3,
+    BannerIMG_CN  = 4,
+    BannerIMG_JP  = 5,
+    BannerIMG_EN  = 6,
+    ShopID        = 7,
+    ShopGoodsID   = 8,
+    TimeLimit     = 9,
+    Tag           = 10,
+    Sort          = 11,
+    Open          = 12,
+}
+local set = {
+    BannerName    = lang_get,
+    BannerNameEng = lang_get,
+    TimeLimit     = Int2_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

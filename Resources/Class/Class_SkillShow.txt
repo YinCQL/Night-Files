@@ -1,0 +1,40 @@
+TextAsset Base
+	string m_Name = "Class_SkillShow"
+	string m_Script = "---@class Class_SkillShow table
+---@field SkillID number 技能ID
+---@field SkillLevel number 技能等级
+---@field SkillName lang 技能名
+---@field SkillName_EN lang 技能英文名
+---@field SkillIcon string 技能Icon
+---@field SkillType number 技能类型
+---@field UnlockType number 解锁类型
+---@field SkillIntro lang 技能详细介绍
+---@field ExtraSkillDes table<number, Struct_IDDes> 额外提升描述
+---@field SkillDetail table<number, Struct_SkillNameDes> 技能详情
+local util = require('Config/Data/Util')
+local lang_get         = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDDes_get        = require('Config/Data/Struct_IDDes')
+local SkillNameDes_get = require('Config/Data/Struct_SkillNameDes')
+local title = {
+    SkillID       = 1,
+    SkillLevel    = 2,
+    SkillName     = 3,
+    SkillName_EN  = 4,
+    SkillIcon     = 5,
+    SkillType     = 6,
+    UnlockType    = 7,
+    SkillIntro    = 8,
+    ExtraSkillDes = 9,
+    SkillDetail   = 10,
+}
+local set = {
+    SkillName     = lang_get,
+    SkillName_EN  = lang_get,
+    SkillIntro    = lang_get,
+    ExtraSkillDes = util.array_set(IDDes_get),
+    SkillDetail   = util.array_set(SkillNameDes_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

@@ -1,0 +1,44 @@
+TextAsset Base
+	string m_Name = "Data_HomeSCPBubble"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [20001] = {
+        [1] = {
+            20001,
+            1,
+            "HomeSCPBubble_BubbleText_20001_1"
+        },
+        [2] = {
+            20001,
+            2,
+            "HomeSCPBubble_BubbleText_20001_2"
+        },
+        [3] = {
+            20001,
+            3,
+            "HomeSCPBubble_BubbleText_20001_3"
+        },
+        [4] = {
+            20001,
+            4,
+            "HomeSCPBubble_BubbleText_20001_4"
+        },
+        [5] = {
+            20001,
+            5,
+            "HomeSCPBubble_BubbleText_20001_5"
+        },
+        [6] = {
+            20001,
+            6,
+            "HomeSCPBubble_BubbleText_20001_6"
+        },
+        [7] = {
+            20001,
+            7,
+            "HomeSCPBubble_BubbleText_20001_7"
+        }
+    }
+}
+return require('Config/Data/Class_HomeSCPBubble')(data)
+"

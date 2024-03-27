@@ -1,0 +1,24 @@
+TextAsset Base
+	string m_Name = "Class_HomeBuildingBase"
+	string m_Script = "---@class Class_HomeBuildingBase table
+---@field ID number 地基ID
+---@field BaseType number 地基类型
+---@field BasePosition table<number, Struct_Int3> 地基位置
+---@field Condition number 解锁条件
+---@field Open number 是否开放
+local util = require('Config/Data/Util')
+local Int3_get = require('Config/Data/Struct_Int3')
+local title = {
+    ID           = 1,
+    BaseType     = 2,
+    BasePosition = 3,
+    Condition    = 4,
+    Open         = 5,
+}
+local set = {
+    BasePosition = util.array_set(Int3_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

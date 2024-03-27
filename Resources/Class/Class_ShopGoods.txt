@@ -1,0 +1,66 @@
+TextAsset Base
+	string m_Name = "Class_ShopGoods"
+	string m_Script = "---@class Class_ShopGoods table
+---@field GoodsID number 商品ID
+---@field Name lang 商品名称
+---@field GoodsDes lang 商品描述
+---@field ItemsID table<number, Struct_IDNum> 商品道具内容
+---@field GoodsViewType number 商品显示类型
+---@field GoodsCostType number 商品消费类型
+---@field GoodsType number 商品类型
+---@field NumSelect number 数量选择关闭
+---@field TimeLimit Struct_Int2 限时时间
+---@field GoodsQuality number 商品品质
+---@field NextGoodsID table<number, number> 下级商品ID
+---@field Price table<number, Struct_IDNum> 商品价格
+---@field FixedDiscount number 固定折扣信息（万分比）
+---@field Tag table<number, number> 商品标签
+---@field Limit number 限购次数
+---@field Unlock table<number, number> 商品解锁条件
+---@field GoodsRefreshTime number 商品自动刷新时间（秒）
+---@field GoodsIMG_S string 商品图片（小-Icon）
+---@field GoodsBanner_S string 商品图片（小-广告）
+---@field GoodsBanner_B string 商品图片（大-广告）
+---@field GoodsDetailIMG string 商品详图
+---@field Sort number 排序权重
+---@field Open number 是否开放
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local Int2_get  = require('Config/Data/Struct_Int2')
+local title = {
+    GoodsID          = 1,
+    Name             = 2,
+    GoodsDes         = 3,
+    ItemsID          = 4,
+    GoodsViewType    = 5,
+    GoodsCostType    = 6,
+    GoodsType        = 7,
+    NumSelect        = 8,
+    TimeLimit        = 9,
+    GoodsQuality     = 10,
+    NextGoodsID      = 11,
+    Price            = 12,
+    FixedDiscount    = 13,
+    Tag              = 14,
+    Limit            = 15,
+    Unlock           = 16,
+    GoodsRefreshTime = 17,
+    GoodsIMG_S       = 18,
+    GoodsBanner_S    = 19,
+    GoodsBanner_B    = 20,
+    GoodsDetailIMG   = 21,
+    Sort             = 22,
+    Open             = 23,
+}
+local set = {
+    Name      = lang_get,
+    GoodsDes  = lang_get,
+    ItemsID   = util.array_set(IDNum_get),
+    TimeLimit = Int2_get,
+    Price     = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

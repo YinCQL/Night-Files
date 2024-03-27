@@ -1,0 +1,57 @@
+TextAsset Base
+	string m_Name = "Data_HeroBattleAssist"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [10001] = {
+        10001,
+        1,
+        11001002,
+        "Skill/ui_icon_skill_11001002",
+        "HeroBattleAssist_AssistSkillName_10001",
+        "HeroBattleAssist_AssistSkillDes_10001",
+        10000,
+        10
+    },
+    [10002] = {
+        10002,
+        1,
+        11002004,
+        "Skill/ui_icon_skill_11002004",
+        "HeroBattleAssist_AssistSkillName_10002",
+        "HeroBattleAssist_AssistSkillDes_10002",
+        10000,
+        10
+    },
+    [10009] = {
+        10009,
+        1,
+        11009004,
+        "Skill/ui_icon_skill_11009004",
+        "HeroBattleAssist_AssistSkillName_10009",
+        "HeroBattleAssist_AssistSkillDes_10009",
+        10000,
+        10
+    },
+    [10010] = {
+        10010,
+        1,
+        11010002,
+        "Skill/ui_icon_skill_11010002",
+        "HeroBattleAssist_AssistSkillName_10010",
+        "HeroBattleAssist_AssistSkillDes_10010",
+        10000,
+        10
+    },
+    [10015] = {
+        10015,
+        1,
+        11015003,
+        "Skill/ui_icon_skill_11015003",
+        "HeroBattleAssist_AssistSkillName_10015",
+        "HeroBattleAssist_AssistSkillDes_10015",
+        10000,
+        10
+    }
+}
+return require('Config/Data/Class_HeroBattleAssist')(data)
+"

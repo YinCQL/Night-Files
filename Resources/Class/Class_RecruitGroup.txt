@@ -1,0 +1,80 @@
+TextAsset Base
+	string m_Name = "Class_RecruitGroup"
+	string m_Script = "---@class Class_RecruitGroup table
+---@field PoolID number 卡池ID
+---@field RecruitType number 招募类型
+---@field ConsumeProps Struct_IDNum 消耗道具
+---@field ShopGoods Struct_Int3 对应商品
+---@field RecruitName lang 招募名
+---@field OpeningHours table<number, number> 开放时间
+---@field Duration number 持续时间（秒）
+---@field StarBase4 Struct_IDNum 4星以上保底次数
+---@field StarBase5 Struct_IDNum 5星以上保底次数
+---@field ProbAdjust table<number, number> 概率调整
+---@field LimitedBase Struct_IDNum 限定五星保底比例
+---@field ProbStar3 number 3星总概率
+---@field ProbStar4 number 4星总概率
+---@field ProbStar5 number 5星总概率
+---@field NomalUP table<number, number> 普通UP
+---@field ProbNomalUP number 普通UP概率占比
+---@field SpecificUP table<number, number> 限定UP
+---@field ProbSpecificUP number 限定UP概率占比
+---@field FirstOnceResult Struct_Int2 首次单抽固定结果
+---@field FirstTenResult table<number, Struct_Int2> 首次十连固定结果
+---@field RecruitPicture1 string 卡池图1
+---@field RecruitPicture2 string 卡池图2
+---@field RecruitPicture3 string 卡池图3
+---@field RecruitPicture4 string 卡池图4
+---@field RecruitDetail lang 招募详情
+---@field RecruiRule lang 招募规则
+---@field Open number 是否开启
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local Int3_get  = require('Config/Data/Struct_Int3')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local Int2_get  = require('Config/Data/Struct_Int2')
+local title = {
+    PoolID          = 1,
+    RecruitType     = 2,
+    ConsumeProps    = 3,
+    ShopGoods       = 4,
+    RecruitName     = 5,
+    OpeningHours    = 6,
+    Duration        = 7,
+    StarBase4       = 8,
+    StarBase5       = 9,
+    ProbAdjust      = 10,
+    LimitedBase     = 11,
+    ProbStar3       = 12,
+    ProbStar4       = 13,
+    ProbStar5       = 14,
+    NomalUP         = 15,
+    ProbNomalUP     = 16,
+    SpecificUP      = 17,
+    ProbSpecificUP  = 18,
+    FirstOnceResult = 19,
+    FirstTenResult  = 20,
+    RecruitPicture1 = 21,
+    RecruitPicture2 = 22,
+    RecruitPicture3 = 23,
+    RecruitPicture4 = 24,
+    RecruitDetail   = 25,
+    RecruiRule      = 26,
+    Open            = 27,
+}
+local set = {
+    ConsumeProps    = IDNum_get,
+    ShopGoods       = Int3_get,
+    RecruitName     = lang_get,
+    StarBase4       = IDNum_get,
+    StarBase5       = IDNum_get,
+    LimitedBase     = IDNum_get,
+    FirstOnceResult = Int2_get,
+    FirstTenResult  = util.array_set(Int2_get),
+    RecruitDetail   = lang_get,
+    RecruiRule      = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

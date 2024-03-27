@@ -1,0 +1,147 @@
+TextAsset Base
+	string m_Name = "Data_WindowList"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        "Main",
+        "MainWindow"
+    },
+    [2] = {
+        2,
+        "Bag",
+        "BagWindow"
+    },
+    [3] = {
+        3,
+        "HeroList",
+        "HeroListWindow"
+    },
+    [4] = {
+        4,
+        "Hero",
+        "HeroWindow"
+    },
+    [5] = {
+        5,
+        "Weapon",
+        "WeaponWindow"
+    },
+    [6] = {
+        6,
+        "Equip",
+        "EquipWindow"
+    },
+    [7] = {
+        7,
+        "Recruit",
+        "RecruitWindow"
+    },
+    [8] = {
+        8,
+        "Shop",
+        "ShopWindow"
+    },
+    [9] = {
+        9,
+        "Mail",
+        "MailWindow"
+    },
+    [11] = {
+        11,
+        "Mail",
+        "DetailWindow"
+    },
+    [12] = {
+        12,
+        "Formation",
+        "FormationWindow"
+    },
+    [13] = {
+        13,
+        "Formation",
+        "AssistantSelectView"
+    },
+    [14] = {
+        14,
+        "Formation",
+        "FormationChangeCaptainView"
+    },
+    [20] = {
+        20,
+        "Chapter",
+        "ChapterWindow"
+    },
+    [21] = {
+        21,
+        "Chapter",
+        "ChapterLevelWindow"
+    },
+    [22] = {
+        22,
+        "Battle",
+        "BattleSuccessWindow"
+    },
+    [23] = {
+        23,
+        "Battle",
+        "BattleFailWindow"
+    },
+    [24] = {
+        24,
+        "Battle",
+        "BattleWindow"
+    },
+    [41] = {
+        41,
+        "Hero",
+        "HeroUpgradeView"
+    },
+    [42] = {
+        42,
+        "Hero",
+        "FavorDetailView"
+    },
+    [51] = {
+        51,
+        "Common",
+        "WeaponUpgradePopView"
+    },
+    [71] = {
+        71,
+        "Recruit",
+        "RecruitInfoView"
+    },
+    [72] = {
+        72,
+        "Recruit",
+        "RecruitResultView"
+    },
+    [100] = {
+        100,
+        "TDayTask",
+        "TDayTaskWindow"
+    },
+    [500] = {
+        500,
+        "Home",
+        "HomeWindow"
+    },
+    [501] = {
+        501,
+        "Home",
+        "HomeFactoryWindow"
+    },
+    [502] = {
+        502,
+        "Home",
+        "HomeErrorWindow"
+    },
+    [999] = {
+        999,
+        "Guide",
+        "ModifyNameWindow"
+    }
+}
+return require('Config/Data/Class_WindowList')(data)
+"

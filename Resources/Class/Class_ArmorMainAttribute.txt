@@ -1,0 +1,39 @@
+TextAsset Base
+	string m_Name = "Class_ArmorMainAttribute"
+	string m_Script = "---@class Class_ArmorMainAttribute table
+---@field EntryID number 词条ID
+---@field Level number 词条等级
+---@field EntryName lang 词条名称
+---@field EntryDes lang 词条描述
+---@field EntryPosition table<number, number> 词条部位
+---@field EntryType number 词条类型
+---@field EntryQuality number 词条品质
+---@field EntryGroup number 词条组
+---@field LevelAtt table<number, Struct_BattleAttrValue> 词条属性
+---@field SpecialEntryLevel table<number, Struct_IDNum> 特殊词条等级（加值ID）
+local util = require('Config/Data/Util')
+local lang_get            = require('Config/Data/Languages/'..languageData.currentLanguage)
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local title = {
+    EntryID           = 1,
+    Level             = 2,
+    EntryName         = 3,
+    EntryDes          = 4,
+    EntryPosition     = 5,
+    EntryType         = 6,
+    EntryQuality      = 7,
+    EntryGroup        = 8,
+    LevelAtt          = 9,
+    SpecialEntryLevel = 10,
+}
+local set = {
+    EntryName         = lang_get,
+    EntryDes          = lang_get,
+    LevelAtt          = util.array_set(BattleAttrValue_get),
+    SpecialEntryLevel = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

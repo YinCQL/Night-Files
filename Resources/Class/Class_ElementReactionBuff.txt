@@ -1,0 +1,16 @@
+TextAsset Base
+	string m_Name = "Class_ElementReactionBuff"
+	string m_Script = "---@class Class_ElementReactionBuff table
+---@field ElementType Enum_ElementType ID
+---@field BuffID number 元素对应BuffID
+local util = require('Config/Data/Util')
+local title = {
+    ElementType = 1,
+    BuffID      = 2,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

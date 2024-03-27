@@ -1,0 +1,23 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message C2L_TeamChange {
+  int32 id = 1;
+  optional int32 strike_id = 2;
+  optional string name = 3;
+  optional int32 leader = 4;
+  optional int32 hero_id0 = 5;
+  optional int32 hero_id1 = 6;
+  optional int32 hero_id2 = 7;
+  optional int64 machine_id0 = 8;
+  optional int64 machine_id1 = 9;
+  optional int64 machine_id2 = 10;
+  optional bool init_team = 11;
+  repeated int32 other_leader = 12;
+  repeated int32 other_hero_id = 13;
+  repeated int64 other_machine_id = 14;
+}

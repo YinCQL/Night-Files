@@ -1,0 +1,26 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "User.proto";
+import "Item.proto";
+import "Hero.proto";
+import "Equip.proto";
+import "Money.proto";
+
+message L2C_Flush {
+  uint32 ret = 1;
+  bool user = 2;
+  bool item = 3;
+  bool hero = 4;
+  bool equip = 5;
+  bool money = 6;
+  User userdata = 102;
+  repeated Item items = 103;
+  repeated Hero heros = 104;
+  repeated Equip equips = 105;
+  repeated Money moneys = 106;
+}

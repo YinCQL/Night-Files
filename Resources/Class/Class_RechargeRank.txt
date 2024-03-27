@@ -1,0 +1,20 @@
+TextAsset Base
+	string m_Name = "Class_RechargeRank"
+	string m_Script = "---@class Class_RechargeRank table
+---@field RechargeRank number 充值档位
+---@field ChinaIOS number 中国IOS（￥）
+---@field JapanIOS number 日本IOS（円）
+---@field AmericaIOS number 美国IOS（$)
+local util = require('Config/Data/Util')
+local title = {
+    RechargeRank = 1,
+    ChinaIOS     = 2,
+    JapanIOS     = 3,
+    AmericaIOS   = 4,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

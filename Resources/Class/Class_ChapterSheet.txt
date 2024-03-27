@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_ChapterSheet"
+	string m_Script = "---@class Class_ChapterSheet table
+---@field SheetID number 玩法ID
+---@field Type number 玩法类型
+---@field SheetNamCN lang 页签中文名称
+---@field SheetNamEN string 页签英文名称
+---@field Unlock number 解锁条件
+---@field UIPrefab string prefab文件
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    SheetID    = 1,
+    Type       = 2,
+    SheetNamCN = 3,
+    SheetNamEN = 4,
+    Unlock     = 5,
+    UIPrefab   = 6,
+}
+local set = {
+    SheetNamCN = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

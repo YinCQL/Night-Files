@@ -1,0 +1,417 @@
+TextAsset Base
+	string m_Name = "Data_HeroStory"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [10001] = {
+        [1] = {
+            10001,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        },
+        [2] = {
+            10001,
+            2,
+            {
+                {
+                    1,
+                    50
+                }
+            },
+            "HeroStory_StoryName_10001_2",
+            "HeroStory_StoryDesc_10001_2"
+        },
+        [3] = {
+            10001,
+            3,
+            {
+                {
+                    2,
+                    3
+                }
+            },
+            "HeroStory_StoryName_10001_3",
+            "HeroStory_StoryDesc_10001_3"
+        },
+        [4] = {
+            10001,
+            4,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10001_4",
+            "HeroStory_StoryDesc_10001_4"
+        },
+        [5] = {
+            10001,
+            5,
+            {
+            },
+            "HeroStory_StoryName_10001_5",
+            "HeroStory_StoryDesc_10001_5"
+        }
+    },
+    [10002] = {
+        [1] = {
+            10002,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10002_1",
+            "HeroStory_StoryDesc_10002_1"
+        },
+        [2] = {
+            10002,
+            2,
+            {
+                {
+                    1,
+                    50
+                }
+            },
+            "HeroStory_StoryName_10002_2",
+            "HeroStory_StoryDesc_10002_2"
+        },
+        [3] = {
+            10002,
+            3,
+            {
+                {
+                    2,
+                    3
+                }
+            },
+            "HeroStory_StoryName_10002_3",
+            "HeroStory_StoryDesc_10002_3"
+        },
+        [4] = {
+            10002,
+            4,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10002_4"
+        },
+        [5] = {
+            10002,
+            5,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10002_5",
+            "HeroStory_StoryDesc_10002_5"
+        }
+    },
+    [10003] = {
+        [1] = {
+            10003,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10004] = {
+        [1] = {
+            10004,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10005] = {
+        [1] = {
+            10005,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10005_1"
+        },
+        [2] = {
+            10005,
+            2,
+            {
+            },
+            "HeroStory_StoryName_10001_2",
+            "HeroStory_StoryDesc_10005_2"
+        },
+        [3] = {
+            10005,
+            3,
+            {
+            },
+            "HeroStory_StoryName_10001_3",
+            "HeroStory_StoryDesc_10005_3"
+        },
+        [4] = {
+            10005,
+            4,
+            {
+            },
+            "HeroStory_StoryName_10001_4",
+            "HeroStory_StoryDesc_10005_4"
+        },
+        [5] = {
+            10005,
+            5,
+            {
+            },
+            "HeroStory_StoryName_10001_5",
+            "HeroStory_StoryDesc_10005_5"
+        }
+    },
+    [10006] = {
+        [1] = {
+            10006,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10007] = {
+        [1] = {
+            10007,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10008] = {
+        [1] = {
+            10008,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10009] = {
+        [1] = {
+            10009,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10009_1"
+        },
+        [2] = {
+            10009,
+            2,
+            {
+                {
+                    1,
+                    50
+                }
+            },
+            "HeroStory_StoryName_10001_4",
+            "HeroStory_StoryDesc_10009_2"
+        },
+        [3] = {
+            10009,
+            3,
+            {
+                {
+                    2,
+                    3
+                }
+            },
+            "HeroStory_StoryName_10009_3",
+            "HeroStory_StoryDesc_10009_3"
+        },
+        [4] = {
+            10009,
+            4,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10009_4",
+            "HeroStory_StoryDesc_10009_4"
+        },
+        [5] = {
+            10009,
+            5,
+            {
+            },
+            "HeroStory_StoryName_10009_5",
+            "HeroStory_StoryDesc_10009_5"
+        }
+    },
+    [10010] = {
+        [1] = {
+            10010,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10010_1"
+        },
+        [2] = {
+            10010,
+            2,
+            {
+                {
+                    1,
+                    50
+                }
+            },
+            "HeroStory_StoryName_10001_4",
+            "HeroStory_StoryDesc_10010_2"
+        },
+        [3] = {
+            10010,
+            3,
+            {
+                {
+                    2,
+                    3
+                }
+            },
+            "HeroStory_StoryName_10010_3",
+            "HeroStory_StoryDesc_10010_3"
+        },
+        [4] = {
+            10010,
+            4,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10010_4",
+            "HeroStory_StoryDesc_10010_4"
+        },
+        [5] = {
+            10010,
+            5,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10010_5",
+            "HeroStory_StoryDesc_10010_5"
+        }
+    },
+    [10011] = {
+        [1] = {
+            10011,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10012] = {
+        [1] = {
+            10012,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10013] = {
+        [1] = {
+            10013,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10014] = {
+        [1] = {
+            10014,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10001_1"
+        }
+    },
+    [10015] = {
+        [1] = {
+            10015,
+            1,
+            {
+            },
+            "HeroStory_StoryName_10001_1",
+            "HeroStory_StoryDesc_10015_1"
+        },
+        [2] = {
+            10015,
+            2,
+            {
+                {
+                    1,
+                    50
+                }
+            },
+            "HeroStory_StoryName_10015_2",
+            "HeroStory_StoryDesc_10015_2"
+        },
+        [3] = {
+            10015,
+            3,
+            {
+                {
+                    2,
+                    3
+                }
+            },
+            "HeroStory_StoryName_10015_3",
+            "HeroStory_StoryDesc_10015_3"
+        },
+        [4] = {
+            10015,
+            4,
+            {
+                {
+                    3,
+                    4
+                }
+            },
+            "HeroStory_StoryName_10015_4",
+            "HeroStory_StoryDesc_10015_4"
+        },
+        [5] = {
+            10015,
+            5,
+            {
+            },
+            "HeroStory_StoryName_10001_4",
+            "HeroStory_StoryDesc_10015_5"
+        }
+    }
+}
+return require('Config/Data/Class_HeroStory')(data)
+"

@@ -1,0 +1,69 @@
+TextAsset Base
+	string m_Name = "Data_HomeSCPReport"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [20001] = {
+        [1] = {
+            20001,
+            1,
+            "HomeSCPReport_ReportName_20001_1",
+            "HomeSCPReport_ReportText_20001_1"
+        },
+        [2] = {
+            20001,
+            2,
+            "HomeSCPReport_ReportName_20001_2",
+            "HomeSCPReport_ReportText_20001_2"
+        },
+        [3] = {
+            20001,
+            3,
+            "HomeSCPReport_ReportName_20001_3",
+            "HomeSCPReport_ReportText_20001_3"
+        },
+        [4] = {
+            20001,
+            4,
+            "HomeSCPReport_ReportName_20001_4",
+            "HomeSCPReport_ReportText_20001_4"
+        },
+        [5] = {
+            20001,
+            5,
+            "HomeSCPReport_ReportName_20001_5",
+            "HomeSCPReport_ReportText_20001_5"
+        },
+        [6] = {
+            20001,
+            6,
+            "HomeSCPReport_ReportName_20001_6",
+            "HomeSCPReport_ReportText_20001_6"
+        },
+        [7] = {
+            20001,
+            7,
+            "HomeSCPReport_ReportName_20001_7",
+            "HomeSCPReport_ReportText_20001_7"
+        },
+        [8] = {
+            20001,
+            8,
+            "HomeSCPReport_ReportName_20001_8",
+            "HomeSCPReport_ReportText_20001_8"
+        },
+        [9] = {
+            20001,
+            9,
+            "HomeSCPReport_ReportName_20001_9",
+            "HomeSCPReport_ReportText_20001_9"
+        },
+        [10] = {
+            20001,
+            10,
+            "HomeSCPReport_ReportName_20001_10",
+            "HomeSCPReport_ReportText_20001_10"
+        }
+    }
+}
+return require('Config/Data/Class_HomeSCPReport')(data)
+"

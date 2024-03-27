@@ -1,0 +1,92 @@
+TextAsset Base
+	string m_Name = "Class_Guidance"
+	string m_Script = "---@class Class_Guidance table
+---@field ID number ID
+---@field GroupID number 组ID
+---@field GuideType number 引导类型
+---@field GuideStart number 组起始
+---@field DungeonTrigger table<number, number> 关卡触发器
+---@field ConditionID table<number, number> 触发条件
+---@field GuideWindow number 触发界面
+---@field GoToWindow number 强制跳转界面
+---@field CompleteCondition table<number, number> 完成条件
+---@field ForceSkip table<number, number> 强制跳过
+---@field Next number 下一条引导
+---@field Load number 断点恢复
+---@field SaveType number 保存进度
+---@field Skip number 能否跳过
+---@field ButtonID number 对应界面按钮
+---@field ButtonPara table<number, string> 按钮参数
+---@field FinishTrigger table<number, number> 完成触发器
+---@field ItemGet Struct_IDNum 获得道具
+---@field TimeLine number 播放2DTimeLine
+---@field Video string 播放动画
+---@field TimeDelayType number 延迟类型
+---@field TimeDelay string 延迟参数
+---@field Time number 引导时间/s
+---@field GuideBook number 说明书ID
+---@field ShowMask number 是否显示遮罩
+---@field GuideBoxShape number 引导框形状
+---@field GuideBoxSize Struct_Float2 引导框大小
+---@field GuideBoxPosition Struct_Float2 引导框位置
+---@field GuideDes lang 引导描述
+---@field GuiderHead String 指导员头像
+---@field GuiderName lang 指导员名称
+---@field ImgPosition number 头像位置
+---@field TxtPosition number 文本位置
+---@field GuideVX string 特效资源
+---@field GuideVoice String 教程语音
+---@field Sort number 优先级
+local util = require('Config/Data/Util')
+local IDNum_get  = require('Config/Data/Struct_IDNum')
+local Float2_get = require('Config/Data/Struct_Float2')
+local lang_get   = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID                = 1,
+    GroupID           = 2,
+    GuideType         = 3,
+    GuideStart        = 4,
+    DungeonTrigger    = 5,
+    ConditionID       = 6,
+    GuideWindow       = 7,
+    GoToWindow        = 8,
+    CompleteCondition = 9,
+    ForceSkip         = 10,
+    Next              = 11,
+    Load              = 12,
+    SaveType          = 13,
+    Skip              = 14,
+    ButtonID          = 15,
+    ButtonPara        = 16,
+    FinishTrigger     = 17,
+    ItemGet           = 18,
+    TimeLine          = 19,
+    Video             = 20,
+    TimeDelayType     = 21,
+    TimeDelay         = 22,
+    Time              = 23,
+    GuideBook         = 24,
+    ShowMask          = 25,
+    GuideBoxShape     = 26,
+    GuideBoxSize      = 27,
+    GuideBoxPosition  = 28,
+    GuideDes          = 29,
+    GuiderHead        = 30,
+    GuiderName        = 31,
+    ImgPosition       = 32,
+    TxtPosition       = 33,
+    GuideVX           = 34,
+    GuideVoice        = 35,
+    Sort              = 36,
+}
+local set = {
+    ItemGet          = IDNum_get,
+    GuideBoxSize     = Float2_get,
+    GuideBoxPosition = Float2_get,
+    GuideDes         = lang_get,
+    GuiderName       = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

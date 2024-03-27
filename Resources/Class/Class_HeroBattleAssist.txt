@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_HeroBattleAssist"
+	string m_Script = "---@class Class_HeroBattleAssist table
+---@field ID number ID
+---@field AssistHeroType number 助战角色类型
+---@field AssistSkillID number 关联助战技能ID
+---@field AssistSkillIcon string 助战技能Icon
+---@field AssistSkillName lang 助战技能名称
+---@field AssistSkillDes lang 助战技能描述
+---@field DamageFactor number 伤害系数（万分比数值）
+---@field CD number 冷却时间s
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID              = 1,
+    AssistHeroType  = 2,
+    AssistSkillID   = 3,
+    AssistSkillIcon = 4,
+    AssistSkillName = 5,
+    AssistSkillDes  = 6,
+    DamageFactor    = 7,
+    CD              = 8,
+}
+local set = {
+    AssistSkillName = lang_get,
+    AssistSkillDes  = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

@@ -1,0 +1,22 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+import "KV32.proto";
+
+message Equip {
+  int64 uid = 1;
+  int32 id = 2;
+  int32 level = 3;
+  int32 exp = 4;
+  int32 advance_level = 5;
+  int32 refining_level = 6;
+  bool lock = 7;
+  int32 dress_hero_id = 8;
+  int32 main_entry = 9;
+  repeated KV32 inherit_entry_list = 10;
+  repeated KV32 common_entry_list = 11;
+}

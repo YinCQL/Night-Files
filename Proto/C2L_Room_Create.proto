@@ -1,0 +1,10 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message C2L_Room_Create {
+  uint32 scene_id = 1;
+}

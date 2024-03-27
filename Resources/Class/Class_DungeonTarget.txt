@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_DungeonTarget"
+	string m_Script = "---@class Class_DungeonTarget table
+---@field TargetID number 目标ID
+---@field Type number 目标类型
+---@field DescribeInBattle lang 文字描述
+---@field Operate number 关系运算
+---@field Mark string 字符串参数
+---@field Paramid table<number, number> id参数
+---@field Num number 数值参数
+---@field Describe lang 文字描述（纯文字表现）
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    TargetID         = 1,
+    Type             = 2,
+    DescribeInBattle = 3,
+    Operate          = 4,
+    Mark             = 5,
+    Paramid          = 6,
+    Num              = 7,
+    Describe         = 8,
+}
+local set = {
+    DescribeInBattle = lang_get,
+    Describe         = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

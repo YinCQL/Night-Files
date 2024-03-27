@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_AuxMachine"
+	string m_Script = "---@class Class_AuxMachine table
+---@field ID number ID
+---@field DampSpeed number 阻力
+---@field MaxSpeed number 最大速度
+---@field FollowSlot1 string 跟随挂点名称
+---@field FollowSlot2 string 跟随挂点名称
+---@field AttackSlot string 攻击挂点名称
+---@field Type number 机枪塔类型
+local util = require('Config/Data/Util')
+local title = {
+    ID          = 1,
+    DampSpeed   = 2,
+    MaxSpeed    = 3,
+    FollowSlot1 = 4,
+    FollowSlot2 = 5,
+    AttackSlot  = 6,
+    Type        = 7,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

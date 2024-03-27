@@ -1,0 +1,35 @@
+TextAsset Base
+	string m_Name = "Class_ProduceResolve"
+	string m_Script = "---@class Class_ProduceResolve table
+---@field ID number ID
+---@field FormulaID number 配方ID
+---@field Product table<number, Struct_IDNum> 分解产物
+---@field NeedMoney table<number, Struct_IDNum> 消耗货币
+---@field ExtraProduct table<number, number> 额外产物
+---@field ProduceType number 生产类型
+---@field SuccessRate number 成功率
+---@field NeedTime number 所需时间
+---@field Unlock number 解锁条件
+---@field Open number 是否开放
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    ID           = 1,
+    FormulaID    = 2,
+    Product      = 3,
+    NeedMoney    = 4,
+    ExtraProduct = 5,
+    ProduceType  = 6,
+    SuccessRate  = 7,
+    NeedTime     = 8,
+    Unlock       = 9,
+    Open         = 10,
+}
+local set = {
+    Product   = util.array_set(IDNum_get),
+    NeedMoney = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

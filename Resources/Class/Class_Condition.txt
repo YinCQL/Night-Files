@@ -1,0 +1,24 @@
+TextAsset Base
+	string m_Name = "Class_Condition"
+	string m_Script = "---@class Class_Condition table
+---@field ConditionID number 条件ID
+---@field AndOr number 与或类型
+---@field Condition1 table<number, number> 条件1
+---@field Condition2 table<number, number> 条件2
+---@field Condition3 table<number, number> 条件3
+---@field Condition4 table<number, number> 条件4
+local util = require('Config/Data/Util')
+local title = {
+    ConditionID = 1,
+    AndOr       = 2,
+    Condition1  = 3,
+    Condition2  = 4,
+    Condition3  = 5,
+    Condition4  = 6,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

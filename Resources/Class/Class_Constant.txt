@@ -1,0 +1,255 @@
+TextAsset Base
+	string m_Name = "Class_Constant"
+	string m_Script = "---@class Class_Constant table
+---@field User_Born_1 table<number, Struct_Int2> 用户出生携带物品（5000金币，120体力,10001号角色，用户直升60级，限定抽卡和普通抽卡券各10）
+---@field User_MaxPH number 用户最大储存体力上限
+---@field User_PHRecover number 1点体力恢复时间（秒）
+---@field User_MaxLevel number 当前版本用户等级上限
+---@field User_MaxName number 用户昵称最大字节数
+---@field User_MaxSign number 用户签名最大字节数
+---@field Sys_ResetTime number 每日系统重置时间（24小时制）
+---@field Daily_PH_MaxBuyTimes number 每日钻石/绑钻购买体力次数
+---@field Daily_PH_BuyNumber number 每次钻石/绑钻购买体力数量
+---@field Daily_PH_BuyPrice table<number, number> 每日钻石/绑钻购买体力消费增长
+---@field Daily_Gold_MaxBuyTimes number 每日钻石/绑钻购买金币
+---@field Daily_Gold_BuyNumber number 每次钻石/绑钻购买金币数量
+---@field Daily_Gold_BuyPrice table<number, number> 每日钻石/绑钻购买金币消费增长
+---@field Hero_MaxBreachLevel number 当前版本角色突破等级上限
+---@field Hero_BreachSymbol table<number, Struct_ResourceSet> 角色突破等级标志
+---@field Hero_MaxLevel number 当前版本角色成长等级上限
+---@field Hero_MaxAwakeLevel number 当前版本角色觉醒等级上限
+---@field Hero_MaxFavorLevel number 当前版本角色好感等级上限
+---@field Weapon_MaxBreachLevel number 当前版本武器突破等级上限
+---@field Weapon_BreachSymbol table<number, Struct_ResourceSet> 武器突破等级标志
+---@field Weapon_MaxLevel number 当前版本武器成长等级上限
+---@field Weapon_MaxRefineLevel number 当前版本武器精炼等级上限
+---@field User_MaxMail number 用户邮件最大数量
+---@field User_BirthMail table<number, Struct_Int2> 用户生日邮件内容
+---@field SysSet_Image_Low table<number, number> 系统设置-图像低
+---@field SysSet_Image_Medium table<number, number> 系统设置-图像中
+---@field SysSet_Image_High table<number, number> 系统设置-图像高
+---@field SysSet_Voice_Default table<number, number> 系统设置-音效默认
+---@field SysSet_Control_Default table<number, number> 系统设置-默认操作设置
+---@field Bag_Weapon_Max number 武器背包容量上限
+---@field Bag_Armor_Max number 礼装背包容量上限
+---@field Bag_Machine_Max number 辅助机背包容量上限
+---@field Bag_General_Max number 通用背包容量上限
+---@field DamageColor_Property_1 string 力能伤害数字色号
+---@field DamageColor_Property_2 string 生体伤害数字色号
+---@field DamageColor_Property_3 string 电磁伤害数字色号
+---@field DamageColor_Property_4 string 念动伤害数字色号
+---@field DamageColor_Property_5 string 强效伤害数字色号
+---@field HeroSkill_Camera_Initial table<number, Struct_Float4> 角色天赋初始相机参数(位置;0|旋转;0|景深）（0是凑位数用的）
+---@field HeroSkill_Camera_1 table<number, Struct_Float4> 角色天赋1相机参数
+---@field HeroSkill_Camera_2 table<number, Struct_Float4> 角色天赋2相机参数
+---@field HeroSkill_Camera_3 table<number, Struct_Float4> 角色天赋3相机参数
+---@field HeroSkill_Camera_4 table<number, Struct_Float4> 角色天赋4相机参数
+---@field HeroSkill_Camera_5 table<number, Struct_Float4> 角色天赋5相机参数
+---@field HeroSkill_Camera_6 table<number, Struct_Float4> 角色天赋6相机参数
+---@field HeroSkill_Camera_7 table<number, Struct_Float4> 角色天赋7相机参数
+---@field HeroSkill_Camera_8 table<number, Struct_Float4> 角色天赋8相机参数
+---@field HeroSkill_Camera_9 table<number, Struct_Float4> 角色天赋9相机参数
+---@field HeroSkill_Camera_10 table<number, Struct_Float4> 角色天赋10相机参数
+---@field Item_HeroExpMaterial table<number, number> 角色经验素材ID
+---@field Item_WeaponExpMaterial table<number, number> 武器经验素材ID
+---@field Item_ArmorExpMaterial table<number, number> 礼装经验素材ID
+---@field WeaponGrow_QuickSelect_Max number 武器强化快速选择物品数量上限
+---@field ArmorGrow_QuickSelect_Max number 礼装强化快速选择物品数量上限
+---@field User_FirstStage number 玩家初始关卡ID
+---@field Armor_ItemSubType table<number, Struct_Int2> 礼装部位子类型
+---@field Armor_EntryGrow_Ratio number 礼装强化属性系数
+---@field User_Initial_Head_1 number 用户初始装饰："馆长头像"，UserPhotos表
+---@field User_Initial_Decorate_1 number 用户初始装饰："T3默认头像框"，UserPhotobox表
+---@field User_Initial_Background_1 number 用户初始装饰："T3默认背景"，UserBackGround表
+---@field Box_ItemSubType table<number, number> 宝箱类道具子类型
+---@field Hero_PropertySymbol_1 string 1-力能属性图标
+---@field Hero_PropertySymbol_2 string 2-生体属性图标
+---@field Hero_PropertySymbol_3 string 3-电磁属性图标
+---@field Hero_PropertySymbol_4 string 4-念动属性图标
+---@field Hero_PropertySymbol_5 string 5-强效属性图标
+---@field Hero_PropertySymbol_white_1 string 1-力能属性图标(白色)
+---@field Hero_PropertySymbol_white_2 string 2-生体属性图标(白色)
+---@field Hero_PropertySymbol_white_3 string 3-电磁属性图标(白色)
+---@field Hero_PropertySymbol_white_4 string 4-念动属性图标(白色)
+---@field Hero_PropertySymbol_white_5 string 5-强效属性图标(白色)
+---@field Hero_PropertySymbol_medium_white_1 string 1-力能属性中型图标(白色)
+---@field Hero_PropertySymbol_medium_white_2 string 2-生体属性中型图标(白色)
+---@field Hero_PropertySymbol_medium_white_3 string 3-电磁属性中型图标(白色)
+---@field Hero_PropertySymbol_medium_white_4 string 4-念动属性中型图标(白色)
+---@field Hero_PropertySymbol_medium_white_5 string 5-强效属性中型图标(白色)
+---@field Hero_CampSymbol_1 string 1-阵营1图标
+---@field Hero_CampSymbol_2 string 2-阵营2图标
+---@field Hero_CampSymbol_3 string 3-阵营3图标
+---@field Hero_CampSymbol_4 string 4-阵营4图标
+---@field Hero_CampSymbol_5 string 5-阵营5图标
+---@field Hero_CampSymbol_6 string 6-阵营6图标
+---@field Hero_CampSymbol_7 string 7-阵营7图标
+---@field Excha_DiamondTo_Dispatch number 1招募券需要多少绑钻
+---@field Excha_FixedDiamondTo_Diamond number 1绑钻需要多少钻石
+---@field Machine_Damage_Display number 1=显示辅助机伤害；0=不显示
+---@field MachineSelectedDelta number 辅助机选择塔台偏移
+---@field MachineClickDelay number 辅助机长按时间
+---@field MachinePlacementDistance number 辅助机放置平台检测距离
+---@field RecruitEffectQuality_Hero_3 string 抽卡角色品质特效—3星
+---@field RecruitEffectQuality_Hero_4 string 抽卡角色品质特效—4星
+---@field RecruitEffectQuality_Hero_5 string 抽卡角色品质特效—5星
+---@field RecruitEffectQuality_Weapon_3 string 抽卡武器品质特效—3星
+---@field RecruitEffectQuality_Weapon_4 string 抽卡武器品质特效—4星
+---@field RecruitEffectQuality_Weapon_5 string 抽卡武器品质特效—5星
+---@field BattleFailReason_KeepTime number 关卡失败结算的原因界面持续时间（毫秒）
+---@field MonsterDrop_Height number 怪物战中掉落n米后自动判定死亡销毁
+---@field ElementDamageKey string 元素反应发生时将伤害存储在单位上的Key
+---@field ElementAdditions table<number, number> 元素反应的加值开关
+---@field TeamType_Preset number 预设编队编号
+---@field SkillDamageNumOffset table<number, Struct_Int2> 技能伤害跳字偏移范围（X,Y）
+---@field ElementDamageNumOffset table<number, Struct_Int2> 元素反应名称跳字偏移范围（X,Y）
+---@field DamageNumRate number 伤害跳字消失速率(暂时没用，代码注释掉了)
+---@field ComboTime number 连击判定时间间隔
+---@field MaxSCPStable number 异常安定值上限
+---@field MaxReceptionPoint number 异常调查次数存储上限
+---@field ReceptionRank table<number, number> D|C|B|A|S——异常调查评级所需判定成功比例（万分比，包下不包上）
+---@field ReceptionSuccessRate table<number, number> 低|中|高——异常调查成功率描述区间（万分比，包下不包上）
+---@field SCPStableRank table<number, number> 暴动|警觉|安定——异常安定状态
+---@field BossBattle_ticket number Boss挑战门票每日恢复上限；每日恢复数量
+---@field User_Name_max number 玩家昵称最长字符数（utf8，3字符=1中文）
+local util = require('Config/Data/Util')
+local Int2_get        = require('Config/Data/Struct_Int2')
+local ResourceSet_get = require('Config/Data/Struct_ResourceSet')
+local Float4_get      = require('Config/Data/Struct_Float4')
+local title = {
+    User_Born_1                        = 1,
+    User_MaxPH                         = 2,
+    User_PHRecover                     = 3,
+    User_MaxLevel                      = 4,
+    User_MaxName                       = 5,
+    User_MaxSign                       = 6,
+    Sys_ResetTime                      = 7,
+    Daily_PH_MaxBuyTimes               = 8,
+    Daily_PH_BuyNumber                 = 9,
+    Daily_PH_BuyPrice                  = 10,
+    Daily_Gold_MaxBuyTimes             = 11,
+    Daily_Gold_BuyNumber               = 12,
+    Daily_Gold_BuyPrice                = 13,
+    Hero_MaxBreachLevel                = 14,
+    Hero_BreachSymbol                  = 15,
+    Hero_MaxLevel                      = 16,
+    Hero_MaxAwakeLevel                 = 17,
+    Hero_MaxFavorLevel                 = 18,
+    Weapon_MaxBreachLevel              = 19,
+    Weapon_BreachSymbol                = 20,
+    Weapon_MaxLevel                    = 21,
+    Weapon_MaxRefineLevel              = 22,
+    User_MaxMail                       = 23,
+    User_BirthMail                     = 24,
+    SysSet_Image_Low                   = 25,
+    SysSet_Image_Medium                = 26,
+    SysSet_Image_High                  = 27,
+    SysSet_Voice_Default               = 28,
+    SysSet_Control_Default             = 29,
+    Bag_Weapon_Max                     = 30,
+    Bag_Armor_Max                      = 31,
+    Bag_Machine_Max                    = 32,
+    Bag_General_Max                    = 33,
+    DamageColor_Property_1             = 34,
+    DamageColor_Property_2             = 35,
+    DamageColor_Property_3             = 36,
+    DamageColor_Property_4             = 37,
+    DamageColor_Property_5             = 38,
+    HeroSkill_Camera_Initial           = 39,
+    HeroSkill_Camera_1                 = 40,
+    HeroSkill_Camera_2                 = 41,
+    HeroSkill_Camera_3                 = 42,
+    HeroSkill_Camera_4                 = 43,
+    HeroSkill_Camera_5                 = 44,
+    HeroSkill_Camera_6                 = 45,
+    HeroSkill_Camera_7                 = 46,
+    HeroSkill_Camera_8                 = 47,
+    HeroSkill_Camera_9                 = 48,
+    HeroSkill_Camera_10                = 49,
+    Item_HeroExpMaterial               = 50,
+    Item_WeaponExpMaterial             = 51,
+    Item_ArmorExpMaterial              = 52,
+    WeaponGrow_QuickSelect_Max         = 53,
+    ArmorGrow_QuickSelect_Max          = 54,
+    User_FirstStage                    = 55,
+    Armor_ItemSubType                  = 56,
+    Armor_EntryGrow_Ratio              = 57,
+    User_Initial_Head_1                = 58,
+    User_Initial_Decorate_1            = 59,
+    User_Initial_Background_1          = 60,
+    Box_ItemSubType                    = 61,
+    Hero_PropertySymbol_1              = 62,
+    Hero_PropertySymbol_2              = 63,
+    Hero_PropertySymbol_3              = 64,
+    Hero_PropertySymbol_4              = 65,
+    Hero_PropertySymbol_5              = 66,
+    Hero_PropertySymbol_white_1        = 67,
+    Hero_PropertySymbol_white_2        = 68,
+    Hero_PropertySymbol_white_3        = 69,
+    Hero_PropertySymbol_white_4        = 70,
+    Hero_PropertySymbol_white_5        = 71,
+    Hero_PropertySymbol_medium_white_1 = 72,
+    Hero_PropertySymbol_medium_white_2 = 73,
+    Hero_PropertySymbol_medium_white_3 = 74,
+    Hero_PropertySymbol_medium_white_4 = 75,
+    Hero_PropertySymbol_medium_white_5 = 76,
+    Hero_CampSymbol_1                  = 77,
+    Hero_CampSymbol_2                  = 78,
+    Hero_CampSymbol_3                  = 79,
+    Hero_CampSymbol_4                  = 80,
+    Hero_CampSymbol_5                  = 81,
+    Hero_CampSymbol_6                  = 82,
+    Hero_CampSymbol_7                  = 83,
+    Excha_DiamondTo_Dispatch           = 84,
+    Excha_FixedDiamondTo_Diamond       = 85,
+    Machine_Damage_Display             = 86,
+    MachineSelectedDelta               = 87,
+    MachineClickDelay                  = 88,
+    MachinePlacementDistance           = 89,
+    RecruitEffectQuality_Hero_3        = 90,
+    RecruitEffectQuality_Hero_4        = 91,
+    RecruitEffectQuality_Hero_5        = 92,
+    RecruitEffectQuality_Weapon_3      = 93,
+    RecruitEffectQuality_Weapon_4      = 94,
+    RecruitEffectQuality_Weapon_5      = 95,
+    BattleFailReason_KeepTime          = 96,
+    MonsterDrop_Height                 = 97,
+    ElementDamageKey                   = 98,
+    ElementAdditions                   = 99,
+    TeamType_Preset                    = 100,
+    SkillDamageNumOffset               = 101,
+    ElementDamageNumOffset             = 102,
+    DamageNumRate                      = 103,
+    ComboTime                          = 104,
+    MaxSCPStable                       = 105,
+    MaxReceptionPoint                  = 106,
+    ReceptionRank                      = 107,
+    ReceptionSuccessRate               = 108,
+    SCPStableRank                      = 109,
+    BossBattle_ticket                  = 110,
+    User_Name_max                      = 111,
+}
+local set = {
+    User_Born_1              = util.array_set(Int2_get),
+    Hero_BreachSymbol        = util.array_set(ResourceSet_get),
+    Weapon_BreachSymbol      = util.array_set(ResourceSet_get),
+    User_BirthMail           = util.array_set(Int2_get),
+    HeroSkill_Camera_Initial = util.array_set(Float4_get),
+    HeroSkill_Camera_1       = util.array_set(Float4_get),
+    HeroSkill_Camera_2       = util.array_set(Float4_get),
+    HeroSkill_Camera_3       = util.array_set(Float4_get),
+    HeroSkill_Camera_4       = util.array_set(Float4_get),
+    HeroSkill_Camera_5       = util.array_set(Float4_get),
+    HeroSkill_Camera_6       = util.array_set(Float4_get),
+    HeroSkill_Camera_7       = util.array_set(Float4_get),
+    HeroSkill_Camera_8       = util.array_set(Float4_get),
+    HeroSkill_Camera_9       = util.array_set(Float4_get),
+    HeroSkill_Camera_10      = util.array_set(Float4_get),
+    Armor_ItemSubType        = util.array_set(Int2_get),
+    SkillDamageNumOffset     = util.array_set(Int2_get),
+    ElementDamageNumOffset   = util.array_set(Int2_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return metaFunc"

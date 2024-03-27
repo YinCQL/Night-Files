@@ -1,0 +1,25 @@
+TextAsset Base
+	string m_Name = "Class_UserBackGround"
+	string m_Script = "---@class Class_UserBackGround table
+---@field BackGroundID number 装饰ID
+---@field ResourcesName lang 资源名称
+---@field ResourcesDes lang 资源描述
+---@field ArtResources string 资源名称
+---@field PreviewResources string 预览资源文件
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    BackGroundID     = 1,
+    ResourcesName    = 2,
+    ResourcesDes     = 3,
+    ArtResources     = 4,
+    PreviewResources = 5,
+}
+local set = {
+    ResourcesName = lang_get,
+    ResourcesDes  = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

@@ -1,0 +1,24 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Home";
+
+import "KV32.proto";
+import "InvestigateState.proto";
+
+message ScpInfo {
+  int64 uid = 1;
+  int32 config_id = 2;
+  int32 investigation_progress = 3;
+  int32 level = 4;
+  int64 stable_value = 5;
+  int64 energy_produce_value = 6;
+  int64 ex_talent_produce_value = 7;
+  int64 investigate_left_time = 8;
+  int64 building = 9;
+  repeated KV32 attrs = 10;
+  repeated int32 investigating_info = 11;
+  InvestigateState state = 12;
+}

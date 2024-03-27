@@ -1,0 +1,19 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+import "Equip.proto";
+
+message HeroShow {
+  int32 id = 1;
+  int32 level = 2;
+  int32 awake_level = 3;
+  int32 fashion = 4;
+  int32 fashion_equip = 5;
+  repeated int32 skill_level = 6;
+  Equip weapon = 30;
+  repeated Equip equips = 31;
+}

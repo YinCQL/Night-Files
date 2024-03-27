@@ -1,0 +1,27 @@
+TextAsset Base
+	string m_Name = "Class_ItemSubType"
+	string m_Script = "---@class Class_ItemSubType table
+---@field ItemSubType number 物品子类型ID
+---@field ItemSubTypeName lang 物品子类型名称
+---@field ItemSubTypeName_EN lang 
+---@field BoxType number 宝箱类型
+---@field PoolType number 卡池类型
+---@field TipsType number tips类型
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ItemSubType        = 1,
+    ItemSubTypeName    = 2,
+    ItemSubTypeName_EN = 3,
+    BoxType            = 4,
+    PoolType           = 5,
+    TipsType           = 6,
+}
+local set = {
+    ItemSubTypeName    = lang_get,
+    ItemSubTypeName_EN = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

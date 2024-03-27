@@ -1,0 +1,42 @@
+TextAsset Base
+	string m_Name = "Class_Mail"
+	string m_Script = "---@class Class_Mail table
+---@field MailId number 邮件Id
+---@field MailName string 邮件标题
+---@field MailContent string 邮件内容
+---@field Sender string 邮件发送者
+---@field Address string 链接地址
+---@field MailType number 邮件类型
+---@field ItemBagId table<number, number> 道具组Id
+---@field ValidTime number 有效显示时间
+---@field StartTime string 有效开始时间
+---@field MailSendTime string 发送时间
+---@field MailSendCycleTime number 发送周期
+---@field SendCond1 string 发送条件1
+---@field CondParam1 string 条件值1
+---@field SendCond2 string 发送条件2
+---@field CondParam2 string 条件值2
+local util = require('Config/Data/Util')
+local title = {
+    MailId            = 1,
+    MailName          = 2,
+    MailContent       = 3,
+    Sender            = 4,
+    Address           = 5,
+    MailType          = 6,
+    ItemBagId         = 7,
+    ValidTime         = 8,
+    StartTime         = 9,
+    MailSendTime      = 10,
+    MailSendCycleTime = 11,
+    SendCond1         = 12,
+    CondParam1        = 13,
+    SendCond2         = 14,
+    CondParam2        = 15,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

@@ -1,0 +1,32 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+message User {
+  int64 id = 1;
+  optional string name = 2;
+  optional int32 level = 3;
+  optional int32 exp = 4;
+  optional int64 all_online_time = 5;
+  optional int64 create_time = 6;
+  optional int64 online_time = 7;
+  optional string desc = 8;
+  optional int32 head_id = 9;
+  optional int32 energy = 13;
+  optional int32 energy_max = 14;
+  optional int32 chapter_id = 15;
+  optional int32 home_level = 16;
+  optional int32 battle_hero = 17;
+  optional int32 birth_month = 18;
+  optional int32 birth_day = 19;
+  optional int32 head_frame = 20;
+  optional int32 background_id = 21;
+  optional int64 energy_update_time = 22;
+  optional int32 secretary = 23;
+  optional int64 last_update_time = 24;
+  optional int32 give_gift_times = 25;
+  optional int32 boss_ticket = 26;
+}

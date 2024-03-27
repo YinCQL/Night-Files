@@ -1,0 +1,71 @@
+TextAsset Base
+	string m_Name = "Class_TalkInfo"
+	string m_Script = "---@class Class_TalkInfo table
+---@field ID number 对话ID
+---@field Type number 类型
+---@field Name lang 名称
+---@field Content lang 对话信息
+---@field Main table<number, number> 主体立绘
+---@field Roles table<number, number> 立绘ID
+---@field Expressions table<number, number> 立绘表情
+---@field SoundsBank string 语音
+---@field EventName string 语音事件名
+---@field SoundEffectBank string 音效
+---@field EffectEvent string 音效事件名
+---@field EffectDelay number 音效播放延迟
+---@field BGM string 背景音
+---@field Backdrop string 背景
+---@field AfterTalk table<number, number> 后续对话
+---@field Option table<number, string> 选项对话
+---@field Animtion1 string 立绘动画1
+---@field Animtion2 string 立绘动画2
+---@field Animtion3 string 立绘动画3
+---@field Animtion4 string 立绘动画4
+---@field OutAnimtion1 string 退出立绘动画1
+---@field OutAnimtion2 string 退出立绘动画2
+---@field OutAnimtion3 string 退出立绘动画3
+---@field OutAnimtion4 string 退出立绘动画4
+---@field CamAnim string 镜头动画
+---@field Timeline string timeline动画名
+---@field TextTime number 打字速度
+---@field EpisodeCite number 引用段落
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID              = 1,
+    Type            = 2,
+    Name            = 3,
+    Content         = 4,
+    Main            = 5,
+    Roles           = 6,
+    Expressions     = 7,
+    SoundsBank      = 8,
+    EventName       = 9,
+    SoundEffectBank = 10,
+    EffectEvent     = 11,
+    EffectDelay     = 12,
+    BGM             = 13,
+    Backdrop        = 14,
+    AfterTalk       = 15,
+    Option          = 16,
+    Animtion1       = 17,
+    Animtion2       = 18,
+    Animtion3       = 19,
+    Animtion4       = 20,
+    OutAnimtion1    = 21,
+    OutAnimtion2    = 22,
+    OutAnimtion3    = 23,
+    OutAnimtion4    = 24,
+    CamAnim         = 25,
+    Timeline        = 26,
+    TextTime        = 27,
+    EpisodeCite     = 28,
+}
+local set = {
+    Name    = lang_get,
+    Content = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

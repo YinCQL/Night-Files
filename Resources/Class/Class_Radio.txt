@@ -1,0 +1,39 @@
+TextAsset Base
+	string m_Name = "Class_Radio"
+	string m_Script = "---@class Class_Radio table
+---@field RadioGroupID number 无线电组ID
+---@field RadioID number 单个无线电序号
+---@field Time number 持续时间（毫秒）
+---@field Speaker lang 叙述者名字
+---@field Content lang 文本内容
+---@field SpeakerPhoto string 叙述者头像
+---@field LookatPoint string 角色头部朝向
+---@field SoundsBank string 语音
+---@field EventName string 语音事件名
+---@field SoundEffectBank string 音效
+---@field EffectEvent string 音效事件名
+---@field EffectDelay number 音效播放延迟
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    RadioGroupID    = 1,
+    RadioID         = 2,
+    Time            = 3,
+    Speaker         = 4,
+    Content         = 5,
+    SpeakerPhoto    = 6,
+    LookatPoint     = 7,
+    SoundsBank      = 8,
+    EventName       = 9,
+    SoundEffectBank = 10,
+    EffectEvent     = 11,
+    EffectDelay     = 12,
+}
+local set = {
+    Speaker = lang_get,
+    Content = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

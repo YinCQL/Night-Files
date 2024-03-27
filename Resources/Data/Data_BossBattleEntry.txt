@@ -1,0 +1,172 @@
+TextAsset Base
+	string m_Name = "Data_BossBattleEntry"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [100001] = {
+        100001,
+        1000,
+        "BossBattleEntry_EntryDes_100001",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        250,
+        1,
+        0
+    },
+    [100002] = {
+        100002,
+        1000,
+        "BossBattleEntry_EntryDes_100002",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        500,
+        1,
+        0
+    },
+    [100003] = {
+        100003,
+        1000,
+        "BossBattleEntry_EntryDes_100003",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        1000,
+        1,
+        0
+    },
+    [100101] = {
+        100101,
+        1001,
+        "BossBattleEntry_EntryDes_100101",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        250,
+        1,
+        0
+    },
+    [100102] = {
+        100102,
+        1001,
+        "BossBattleEntry_EntryDes_100102",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        500,
+        1,
+        0
+    },
+    [100103] = {
+        100103,
+        1001,
+        "BossBattleEntry_EntryDes_100103",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        1000,
+        1,
+        0
+    },
+    [100201] = {
+        100201,
+        1002,
+        "BossBattleEntry_EntryDes_100201",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        250,
+        1,
+        0
+    },
+    [100301] = {
+        100301,
+        1003,
+        "BossBattleEntry_EntryDes_100301",
+        {
+        },
+        {
+        },
+        {
+            1
+        },
+        500,
+        1,
+        0
+    },
+    [100401] = {
+        100401,
+        1004,
+        "BossBattleEntry_EntryDes_100401",
+        {
+        },
+        {
+        },
+        {
+            1
+        },
+        1000,
+        1,
+        0
+    },
+    [100501] = {
+        100501,
+        1005,
+        "BossBattleEntry_EntryDes_100501",
+        {
+        },
+        {
+        },
+        {
+            1
+        },
+        500,
+        1,
+        0
+    },
+    [100601] = {
+        100601,
+        1006,
+        "BossBattleEntry_EntryDes_100601",
+        {
+        },
+        {
+        },
+        {
+            3
+        },
+        500,
+        1,
+        0
+    }
+}
+return require('Config/Data/Class_BossBattleEntry')(data)
+"

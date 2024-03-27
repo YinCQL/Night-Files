@@ -1,0 +1,78 @@
+TextAsset Base
+	string m_Name = "Class_Monster"
+	string m_Script = "---@class Class_Monster table
+---@field ID number 
+---@field Name_ch string 备注
+---@field Name string 正式名称
+---@field CharacterID number 角色ID
+---@field Avatar number 造型ID
+---@field MonsterFileID number 怪物档案ID
+---@field BehaviorTree string 行为树（战斗）
+---@field BehaviorTreeLife string 行为树（生态）
+---@field BehaviorTreePreLoad table<number, string> 预加载子树
+---@field LockEnemyRange number 索敌范围
+---@field LostEnemyRange number 丢失范围
+---@field LostLockTime number 丢失时间
+---@field Camp Enum_CampType 阵营
+---@field Tag table<number, Enum_UnitTag> 特性标签
+---@field InterActionList table<number, number> 交互ID
+---@field Atk number 攻击
+---@field Def number 防御
+---@field HP number 生命
+---@field Speed number 速度
+---@field BloodbarType number 血条显隐类型
+---@field BloodUIType number 血条ui类型
+---@field BloodSlot string 血条挂点
+---@field BloodbarNum number boss血条数
+---@field MonsterBornBuff table<number, number> 出生buff
+---@field Servants table<number, number> 依赖的怪物ID
+---@field MonsterSanDrop number 死亡掉落SAN值
+---@field IsSCPMonster number 是否为SCP怪物
+---@field DropItemType number 掉落类型
+---@field DropItemID number 掉落ID
+---@field DropRate number 掉落概率
+---@field DropItemCount number 掉落数量
+---@field MonsterAttributeID number 属性ID
+---@field MonsterType Enum_MonsterType 怪物类型
+local util = require('Config/Data/Util')
+local title = {
+    ID                  = 1,
+    Name_ch             = 2,
+    Name                = 3,
+    CharacterID         = 4,
+    Avatar              = 5,
+    MonsterFileID       = 6,
+    BehaviorTree        = 7,
+    BehaviorTreeLife    = 8,
+    BehaviorTreePreLoad = 9,
+    LockEnemyRange      = 10,
+    LostEnemyRange      = 11,
+    LostLockTime        = 12,
+    Camp                = 13,
+    Tag                 = 14,
+    InterActionList     = 15,
+    Atk                 = 16,
+    Def                 = 17,
+    HP                  = 18,
+    Speed               = 19,
+    BloodbarType        = 20,
+    BloodUIType         = 21,
+    BloodSlot           = 22,
+    BloodbarNum         = 23,
+    MonsterBornBuff     = 24,
+    Servants            = 25,
+    MonsterSanDrop      = 26,
+    IsSCPMonster        = 27,
+    DropItemType        = 28,
+    DropItemID          = 29,
+    DropRate            = 30,
+    DropItemCount       = 31,
+    MonsterAttributeID  = 32,
+    MonsterType         = 33,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

@@ -1,0 +1,29 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cg";
+
+message Client {
+  string version = 1;
+  string ip = 2;
+  uint64 ad_id = 3;
+  string bundle_id = 4;
+  string model = 5;
+  string device = 6;
+  string device_tp = 7;
+  string device_os = 8;
+  string device_id = 9;
+  string country = 10;
+  string region = 11;
+  string language = 12;
+  string time_zone = 13;
+  uint64 timestamp = 14;
+  string spare_one = 15;
+  uint64 op_id = 16;
+  string multiscreen_type = 17;
+  string yz_device_id = 18;
+  string device_info = 19;
+  int64 uuid_reg_time = 20;
+}

@@ -1,0 +1,26 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+import "HeroBattle.proto";
+import "PB_Transform.proto";
+
+message PB_BattleActor {
+  uint64 uid = 1;
+  int32 index = 2;
+  int32 config = 3;
+  int32 type = 4;
+  HeroBattle hero_data = 5;
+  int32 groups = 6;
+  string tag = 7;
+  int32 state = 8;
+  int32 region = 9;
+  string stage_h_p_tag = 10;
+  int32 reduce_stage_h_p = 11;
+  int32 change_type = 12;
+  PB_Transform transform = 13;
+  bool not_active = 14;
+}

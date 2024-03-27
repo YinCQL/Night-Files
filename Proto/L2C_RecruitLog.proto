@@ -1,0 +1,15 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "RecruitLog.proto";
+
+message L2C_RecruitLog {
+  repeated RecruitLog log_list = 1;
+  int32 pool_id = 2;
+  int32 last_indx = 3;
+  int32 max = 4;
+}

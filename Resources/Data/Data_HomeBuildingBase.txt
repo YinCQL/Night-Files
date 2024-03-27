@@ -1,0 +1,47 @@
+TextAsset Base
+	string m_Name = "Data_HomeBuildingBase"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [101] = {
+        101,
+        1,
+        {
+        },
+        0,
+        1
+    },
+    [102] = {
+        102,
+        2,
+        {
+        },
+        0,
+        1
+    },
+    [103] = {
+        103,
+        2,
+        {
+        },
+        0,
+        1
+    },
+    [104] = {
+        104,
+        2,
+        {
+        },
+        0,
+        1
+    },
+    [105] = {
+        105,
+        2,
+        {
+        },
+        0,
+        1
+    }
+}
+return require('Config/Data/Class_HomeBuildingBase')(data)
+"

@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_BangScreen"
+	string m_Script = "---@class Class_BangScreen table
+---@field ID number 序号
+---@field Model string 机型
+---@field Deviation number 偏移像素量
+local util = require('Config/Data/Util')
+local title = {
+    ID        = 1,
+    Model     = 2,
+    Deviation = 3,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

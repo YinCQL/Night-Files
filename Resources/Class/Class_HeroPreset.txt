@@ -1,0 +1,48 @@
+TextAsset Base
+	string m_Name = "Class_HeroPreset"
+	string m_Script = "---@class Class_HeroPreset table
+---@field ID number 序号
+---@field HeroID number 角色ID
+---@field AppearID number 外观ID
+---@field HeroLevel number 角色等级
+---@field HeroBreach number 突破等级
+---@field HeroAwake number 觉醒等级
+---@field HeroSkill table<number, number> 角色技能
+---@field WeaopnPreset Struct_IDNum 持有武器
+---@field ArmorPreset1 Struct_IDNum 持有礼装1
+---@field ArmorPreset2 Struct_IDNum 持有礼装2
+---@field ArmorPreset3 Struct_IDNum 持有礼装3
+---@field ArmorPreset4 Struct_IDNum 持有礼装4
+---@field ArmorPreset5 Struct_IDNum 持有礼装5
+---@field ArmorPreset6 Struct_IDNum 持有礼装6
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    ID           = 1,
+    HeroID       = 2,
+    AppearID     = 3,
+    HeroLevel    = 4,
+    HeroBreach   = 5,
+    HeroAwake    = 6,
+    HeroSkill    = 7,
+    WeaopnPreset = 8,
+    ArmorPreset1 = 9,
+    ArmorPreset2 = 10,
+    ArmorPreset3 = 11,
+    ArmorPreset4 = 12,
+    ArmorPreset5 = 13,
+    ArmorPreset6 = 14,
+}
+local set = {
+    WeaopnPreset = IDNum_get,
+    ArmorPreset1 = IDNum_get,
+    ArmorPreset2 = IDNum_get,
+    ArmorPreset3 = IDNum_get,
+    ArmorPreset4 = IDNum_get,
+    ArmorPreset5 = IDNum_get,
+    ArmorPreset6 = IDNum_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

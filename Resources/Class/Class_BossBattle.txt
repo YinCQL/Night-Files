@@ -1,0 +1,53 @@
+TextAsset Base
+	string m_Name = "Class_BossBattle"
+	string m_Script = "---@class Class_BossBattle table
+---@field BossID number BossID
+---@field BossBattleDifficulty number 挑战难度
+---@field DifficultyDes lang 难度描述
+---@field DungeonID number 节ID
+---@field BossName lang Boss名称
+---@field UnlockCondition table<number, number> 解锁条件
+---@field ScoreID number 积分ID
+---@field MoneyID number 积分币ID
+---@field Resource number 关联消耗道具
+---@field ItemCost Struct_IDNum 消耗道具
+---@field BaseScore number 基础积分
+---@field EntryScoreMulti number 词条积分倍率
+---@field EntryLibrary table<number, number> 词条库
+---@field MissionLibrary table<number, number> 任务库
+---@field ScoreRank table<number, number> 积分段位DCBAS
+---@field BackgroundIMG string 背景图资源
+---@field BossIMG string boss立绘资源
+---@field ShopID number 对应商店
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    BossID               = 1,
+    BossBattleDifficulty = 2,
+    DifficultyDes        = 3,
+    DungeonID            = 4,
+    BossName             = 5,
+    UnlockCondition      = 6,
+    ScoreID              = 7,
+    MoneyID              = 8,
+    Resource             = 9,
+    ItemCost             = 10,
+    BaseScore            = 11,
+    EntryScoreMulti      = 12,
+    EntryLibrary         = 13,
+    MissionLibrary       = 14,
+    ScoreRank            = 15,
+    BackgroundIMG        = 16,
+    BossIMG              = 17,
+    ShopID               = 18,
+}
+local set = {
+    DifficultyDes = lang_get,
+    BossName      = lang_get,
+    ItemCost      = IDNum_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

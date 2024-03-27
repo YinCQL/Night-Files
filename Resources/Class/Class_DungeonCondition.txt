@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_DungeonCondition"
+	string m_Script = "---@class Class_DungeonCondition table
+---@field ConditionID number 条件ID
+---@field Type number 条件类型\n1=击杀场上所有怪物\n2=倒计时结束\n3=杀死指定数量某怪物
+---@field State number 达成条件后\n的关卡状态\n1=通关\n2=失败
+---@field ParamID table<number, Struct_IDNum> 怪物id参数
+---@field ParamNum number 数值参数
+---@field ParamString string 字符串参数
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    ConditionID = 1,
+    Type        = 2,
+    State       = 3,
+    ParamID     = 4,
+    ParamNum    = 5,
+    ParamString = 6,
+}
+local set = {
+    ParamID = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

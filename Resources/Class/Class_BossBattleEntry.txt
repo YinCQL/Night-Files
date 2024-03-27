@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Class_BossBattleEntry"
+	string m_Script = "---@class Class_BossBattleEntry table
+---@field BossEntryID number 词条ID
+---@field EntryGroup number 词条组
+---@field EntryDes lang 词条描述
+---@field AddValueID table<number, Struct_Int2> 加值ID
+---@field BuffID table<number, number> BuffID
+---@field BuffTarget table<number, number> Buff作用对象
+---@field EntryScore number 词条基础积分
+---@field Open number 是否开启
+---@field UnlockCondition number 解锁条件（本次不做）
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local Int2_get = require('Config/Data/Struct_Int2')
+local title = {
+    BossEntryID     = 1,
+    EntryGroup      = 2,
+    EntryDes        = 3,
+    AddValueID      = 4,
+    BuffID          = 5,
+    BuffTarget      = 6,
+    EntryScore      = 7,
+    Open            = 8,
+    UnlockCondition = 9,
+}
+local set = {
+    EntryDes   = lang_get,
+    AddValueID = util.array_set(Int2_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

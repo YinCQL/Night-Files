@@ -1,0 +1,21 @@
+TextAsset Base
+	string m_Name = "Class_AtvThreeDayMissionPoint"
+	string m_Script = "---@class Class_AtvThreeDayMissionPoint table
+---@field AwardID number 奖励ID
+---@field NeedPoint Struct_IDNum 所需积分
+---@field Award table<number, Struct_IDNum> 积分奖励
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    AwardID   = 1,
+    NeedPoint = 2,
+    Award     = 3,
+}
+local set = {
+    NeedPoint = IDNum_get,
+    Award     = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

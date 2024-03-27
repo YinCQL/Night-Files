@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_FunctionUnlock"
+	string m_Script = "---@class Class_FunctionUnlock table
+---@field ID number ID
+---@field FunctionName lang 功能名称
+---@field ConditionID table<number, number> 条件ID
+---@field ConditionDes lang 条件描述
+---@field UnlockAnimation string 解锁动画
+---@field ButtonID number 对应按钮
+---@field LockType number 未解锁状态
+---@field Open number 手动控制
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID              = 1,
+    FunctionName    = 2,
+    ConditionID     = 3,
+    ConditionDes    = 4,
+    UnlockAnimation = 5,
+    ButtonID        = 6,
+    LockType        = 7,
+    Open            = 8,
+}
+local set = {
+    FunctionName = lang_get,
+    ConditionDes = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

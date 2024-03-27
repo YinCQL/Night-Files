@@ -1,0 +1,22 @@
+TextAsset Base
+	string m_Name = "Class_HomeFormula"
+	string m_Script = "---@class Class_HomeFormula table
+---@field ID number 公式ID
+---@field Formula string 公式
+---@field Des lang 描述
+---@field NumType number 数值形式
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID      = 1,
+    Formula = 2,
+    Des     = 3,
+    NumType = 4,
+}
+local set = {
+    Des = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

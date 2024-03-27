@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message S2C_MirrorSkill {
+  int32 index = 1;
+  int32 skill_id = 2;
+  int32 linker_idx = 3;
+}

@@ -1,0 +1,24 @@
+TextAsset Base
+	string m_Name = "Class_UserLevel"
+	string m_Script = "---@class Class_UserLevel table
+---@field UserLevel number 用户等级
+---@field NeedUExp number 到下级所需经验
+---@field Energy number 体力值上限
+---@field ChaBreachmax number 角色突破等级上限
+---@field FriendMax number 最大好友数
+---@field WeeklyGiftNum number 每周送礼次数
+local util = require('Config/Data/Util')
+local title = {
+    UserLevel     = 1,
+    NeedUExp      = 2,
+    Energy        = 3,
+    ChaBreachmax  = 4,
+    FriendMax     = 5,
+    WeeklyGiftNum = 6,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

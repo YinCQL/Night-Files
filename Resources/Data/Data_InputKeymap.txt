@@ -1,0 +1,135 @@
+TextAsset Base
+	string m_Name = "Data_InputKeymap"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [10001] = {
+        10001,
+        "/XInputControllerWindows/start",
+        1,
+        "Battle/ui_img_battle_pcui_03",
+        1,
+        "InputKeymap_DisplayName_10001"
+    },
+    [10002] = {
+        10002,
+        "/Gamepad/leftStick",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10002"
+    },
+    [10003] = {
+        10003,
+        "/Gamepad/rightStick",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10003"
+    },
+    [10004] = {
+        10004,
+        "/XInputControllerWindows/buttonSouth",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10004"
+    },
+    [10005] = {
+        10005,
+        "/XInputControllerWindows/buttonEast",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10005"
+    },
+    [10006] = {
+        10006,
+        "/XInputControllerWindows/buttonNorth",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10006"
+    },
+    [10007] = {
+        10007,
+        "/XInputControllerWindows/buttonWest",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10007"
+    },
+    [10008] = {
+        10008,
+        "/XInputControllerWindows/RightShoulder",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10008"
+    },
+    [10009] = {
+        10009,
+        "/XInputControllerWindows/leftShoulder",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10009"
+    },
+    [10010] = {
+        10010,
+        "/XInputControllerWindows/RightTrigger",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10010"
+    },
+    [10011] = {
+        10011,
+        "/XInputControllerWindows/leftTrigger",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10011"
+    },
+    [10012] = {
+        10012,
+        "/XInputControllerWindows/dpad/up",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10012"
+    },
+    [10013] = {
+        10013,
+        "/XInputControllerWindows/dpad/right",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10013"
+    },
+    [10014] = {
+        10014,
+        "/XInputControllerWindows/dpad/down",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10014"
+    },
+    [10015] = {
+        10015,
+        "/XInputControllerWindows/dpad/left",
+        0,
+        "",
+        0,
+        "InputKeymap_DisplayName_10002"
+    },
+    [20001] = {
+        20001,
+        "/Keyboard/escape",
+        0,
+        "",
+        1,
+        "InputKeymap_DisplayName_20001"
+    }
+}
+return require('Config/Data/Class_InputKeymap')(data)
+"

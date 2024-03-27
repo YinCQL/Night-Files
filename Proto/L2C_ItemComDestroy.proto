@@ -1,0 +1,15 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "KV32.proto";
+
+message L2C_ItemComDestroy {
+  int32 ret = 1;
+  int64 id = 2;
+  repeated KV32 id_num = 3;
+  repeated int64 uid = 4;
+}

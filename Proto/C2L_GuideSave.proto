@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message C2L_GuideSave {
+  int32 id = 1;
+  optional int32 cur_guide_id = 2;
+  repeated int32 guide_list = 3;
+  optional bool finish = 4;
+}

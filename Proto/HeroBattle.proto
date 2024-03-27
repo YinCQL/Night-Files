@@ -1,0 +1,20 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+import "KV32.proto";
+
+message HeroBattle {
+  int64 uid = 1;
+  int32 hero_id = 2;
+  int32 skin = 3;
+  int32 weapon_skin = 4;
+  int32 index = 5;
+  repeated KV32 attr_list = 6;
+  repeated KV32 special_list = 7;
+  repeated int32 skill_list = 8;
+  repeated int32 buff_list = 9;
+}

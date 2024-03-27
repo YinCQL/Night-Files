@@ -1,0 +1,15 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cb";
+
+message C2B_FindPath {
+  uint64 space_id = 1;
+  uint32 map_size = 2;
+  uint32 map_height = 3;
+  uint32 times = 4;
+  uint32 cross_height = 5;
+  uint32 test_option = 6;
+}

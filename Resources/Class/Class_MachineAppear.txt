@@ -1,0 +1,32 @@
+TextAsset Base
+	string m_Name = "Class_MachineAppear"
+	string m_Script = "---@class Class_MachineAppear table
+---@field AppearID number 外观ID
+---@field MachineID number 所属辅助机ID
+---@field ItemID number 所属物品ID
+---@field GetType number 获取类型
+---@field Quality number 外观品质
+---@field AppearIcon string 外观Icon
+---@field AppearPicture string 外观立绘
+---@field MachinePerform string 外观预制体
+---@field Camera table<number, Struct_Float3> 展示镜头
+local util = require('Config/Data/Util')
+local Float3_get = require('Config/Data/Struct_Float3')
+local title = {
+    AppearID       = 1,
+    MachineID      = 2,
+    ItemID         = 3,
+    GetType        = 4,
+    Quality        = 5,
+    AppearIcon     = 6,
+    AppearPicture  = 7,
+    MachinePerform = 8,
+    Camera         = 9,
+}
+local set = {
+    Camera = util.array_set(Float3_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

@@ -1,0 +1,17 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "StageInfo.proto";
+import "ChapterGroup.proto";
+import "BossChallengeInfo.proto";
+
+message L2C_FlushChapter {
+  repeated StageInfo dungeons = 1;
+  repeated ChapterGroup groups = 2;
+  repeated BossChallengeInfo boss_info = 3;
+  bool update = 4;
+}

@@ -1,0 +1,95 @@
+TextAsset Base
+	string m_Name = "Data_BossBattleRandomMission"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [10001] = {
+        10001,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10001",
+        {
+        },
+        300,
+        1
+    },
+    [10002] = {
+        10002,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10002",
+        {
+        },
+        250,
+        1
+    },
+    [10003] = {
+        10003,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10003",
+        {
+        },
+        300,
+        1
+    },
+    [10004] = {
+        10004,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10004",
+        {
+        },
+        200,
+        1
+    },
+    [10005] = {
+        10005,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10005",
+        {
+        },
+        200,
+        1
+    },
+    [10006] = {
+        10006,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10006",
+        {
+        },
+        300,
+        1
+    },
+    [10007] = {
+        10007,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10007",
+        {
+        },
+        200,
+        1
+    },
+    [10008] = {
+        10008,
+        1,
+        {
+        },
+        "BossBattleRandomMission_MissionDes_10008",
+        {
+        },
+        200,
+        1
+    }
+}
+return require('Config/Data/Class_BossBattleRandomMission')(data)
+"

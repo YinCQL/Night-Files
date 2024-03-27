@@ -1,0 +1,15 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cg";
+
+message L2C_StartBattle {
+  int32 ret = 1;
+  uint32 room_id = 2;
+  repeated int64 uids = 3;
+  int32 dungeon_id = 4;
+  string battled_ip = 5;
+  uint32 battled_port = 6;
+}

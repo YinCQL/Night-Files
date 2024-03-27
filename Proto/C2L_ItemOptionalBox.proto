@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message C2L_ItemOptionalBox {
+  int32 id = 1;
+  int32 num = 2;
+  int32 drop_id = 3;
+  int32 drop_index = 4;
+}

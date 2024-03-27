@@ -1,0 +1,48 @@
+TextAsset Base
+	string m_Name = "Class_HeroSkill"
+	string m_Script = "---@class Class_HeroSkill table
+---@field HeroID number 角色ID
+---@field AttackID number 普攻ID
+---@field Skill1ID number 技能
+---@field Skill2ID number 镜面技能1
+---@field Skill3ID number 镜面技能2
+---@field ExSkillID number 必杀技
+---@field CaptainSkill number 队长技
+---@field PassiveSkill1ID number 战斗被动技能1
+---@field PassiveSkill2ID number 战斗被动技能2
+---@field HomeSkill1ID number 基建被动技能1
+---@field HomeSkill2ID number 基建被动技能2
+---@field AwakeBuff1ID number 觉醒1
+---@field AwakeBuff2ID number 觉醒2
+---@field AwakeBuff3ID number 觉醒3
+---@field AwakeBuff4ID number 觉醒4
+---@field AwakeBuff5ID number 觉醒5
+---@field AwakeBuff6ID number 觉醒6
+---@field AwakeBuff7ID number 觉醒7
+local util = require('Config/Data/Util')
+local title = {
+    HeroID          = 1,
+    AttackID        = 2,
+    Skill1ID        = 3,
+    Skill2ID        = 4,
+    Skill3ID        = 5,
+    ExSkillID       = 6,
+    CaptainSkill    = 7,
+    PassiveSkill1ID = 8,
+    PassiveSkill2ID = 9,
+    HomeSkill1ID    = 10,
+    HomeSkill2ID    = 11,
+    AwakeBuff1ID    = 12,
+    AwakeBuff2ID    = 13,
+    AwakeBuff3ID    = 14,
+    AwakeBuff4ID    = 15,
+    AwakeBuff5ID    = 16,
+    AwakeBuff6ID    = 17,
+    AwakeBuff7ID    = 18,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

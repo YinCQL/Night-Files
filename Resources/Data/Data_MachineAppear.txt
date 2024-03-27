@@ -1,0 +1,43 @@
+TextAsset Base
+	string m_Name = "Data_MachineAppear"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [22300101] = {
+        22300101,
+        24100101,
+        0,
+        0,
+        4,
+        "ui_icon_item_20000101",
+        "22300101_picture",
+        "22300101",
+        {
+        }
+    },
+    [22300201] = {
+        22300201,
+        24100201,
+        0,
+        0,
+        4,
+        "ui_icon_item_20000101",
+        "22300201_picture",
+        "22300201",
+        {
+        }
+    },
+    [22300301] = {
+        22300301,
+        24100301,
+        0,
+        0,
+        4,
+        "ui_icon_item_20000101",
+        "22300301_picture",
+        "22300301",
+        {
+        }
+    }
+}
+return require('Config/Data/Class_MachineAppear')(data)
+"

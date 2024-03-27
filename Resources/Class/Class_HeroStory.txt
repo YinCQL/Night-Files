@@ -1,0 +1,27 @@
+TextAsset Base
+	string m_Name = "Class_HeroStory"
+	string m_Script = "---@class Class_HeroStory table
+---@field HeroID number 角色ID
+---@field StoryID number 故事ID
+---@field Unlock table<number, Struct_IDNum> 解锁条件
+---@field StoryName lang 故事标题
+---@field StoryDesc lang 故事内容
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    HeroID    = 1,
+    StoryID   = 2,
+    Unlock    = 3,
+    StoryName = 4,
+    StoryDesc = 5,
+}
+local set = {
+    Unlock    = util.array_set(IDNum_get),
+    StoryName = lang_get,
+    StoryDesc = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

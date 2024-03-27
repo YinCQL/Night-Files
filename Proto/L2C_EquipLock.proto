@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message L2C_EquipLock {
+  int64 uid = 1;
+  bool lock = 2;
+  int32 ret = 3;
+  int32 sub_type = 4;
+}

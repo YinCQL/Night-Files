@@ -1,0 +1,42 @@
+TextAsset Base
+	string m_Name = "Class_Chapter"
+	string m_Script = "---@class Class_Chapter table
+---@field ChapterType number 玩法类型
+---@field ChapterID number 章ID
+---@field SubType number 玩法子类\n（目前只有难度）
+---@field ChapterName lang 章名称
+---@field AssetName string 选章界面美术资源
+---@field ChapterNum number 章编号
+---@field GroupID table<number, number> 包含关ID
+---@field ResourceCost table<number, number> 关联消耗资源
+---@field Background string 选关界面底图文件名
+---@field BgSize table<number, number> 选关界面底图大小
+---@field Background2 string 模糊后的地图文件名
+---@field SliceSize number 背景图滚动区裁剪大小
+---@field SlideRange table<number, number> 背景图滑动范围大小
+---@field UnlockID number 解锁条件ID
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ChapterType  = 1,
+    ChapterID    = 2,
+    SubType      = 3,
+    ChapterName  = 4,
+    AssetName    = 5,
+    ChapterNum   = 6,
+    GroupID      = 7,
+    ResourceCost = 8,
+    Background   = 9,
+    BgSize       = 10,
+    Background2  = 11,
+    SliceSize    = 12,
+    SlideRange   = 13,
+    UnlockID     = 14,
+}
+local set = {
+    ChapterName = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(util.array_set(metaFunc)))"

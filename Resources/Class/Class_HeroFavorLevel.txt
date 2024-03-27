@@ -1,0 +1,42 @@
+TextAsset Base
+	string m_Name = "Class_HeroFavorLevel"
+	string m_Script = "---@class Class_HeroFavorLevel table
+---@field HeroID number 角色ID
+---@field HeroFavorLevel number 角色好感等级
+---@field Need number 升级所需好感经验
+---@field UnlockChallenge table<number, number> 解锁挑战任务
+---@field NeedFavorLevel number 需求好感度解锁等级
+---@field NeedHeroLevel number 需求角色等级
+---@field NeedStageClear table<number, number> 需求首通关卡
+---@field TimeLine table<number, number> 播放TimeLine
+---@field FavorAward table<number, Struct_IDNum> 好感度解锁奖励
+---@field UnlockVoice table<number, number> 好感度解锁语音
+---@field UnlockStory table<number, number> 好感度解锁故事
+---@field UnlockStage table<number, number> 好感度解锁关卡
+---@field UnlockAssistant table<number, number> 好感度解锁助战
+---@field UnlockAssistantPreset table<number, number> 好感度解锁助战预设
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    HeroID                = 1,
+    HeroFavorLevel        = 2,
+    Need                  = 3,
+    UnlockChallenge       = 4,
+    NeedFavorLevel        = 5,
+    NeedHeroLevel         = 6,
+    NeedStageClear        = 7,
+    TimeLine              = 8,
+    FavorAward            = 9,
+    UnlockVoice           = 10,
+    UnlockStory           = 11,
+    UnlockStage           = 12,
+    UnlockAssistant       = 13,
+    UnlockAssistantPreset = 14,
+}
+local set = {
+    FavorAward = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

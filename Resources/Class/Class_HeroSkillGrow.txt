@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_HeroSkillGrow"
+	string m_Script = "---@class Class_HeroSkillGrow table
+---@field SkillID number 技能ID
+---@field Level number 等级
+---@field NeedMaterial table<number, Struct_IDNum> 升到下一等级所需材料
+---@field NeedMoney Struct_IDNum 到下一级消耗的金币和数量
+---@field Unlock table<number, Struct_IDNum> 升到下一级所需条件
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    SkillID      = 1,
+    Level        = 2,
+    NeedMaterial = 3,
+    NeedMoney    = 4,
+    Unlock       = 5,
+}
+local set = {
+    NeedMaterial = util.array_set(IDNum_get),
+    NeedMoney    = IDNum_get,
+    Unlock       = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

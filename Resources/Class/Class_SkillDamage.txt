@@ -1,0 +1,24 @@
+TextAsset Base
+	string m_Name = "Class_SkillDamage"
+	string m_Script = "---@class Class_SkillDamage table
+---@field ID number ID
+---@field FormulaID number 公式ID
+---@field GrowID number 成长ID
+---@field Rate number 伤害权值
+---@field SanForOwn number 对自己San+
+---@field SanForTarget number 对怪San值伤害
+local util = require('Config/Data/Util')
+local title = {
+    ID           = 1,
+    FormulaID    = 2,
+    GrowID       = 3,
+    Rate         = 4,
+    SanForOwn    = 5,
+    SanForTarget = 6,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

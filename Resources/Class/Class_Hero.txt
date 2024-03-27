@@ -1,0 +1,98 @@
+TextAsset Base
+	string m_Name = "Class_Hero"
+	string m_Script = "---@class Class_Hero table
+---@field HeroID number 角色ID
+---@field HeroName lang 角色名称
+---@field CharacterID number 编辑器用角色ID
+---@field HeroEName lang 英文
+---@field HeroDes lang 描述
+---@field HeroBirth lang 角色生日
+---@field HeroBirth2 lang 角色生日（语言2）
+---@field Quality number 品质
+---@field Herorace number 种族
+---@field InitialSAN number 初始休斯指数
+---@field SAN number san值
+---@field SANAddition table<number, number> san值比例区间的属性加成
+---@field SCPType Enum_ElementType 元素类型
+---@field Camp number 阵营
+---@field Department number 部门
+---@field WorkerType number 外勤内勤
+---@field InitialWeaponsID number 初始装具ID
+---@field DamegeType number 伤害类型
+---@field OPType number 机制条类型
+---@field OPDes lang OP描述
+---@field OPInitial number 机制条初始值
+---@field OPMax number 机制条上限
+---@field EPType number ep值模式
+---@field EPDes lang EP描述
+---@field EPInitial number 必杀能量默认
+---@field EPMax number 必杀能量上限
+---@field Servants table<number, number> 依赖的怪物ID
+---@field ItemID number 角色卡ID
+---@field ItemChip Struct_IDNum 角色碎片ID
+---@field InitialAppearID number 初始外观ID
+---@field HeroCard string 角色名片
+---@field Open number 开放状态
+---@field ChineseCV string 中文CV
+---@field EnglishCV string 英文CV
+---@field JapaneseCV string 日文CV
+---@field AudioBank string 音频Bank
+---@field GetVoiceID table<number, number> 初次获得语音
+---@field SwitchCD number 切人CD(帧)
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    HeroID           = 1,
+    HeroName         = 2,
+    CharacterID      = 3,
+    HeroEName        = 4,
+    HeroDes          = 5,
+    HeroBirth        = 6,
+    HeroBirth2       = 7,
+    Quality          = 8,
+    Herorace         = 9,
+    InitialSAN       = 10,
+    SAN              = 11,
+    SANAddition      = 12,
+    SCPType          = 13,
+    Camp             = 14,
+    Department       = 15,
+    WorkerType       = 16,
+    InitialWeaponsID = 17,
+    DamegeType       = 18,
+    OPType           = 19,
+    OPDes            = 20,
+    OPInitial        = 21,
+    OPMax            = 22,
+    EPType           = 23,
+    EPDes            = 24,
+    EPInitial        = 25,
+    EPMax            = 26,
+    Servants         = 27,
+    ItemID           = 28,
+    ItemChip         = 29,
+    InitialAppearID  = 30,
+    HeroCard         = 31,
+    Open             = 32,
+    ChineseCV        = 33,
+    EnglishCV        = 34,
+    JapaneseCV       = 35,
+    AudioBank        = 36,
+    GetVoiceID       = 37,
+    SwitchCD         = 38,
+}
+local set = {
+    HeroName   = lang_get,
+    HeroEName  = lang_get,
+    HeroDes    = lang_get,
+    HeroBirth  = lang_get,
+    HeroBirth2 = lang_get,
+    OPDes      = lang_get,
+    EPDes      = lang_get,
+    ItemChip   = IDNum_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

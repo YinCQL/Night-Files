@@ -1,0 +1,39 @@
+TextAsset Base
+	string m_Name = "Data_HomeMainAttributeAdd"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        "HomeMainAttributeAdd_Name_1",
+        "",
+        2,
+        "HomeMainAttributeAdd_Describe_1",
+        "Common/ui_icon_attributes_1"
+    },
+    [2] = {
+        2,
+        "HomeMainAttributeAdd_Name_2",
+        "",
+        2,
+        "HomeMainAttributeAdd_Describe_1",
+        "Common/ui_icon_attributes_2"
+    },
+    [3] = {
+        3,
+        "HomeMainAttributeAdd_Name_3",
+        "",
+        2,
+        "HomeMainAttributeAdd_Describe_1",
+        "Common/ui_icon_attributes_3"
+    },
+    [4] = {
+        4,
+        "HomeMainAttributeAdd_Name_4",
+        "",
+        1,
+        "HomeMainAttributeAdd_Describe_1",
+        "Common/ui_icon_attributes_1"
+    }
+}
+return require('Config/Data/Class_HomeMainAttributeAdd')(data)
+"

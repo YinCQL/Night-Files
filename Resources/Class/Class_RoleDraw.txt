@@ -1,0 +1,52 @@
+TextAsset Base
+	string m_Name = "Class_RoleDraw"
+	string m_Script = "---@class Class_RoleDraw table
+---@field ID number 立绘ID
+---@field Name string 名称
+---@field Path string 立绘路径
+---@field ExpressionPos Struct_Float2 立绘偏移
+---@field Expression1 string 立绘表情1
+---@field Expression2 string 立绘表情2
+---@field Expression3 string 立绘表情3
+---@field Expression4 string 立绘表情4
+---@field Expression5 string 立绘表情5
+---@field Expression6 string 立绘表情6
+---@field Expression7 string 立绘表情7
+---@field Expression8 string 立绘表情8
+---@field Expression9 string 立绘表情9
+---@field Expression10 string 立绘表情10
+---@field Expression11 string 立绘表情11
+---@field Expression12 string 立绘表情12
+---@field Expression13 string 立绘表情13
+---@field Expression14 string 立绘表情14
+---@field Expression15 string 立绘表情15
+local util = require('Config/Data/Util')
+local Float2_get = require('Config/Data/Struct_Float2')
+local title = {
+    ID            = 1,
+    Name          = 2,
+    Path          = 3,
+    ExpressionPos = 4,
+    Expression1   = 5,
+    Expression2   = 6,
+    Expression3   = 7,
+    Expression4   = 8,
+    Expression5   = 9,
+    Expression6   = 10,
+    Expression7   = 11,
+    Expression8   = 12,
+    Expression9   = 13,
+    Expression10  = 14,
+    Expression11  = 15,
+    Expression12  = 16,
+    Expression13  = 17,
+    Expression14  = 18,
+    Expression15  = 19,
+}
+local set = {
+    ExpressionPos = Float2_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

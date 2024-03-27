@@ -1,0 +1,817 @@
+TextAsset Base
+	string m_Name = "Data_SystemError"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [2] = {
+        2,
+        "SystemError_ErrorDes_2",
+        1
+    },
+    [3] = {
+        3,
+        "SystemError_ErrorDes_3",
+        1
+    },
+    [4] = {
+        4,
+        "SystemError_ErrorDes_4",
+        1
+    },
+    [5] = {
+        5,
+        "SystemError_ErrorDes_5",
+        1
+    },
+    [6] = {
+        6,
+        "SystemError_ErrorDes_6",
+        1
+    },
+    [7] = {
+        7,
+        "SystemError_ErrorDes_7",
+        1
+    },
+    [8] = {
+        8,
+        "SystemError_ErrorDes_8",
+        1
+    },
+    [9] = {
+        9,
+        "SystemError_ErrorDes_9",
+        1
+    },
+    [10] = {
+        10,
+        "SystemError_ErrorDes_10",
+        1
+    },
+    [11] = {
+        11,
+        "SystemError_ErrorDes_11",
+        1
+    },
+    [12] = {
+        12,
+        "SystemError_ErrorDes_12",
+        1
+    },
+    [13] = {
+        13,
+        "SystemError_ErrorDes_13",
+        1
+    },
+    [14] = {
+        14,
+        "SystemError_ErrorDes_14",
+        1
+    },
+    [15] = {
+        15,
+        "SystemError_ErrorDes_15",
+        1
+    },
+    [16] = {
+        16,
+        "SystemError_ErrorDes_16",
+        1
+    },
+    [17] = {
+        17,
+        "SystemError_ErrorDes_17",
+        1
+    },
+    [18] = {
+        18,
+        "SystemError_ErrorDes_18",
+        1
+    },
+    [19] = {
+        19,
+        "SystemError_ErrorDes_19",
+        1
+    },
+    [20] = {
+        20,
+        "SystemError_ErrorDes_20",
+        1
+    },
+    [21] = {
+        21,
+        "SystemError_ErrorDes_21",
+        1
+    },
+    [22] = {
+        22,
+        "SystemError_ErrorDes_22",
+        1
+    },
+    [23] = {
+        23,
+        "SystemError_ErrorDes_23",
+        1
+    },
+    [24] = {
+        24,
+        "SystemError_ErrorDes_24",
+        1
+    },
+    [25] = {
+        25,
+        "SystemError_ErrorDes_25",
+        1
+    },
+    [26] = {
+        26,
+        "SystemError_ErrorDes_26",
+        1
+    },
+    [27] = {
+        27,
+        "SystemError_ErrorDes_27",
+        1
+    },
+    [28] = {
+        28,
+        "SystemError_ErrorDes_28",
+        1
+    },
+    [29] = {
+        29,
+        "SystemError_ErrorDes_29",
+        1
+    },
+    [30] = {
+        30,
+        "SystemError_ErrorDes_30",
+        1
+    },
+    [31] = {
+        31,
+        "SystemError_ErrorDes_31",
+        1
+    },
+    [32] = {
+        32,
+        "SystemError_ErrorDes_32",
+        1
+    },
+    [100] = {
+        100,
+        "SystemError_ErrorDes_100",
+        1
+    },
+    [1000] = {
+        1000,
+        "SystemError_ErrorDes_1000",
+        1
+    },
+    [1001] = {
+        1001,
+        "SystemError_ErrorDes_1001",
+        1
+    },
+    [1002] = {
+        1002,
+        "SystemError_ErrorDes_1002",
+        1
+    },
+    [1100] = {
+        1100,
+        "SystemError_ErrorDes_1100",
+        1
+    },
+    [1201] = {
+        1201,
+        "SystemError_ErrorDes_1201",
+        1
+    },
+    [1202] = {
+        1202,
+        "SystemError_ErrorDes_1202",
+        1
+    },
+    [1203] = {
+        1203,
+        "SystemError_ErrorDes_1203",
+        1
+    },
+    [1206] = {
+        1206,
+        "SystemError_ErrorDes_1206",
+        1
+    },
+    [1207] = {
+        1207,
+        "SystemError_ErrorDes_1207",
+        1
+    },
+    [1208] = {
+        1208,
+        "SystemError_ErrorDes_1208",
+        1
+    },
+    [1209] = {
+        1209,
+        "SystemError_ErrorDes_1209",
+        1
+    },
+    [1300] = {
+        1300,
+        "SystemError_ErrorDes_1300",
+        1
+    },
+    [1302] = {
+        1302,
+        "SystemError_ErrorDes_1302",
+        1
+    },
+    [1303] = {
+        1303,
+        "SystemError_ErrorDes_1303",
+        1
+    },
+    [1304] = {
+        1304,
+        "SystemError_ErrorDes_1304",
+        1
+    },
+    [1305] = {
+        1305,
+        "SystemError_ErrorDes_1305",
+        1
+    },
+    [1306] = {
+        1306,
+        "SystemError_ErrorDes_1306",
+        1
+    },
+    [1307] = {
+        1307,
+        "SystemError_ErrorDes_1307",
+        1
+    },
+    [1308] = {
+        1308,
+        "SystemError_ErrorDes_1308",
+        1
+    },
+    [1311] = {
+        1311,
+        "SystemError_ErrorDes_1311",
+        1
+    },
+    [1312] = {
+        1312,
+        "SystemError_ErrorDes_1312",
+        1
+    },
+    [1313] = {
+        1313,
+        "SystemError_ErrorDes_1313",
+        1
+    },
+    [1314] = {
+        1314,
+        "SystemError_ErrorDes_1314",
+        1
+    },
+    [1315] = {
+        1315,
+        "SystemError_ErrorDes_1315",
+        1
+    },
+    [1316] = {
+        1316,
+        "SystemError_ErrorDes_1316",
+        1
+    },
+    [1317] = {
+        1317,
+        "SystemError_ErrorDes_1317",
+        1
+    },
+    [1318] = {
+        1318,
+        "SystemError_ErrorDes_1318",
+        1
+    },
+    [1400] = {
+        1400,
+        "SystemError_ErrorDes_1400",
+        1
+    },
+    [1401] = {
+        1401,
+        "SystemError_ErrorDes_1401",
+        1
+    },
+    [1402] = {
+        1402,
+        "SystemError_ErrorDes_1402",
+        1
+    },
+    [1403] = {
+        1403,
+        "SystemError_ErrorDes_1403",
+        1
+    },
+    [1404] = {
+        1404,
+        "SystemError_ErrorDes_1404",
+        1
+    },
+    [1405] = {
+        1405,
+        "SystemError_ErrorDes_1405",
+        1
+    },
+    [1406] = {
+        1406,
+        "SystemError_ErrorDes_1406",
+        1
+    },
+    [1407] = {
+        1407,
+        "SystemError_ErrorDes_1407",
+        1
+    },
+    [1408] = {
+        1408,
+        "SystemError_ErrorDes_1408",
+        1
+    },
+    [1409] = {
+        1409,
+        "SystemError_ErrorDes_1409",
+        1
+    },
+    [1410] = {
+        1410,
+        "SystemError_ErrorDes_1410",
+        1
+    },
+    [1411] = {
+        1411,
+        "SystemError_ErrorDes_1411",
+        1
+    },
+    [1412] = {
+        1412,
+        "SystemError_ErrorDes_1412",
+        1
+    },
+    [1413] = {
+        1413,
+        "SystemError_ErrorDes_1413",
+        1
+    },
+    [1414] = {
+        1414,
+        "SystemError_ErrorDes_1414",
+        1
+    },
+    [1415] = {
+        1415,
+        "SystemError_ErrorDes_1415",
+        1
+    },
+    [1500] = {
+        1500,
+        "SystemError_ErrorDes_1500",
+        1
+    },
+    [1501] = {
+        1501,
+        "SystemError_ErrorDes_1501",
+        1
+    },
+    [1502] = {
+        1502,
+        "SystemError_ErrorDes_1502",
+        1
+    },
+    [1503] = {
+        1503,
+        "SystemError_ErrorDes_1503",
+        1
+    },
+    [1504] = {
+        1504,
+        "SystemError_ErrorDes_1504",
+        1
+    },
+    [1505] = {
+        1505,
+        "SystemError_ErrorDes_1505",
+        1
+    },
+    [1506] = {
+        1506,
+        "SystemError_ErrorDes_1506",
+        1
+    },
+    [1507] = {
+        1507,
+        "SystemError_ErrorDes_1507",
+        1
+    },
+    [1508] = {
+        1508,
+        "SystemError_ErrorDes_1508",
+        1
+    },
+    [1509] = {
+        1509,
+        "SystemError_ErrorDes_1509",
+        1
+    },
+    [1510] = {
+        1510,
+        "SystemError_ErrorDes_1510",
+        1
+    },
+    [1511] = {
+        1511,
+        "SystemError_ErrorDes_1511",
+        1
+    },
+    [1512] = {
+        1512,
+        "SystemError_ErrorDes_1512",
+        1
+    },
+    [1513] = {
+        1513,
+        "SystemError_ErrorDes_1513",
+        1
+    },
+    [1514] = {
+        1514,
+        "SystemError_ErrorDes_1514",
+        1
+    },
+    [1515] = {
+        1515,
+        "SystemError_ErrorDes_1515",
+        1
+    },
+    [1516] = {
+        1516,
+        "SystemError_ErrorDes_1516",
+        1
+    },
+    [1517] = {
+        1517,
+        "SystemError_ErrorDes_1517",
+        1
+    },
+    [1518] = {
+        1518,
+        "SystemError_ErrorDes_1518",
+        1
+    },
+    [1600] = {
+        1600,
+        "SystemError_ErrorDes_1600",
+        1
+    },
+    [1601] = {
+        1601,
+        "SystemError_ErrorDes_1601",
+        1
+    },
+    [1620] = {
+        1620,
+        "SystemError_ErrorDes_1620",
+        1
+    },
+    [1621] = {
+        1621,
+        "SystemError_ErrorDes_1621",
+        1
+    },
+    [1622] = {
+        1622,
+        "SystemError_ErrorDes_1622",
+        1
+    },
+    [1623] = {
+        1623,
+        "SystemError_ErrorDes_1623",
+        1
+    },
+    [1624] = {
+        1624,
+        "SystemError_ErrorDes_1624",
+        1
+    },
+    [1625] = {
+        1625,
+        "SystemError_ErrorDes_1625",
+        1
+    },
+    [1626] = {
+        1626,
+        "SystemError_ErrorDes_1626",
+        1
+    },
+    [1627] = {
+        1627,
+        "SystemError_ErrorDes_1627",
+        1
+    },
+    [1628] = {
+        1628,
+        "SystemError_ErrorDes_1628",
+        1
+    },
+    [1629] = {
+        1629,
+        "SystemError_ErrorDes_1629",
+        1
+    },
+    [1670] = {
+        1670,
+        "SystemError_ErrorDes_1670",
+        1
+    },
+    [1671] = {
+        1671,
+        "SystemError_ErrorDes_1671",
+        1
+    },
+    [1700] = {
+        1700,
+        "SystemError_ErrorDes_1700",
+        1
+    },
+    [1701] = {
+        1701,
+        "SystemError_ErrorDes_1701",
+        1
+    },
+    [1702] = {
+        1702,
+        "SystemError_ErrorDes_1702",
+        1
+    },
+    [1703] = {
+        1703,
+        "SystemError_ErrorDes_1703",
+        1
+    },
+    [1704] = {
+        1704,
+        "SystemError_ErrorDes_1704",
+        1
+    },
+    [1705] = {
+        1705,
+        "SystemError_ErrorDes_1705",
+        1
+    },
+    [1706] = {
+        1706,
+        "SystemError_ErrorDes_1706",
+        1
+    },
+    [1707] = {
+        1707,
+        "SystemError_ErrorDes_1707",
+        1
+    },
+    [1708] = {
+        1708,
+        "SystemError_ErrorDes_1708",
+        1
+    },
+    [1730] = {
+        1730,
+        "SystemError_ErrorDes_1730",
+        1
+    },
+    [1731] = {
+        1731,
+        "SystemError_ErrorDes_1731",
+        1
+    },
+    [1732] = {
+        1732,
+        "SystemError_ErrorDes_1732",
+        1
+    },
+    [1733] = {
+        1733,
+        "SystemError_ErrorDes_1733",
+        1
+    },
+    [1900] = {
+        1900,
+        "SystemError_ErrorDes_1900",
+        1
+    },
+    [1901] = {
+        1901,
+        "SystemError_ErrorDes_1901",
+        1
+    },
+    [1902] = {
+        1902,
+        "SystemError_ErrorDes_1902",
+        1
+    },
+    [1903] = {
+        1903,
+        "SystemError_ErrorDes_1903",
+        1
+    },
+    [1904] = {
+        1904,
+        "SystemError_ErrorDes_1904",
+        1
+    },
+    [1905] = {
+        1905,
+        "SystemError_ErrorDes_1905",
+        1
+    },
+    [1906] = {
+        1906,
+        "SystemError_ErrorDes_1906",
+        1
+    },
+    [1907] = {
+        1907,
+        "SystemError_ErrorDes_1907",
+        1
+    },
+    [1908] = {
+        1908,
+        "SystemError_ErrorDes_1908",
+        1
+    },
+    [1909] = {
+        1909,
+        "SystemError_ErrorDes_1909",
+        1
+    },
+    [1997] = {
+        1997,
+        "SystemError_ErrorDes_1997",
+        1
+    },
+    [1998] = {
+        1998,
+        "SystemError_ErrorDes_1998",
+        1
+    },
+    [1999] = {
+        1999,
+        "SystemError_ErrorDes_1999",
+        1
+    },
+    [2000] = {
+        2000,
+        "SystemError_ErrorDes_2000",
+        1
+    },
+    [2001] = {
+        2001,
+        "SystemError_ErrorDes_2001",
+        1
+    },
+    [2002] = {
+        2002,
+        "SystemError_ErrorDes_2002",
+        1
+    },
+    [2003] = {
+        2003,
+        "SystemError_ErrorDes_2003",
+        1
+    },
+    [2004] = {
+        2004,
+        "SystemError_ErrorDes_2004",
+        1
+    },
+    [2005] = {
+        2005,
+        "SystemError_ErrorDes_2005",
+        1
+    },
+    [2006] = {
+        2006,
+        "SystemError_ErrorDes_1414",
+        1
+    },
+    [2007] = {
+        2007,
+        "SystemError_ErrorDes_2007",
+        1
+    },
+    [2008] = {
+        2008,
+        "SystemError_ErrorDes_2008",
+        1
+    },
+    [2009] = {
+        2009,
+        "SystemError_ErrorDes_2009",
+        1
+    },
+    [2010] = {
+        2010,
+        "SystemError_ErrorDes_2010",
+        1
+    },
+    [2011] = {
+        2011,
+        "SystemError_ErrorDes_2011",
+        1
+    },
+    [2012] = {
+        2012,
+        "SystemError_ErrorDes_2012",
+        1
+    },
+    [2013] = {
+        2013,
+        "SystemError_ErrorDes_2013",
+        1
+    },
+    [2014] = {
+        2014,
+        "SystemError_ErrorDes_2014",
+        1
+    },
+    [2015] = {
+        2015,
+        "SystemError_ErrorDes_2015",
+        1
+    },
+    [2016] = {
+        2016,
+        "SystemError_ErrorDes_2016",
+        1
+    },
+    [2017] = {
+        2017,
+        "SystemError_ErrorDes_2017",
+        1
+    },
+    [2018] = {
+        2018,
+        "SystemError_ErrorDes_2018",
+        1
+    },
+    [2019] = {
+        2019,
+        "SystemError_ErrorDes_2019",
+        1
+    },
+    [2020] = {
+        2020,
+        "SystemError_ErrorDes_2020",
+        1
+    },
+    [3000] = {
+        3000,
+        "SystemError_ErrorDes_3000",
+        1
+    },
+    [3001] = {
+        3001,
+        "SystemError_ErrorDes_3001",
+        1
+    },
+    [3002] = {
+        3002,
+        "SystemError_ErrorDes_3002",
+        1
+    },
+    [3003] = {
+        3003,
+        "SystemError_ErrorDes_3003",
+        1
+    },
+    [3004] = {
+        3004,
+        "SystemError_ErrorDes_3004",
+        1
+    },
+    [4000] = {
+        4000,
+        "SystemError_ErrorDes_4000",
+        1
+    },
+    [4001] = {
+        4001,
+        "SystemError_ErrorDes_4001",
+        1
+    }
+}
+return require('Config/Data/Class_SystemError')(data)
+"

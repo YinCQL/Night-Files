@@ -1,0 +1,43 @@
+TextAsset Base
+	string m_Name = "Class_WeaponAppear"
+	string m_Script = "---@class Class_WeaponAppear table
+---@field AppearID number 外观ID
+---@field HeroID number 所属角色ID
+---@field WeaponID number 所属武器ID
+---@field ItemID number 所属物品ID
+---@field GetType number 获取类型
+---@field Quality number 外观品质
+---@field AppearIcon string 外观Icon
+---@field AppearPictureM string 外观立绘（中图）
+---@field AppearPicture string 外观立绘
+---@field AppearPicturePoint1 Struct_Int2 抽卡立绘锚点
+---@field WeaponPerform string 外观预制体
+---@field Camera table<number, Struct_Float3> 武器模型位置参数
+---@field TrainCamera table<number, Struct_Float3> 武器在武器架上位置参数;倍率
+local util = require('Config/Data/Util')
+local Int2_get   = require('Config/Data/Struct_Int2')
+local Float3_get = require('Config/Data/Struct_Float3')
+local title = {
+    AppearID            = 1,
+    HeroID              = 2,
+    WeaponID            = 3,
+    ItemID              = 4,
+    GetType             = 5,
+    Quality             = 6,
+    AppearIcon          = 7,
+    AppearPictureM      = 8,
+    AppearPicture       = 9,
+    AppearPicturePoint1 = 10,
+    WeaponPerform       = 11,
+    Camera              = 12,
+    TrainCamera         = 13,
+}
+local set = {
+    AppearPicturePoint1 = Int2_get,
+    Camera              = util.array_set(Float3_get),
+    TrainCamera         = util.array_set(Float3_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

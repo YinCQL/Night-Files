@@ -1,0 +1,56 @@
+TextAsset Base
+	string m_Name = "Class_MonsterAttribute"
+	string m_Script = "---@class Class_MonsterAttribute table
+---@field ID number 属性ID
+---@field Name string 名称
+---@field Atk number 攻击
+---@field Def number 防御
+---@field HP number 生命
+---@field AtkStep number 攻击成长
+---@field DefStep number 防御成长
+---@field HPStep number 生命成长
+---@field Criticalper number 暴击率
+---@field CriDamage number 暴击伤害
+---@field Movement number 基础移动速度
+---@field ReturnHPper number 回血速率\n每秒回复最大生命%
+---@field Debonding number 韧性攻击力
+---@field DebondingResistance number 韧性防御力
+---@field Tenacity number 韧性
+---@field Tenacityup number 韧性\n回复速度/s
+---@field SCP1Resistance number 力能\n抗性%
+---@field SCP2Resistance number 生体\n抗性%
+---@field SCP3Resistance number 电磁\n抗性%
+---@field SCP4Resistance number 念动\n抗性%
+---@field SAN number 休斯指数
+---@field InitialSAN number 初始休斯指数
+local util = require('Config/Data/Util')
+local title = {
+    ID                  = 1,
+    Name                = 2,
+    Atk                 = 3,
+    Def                 = 4,
+    HP                  = 5,
+    AtkStep             = 6,
+    DefStep             = 7,
+    HPStep              = 8,
+    Criticalper         = 9,
+    CriDamage           = 10,
+    Movement            = 11,
+    ReturnHPper         = 12,
+    Debonding           = 13,
+    DebondingResistance = 14,
+    Tenacity            = 15,
+    Tenacityup          = 16,
+    SCP1Resistance      = 17,
+    SCP2Resistance      = 18,
+    SCP3Resistance      = 19,
+    SCP4Resistance      = 20,
+    SAN                 = 21,
+    InitialSAN          = 22,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

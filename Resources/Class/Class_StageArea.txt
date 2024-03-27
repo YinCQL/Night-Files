@@ -1,0 +1,27 @@
+TextAsset Base
+	string m_Name = "Class_StageArea"
+	string m_Script = "---@class Class_StageArea table
+---@field Area string 触发区域名
+---@field GroupID number 组ID
+---@field ShapePos Struct_Float3 坐标
+---@field Rotation Struct_Float3 旋转
+---@field ShapeType number 触发区域形状
+---@field ShapeData table<number, number> 触发区域大小
+local util = require('Config/Data/Util')
+local Float3_get = require('Config/Data/Struct_Float3')
+local title = {
+    Area      = 1,
+    GroupID   = 2,
+    ShapePos  = 3,
+    Rotation  = 4,
+    ShapeType = 5,
+    ShapeData = 6,
+}
+local set = {
+    ShapePos = Float3_get,
+    Rotation = Float3_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

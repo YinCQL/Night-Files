@@ -1,0 +1,25 @@
+TextAsset Base
+	string m_Name = "Data_ShopBanner"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [10001] = {
+        10001,
+        "ShopBanner_BannerName_10001",
+        "ShopBanner_BannerNameEng_10001",
+        "ShopBanner/ui_img_store_bannerWhole_recom_001",
+        "ShopBanner/ui_img_store_bannerWhole_recom_001",
+        "ShopBanner/ui_img_store_bannerWhole_recom_001",
+        6001,
+        5000100,
+        {
+            1664446731,
+            1697731200
+        },
+        {
+        },
+        0,
+        1
+    }
+}
+return require('Config/Data/Class_ShopBanner')(data)
+"

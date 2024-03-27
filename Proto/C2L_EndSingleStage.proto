@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+message C2L_EndSingleStage {
+  uint32 stage_id = 1;
+  uint32 star_num = 2;
+  bool success = 3;
+  int32 score = 4;
+}

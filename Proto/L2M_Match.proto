@@ -1,0 +1,16 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cg";
+
+import "User.proto";
+
+message L2M_Match {
+  string uuid = 1;
+  uint64 uid = 2;
+  uint32 ret = 3;
+  User user_info = 4;
+  uint32 dungeon_id = 5;
+}

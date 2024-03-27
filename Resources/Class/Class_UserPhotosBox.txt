@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Class_UserPhotosBox"
+	string m_Script = "---@class Class_UserPhotosBox table
+---@field PhotosBoxID number 装饰ID
+---@field ResourcesName lang 资源名称
+---@field ResourcesDes lang 资源描述
+---@field ArtResources string 资源名称
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    PhotosBoxID   = 1,
+    ResourcesName = 2,
+    ResourcesDes  = 3,
+    ArtResources  = 4,
+}
+local set = {
+    ResourcesName = lang_get,
+    ResourcesDes  = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

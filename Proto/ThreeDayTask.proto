@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+message ThreeDayTask {
+  int32 id = 1;
+  int32 process = 2;
+  int32 reward_flag = 3;
+}

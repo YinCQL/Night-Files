@@ -1,0 +1,55 @@
+TextAsset Base
+	string m_Name = "Data_RechargeRank"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        6.0,
+        0.0,
+        0.0
+    },
+    [2] = {
+        2,
+        18.0,
+        0.0,
+        0.0
+    },
+    [3] = {
+        3,
+        30.0,
+        0.0,
+        0.0
+    },
+    [4] = {
+        4,
+        68.0,
+        0.0,
+        0.0
+    },
+    [5] = {
+        5,
+        98.0,
+        0.0,
+        0.0
+    },
+    [6] = {
+        6,
+        128.0,
+        0.0,
+        0.0
+    },
+    [7] = {
+        7,
+        328.0,
+        0.0,
+        0.0
+    },
+    [8] = {
+        8,
+        648.0,
+        0.0,
+        0.0
+    }
+}
+return require('Config/Data/Class_RechargeRank')(data)
+"

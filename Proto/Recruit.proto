@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+message Recruit {
+  int32 id = 1;
+  int32 star_base4 = 2;
+  int32 star_base5 = 3;
+  int32 limited_base5 = 4;
+}

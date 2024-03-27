@@ -1,0 +1,34 @@
+TextAsset Base
+	string m_Name = "Data_AuxMachine"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [20104] = {
+        20104,
+        12.0,
+        1.0,
+        "Follow1",
+        "Follow2",
+        "Attack",
+        1
+    },
+    [20206] = {
+        20206,
+        12.0,
+        1.0,
+        "Follow1",
+        "Follow2",
+        "Attack",
+        2
+    },
+    [10310] = {
+        10310,
+        12.0,
+        1.0,
+        "Follow1",
+        "Follow2",
+        "Attack",
+        2
+    }
+}
+return require('Config/Data/Class_AuxMachine')(data)
+"

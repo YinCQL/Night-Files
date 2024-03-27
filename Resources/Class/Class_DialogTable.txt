@@ -1,0 +1,31 @@
+TextAsset Base
+	string m_Name = "Class_DialogTable"
+	string m_Script = "---@class Class_DialogTable table
+---@field ID number 对白ID
+---@field Style number 对话类型
+---@field Name lang 角色名称
+---@field Dialog lang 对白文本
+---@field Audio string 音频文件
+---@field Model string 角色模型
+---@field FinenessType number 模型精度类型
+---@field DialogCharactar number 角色立绘预设ID
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID              = 1,
+    Style           = 2,
+    Name            = 3,
+    Dialog          = 4,
+    Audio           = 5,
+    Model           = 6,
+    FinenessType    = 7,
+    DialogCharactar = 8,
+}
+local set = {
+    Name   = lang_get,
+    Dialog = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

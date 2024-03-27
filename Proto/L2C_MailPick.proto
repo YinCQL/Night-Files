@@ -1,0 +1,16 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "KV32.proto";
+
+message L2C_MailPick {
+  int32 ret = 1;
+  int32 type = 2;
+  int64 mail_id = 3;
+  repeated KV32 items = 4;
+  repeated int64 equips = 5;
+}

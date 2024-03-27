@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_CharacterAddition"
+	string m_Script = "---@class Class_CharacterAddition table
+---@field ID number 加值ID
+---@field Level number 等级
+---@field Value number 值
+local util = require('Config/Data/Util')
+local title = {
+    ID    = 1,
+    Level = 2,
+    Value = 3,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

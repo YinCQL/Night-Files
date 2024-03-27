@@ -1,0 +1,13 @@
+TextAsset Base
+	string m_Name = "Data_Buff"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    {
+        12005001,
+        "Buff_BuffName_",
+        "Buff_BuffDes_",
+        "Skill/ui_icon_skill_19001002"
+    }
+}
+return require('Config/Data/Class_Buff')(data)
+"

@@ -1,0 +1,22 @@
+TextAsset Base
+	string m_Name = "Class_ElementRelationDamage"
+	string m_Script = "---@class Class_ElementRelationDamage table
+---@field ElementA Enum_ElementType ID
+---@field ElementB Enum_ElementType 名称
+---@field DamageID number 基础伤害ID
+---@field ReactionType Enum_ElementReactionType 元素反应类型
+---@field EffectPrefab string 反应特效资源
+local util = require('Config/Data/Util')
+local title = {
+    ElementA     = 1,
+    ElementB     = 2,
+    DamageID     = 3,
+    ReactionType = 4,
+    EffectPrefab = 5,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

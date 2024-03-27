@@ -1,0 +1,18 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+import "HeroBattle.proto";
+
+message TeamBattle {
+  int32 leader = 1;
+  repeated HeroBattle hero_list = 2;
+  repeated HeroBattle machine_list = 3;
+  repeated HeroBattle hero_other_list = 4;
+  repeated HeroBattle machine_other_list = 5;
+  HeroBattle friend_hero = 6;
+  HeroBattle favor_hero = 7;
+}

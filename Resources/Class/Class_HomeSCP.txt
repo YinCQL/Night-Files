@@ -1,0 +1,50 @@
+TextAsset Base
+	string m_Name = "Class_HomeSCP"
+	string m_Script = "---@class Class_HomeSCP table
+---@field SCPID number 异常ID
+---@field SCPType number 异常类型
+---@field FileID number 档案ID
+---@field SCPName lang 异常名称
+---@field SCPNumber string 异常编号
+---@field HazardLevel number 危险等级
+---@field HomeHeroAttribute table<number, Struct_BattleAttrValueRange> 角色家园属性
+---@field InitialStable number 初始安定值
+---@field StableRecoverSpeed number 安定值基础回复
+---@field Avatar string 异常Avatar
+---@field QSCPIdle0 string Q版SCP待机动作0
+---@field AppearHead string 异常头像
+---@field AppearBust string 异常胸像（证件照）
+---@field AppearPicture string 异常立绘
+---@field SCPTalk table<number, number> 异常对话
+---@field SCPCoinProduce Struct_IDNum 异能币产出
+local util = require('Config/Data/Util')
+local lang_get                 = require('Config/Data/Languages/'..languageData.currentLanguage)
+local BattleAttrValueRange_get = require('Config/Data/Struct_BattleAttrValueRange')
+local IDNum_get                = require('Config/Data/Struct_IDNum')
+local title = {
+    SCPID              = 1,
+    SCPType            = 2,
+    FileID             = 3,
+    SCPName            = 4,
+    SCPNumber          = 5,
+    HazardLevel        = 6,
+    HomeHeroAttribute  = 7,
+    InitialStable      = 8,
+    StableRecoverSpeed = 9,
+    Avatar             = 10,
+    QSCPIdle0          = 11,
+    AppearHead         = 12,
+    AppearBust         = 13,
+    AppearPicture      = 14,
+    SCPTalk            = 15,
+    SCPCoinProduce     = 16,
+}
+local set = {
+    SCPName           = lang_get,
+    HomeHeroAttribute = util.array_set(BattleAttrValueRange_get),
+    SCPCoinProduce    = IDNum_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

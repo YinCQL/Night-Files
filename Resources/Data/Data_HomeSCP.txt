@@ -1,0 +1,65 @@
+TextAsset Base
+	string m_Name = "Data_HomeSCP"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [20001] = {
+        20001,
+        101,
+        2000,
+        "HomeSCP_SCPName_20001",
+        "FC-95-27",
+        1,
+        {
+            {
+                2001,
+                25,
+                99
+            },
+            {
+                2002,
+                25,
+                99
+            },
+            {
+                2003,
+                25,
+                99
+            },
+            {
+                2004,
+                25,
+                99
+            },
+            {
+                2005,
+                25,
+                99
+            }
+        },
+        100,
+        -1,
+        "System/Model/QModel/Boss002_SwordmaidStatue_Q",
+        "System/Model/QAnimation/Boss002_SwordmaidStatue_Q/BOS_SwordmaidStatue_Idle",
+        "Head/ui_icon_head_scp_30002",
+        "Bust/ui_icon_bust_scp_20002",
+        "Fgimage/HQ2048_ui_img_fgimage_scp_20002",
+        {
+            2001010,
+            2002010,
+            2003010,
+            2004010,
+            2005010,
+            2006010,
+            2007010,
+            2008010,
+            2009100,
+            2010010
+        },
+        {
+            40800100,
+            1
+        }
+    }
+}
+return require('Config/Data/Class_HomeSCP')(data)
+"

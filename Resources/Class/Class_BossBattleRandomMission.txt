@@ -1,0 +1,30 @@
+TextAsset Base
+	string m_Name = "Class_BossBattleRandomMission"
+	string m_Script = "---@class Class_BossBattleRandomMission table
+---@field MissionID number 任务ID
+---@field MissionCondition number 任务条件
+---@field ConditionParameter table<number, number> 条件参数
+---@field MissionDes lang 任务描述
+---@field ExtraAward table<number, Struct_IDNum> 额外奖励
+---@field ExtraScore number 额外积分
+---@field Open number 是否开启
+local util = require('Config/Data/Util')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    MissionID          = 1,
+    MissionCondition   = 2,
+    ConditionParameter = 3,
+    MissionDes         = 4,
+    ExtraAward         = 5,
+    ExtraScore         = 6,
+    Open               = 7,
+}
+local set = {
+    MissionDes = lang_get,
+    ExtraAward = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

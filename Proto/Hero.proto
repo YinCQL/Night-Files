@@ -1,0 +1,31 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+message Hero {
+  int32 id = 1;
+  optional int32 level = 2;
+  optional int32 exp = 3;
+  optional int32 advance_level = 4;
+  optional int32 awake_level = 5;
+  optional int32 friendly_level = 6;
+  optional int32 friendly_exp = 7;
+  optional int32 fatigue = 8;
+  optional int64 weapon = 12;
+  optional int64 equip1 = 13;
+  optional int64 equip2 = 14;
+  optional int64 equip3 = 15;
+  optional int64 equip4 = 16;
+  optional int64 equip5 = 17;
+  optional int64 equip6 = 18;
+  repeated int32 voice = 19;
+  repeated int32 skill_level = 20;
+  optional int32 friendly_lock = 21;
+  optional int32 fashion = 22;
+  optional int32 fashion_equip = 23;
+  repeated int32 fashions = 24;
+  repeated int32 fashion_equips = 25;
+}

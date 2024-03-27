@@ -1,0 +1,16 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cl";
+
+import "Item.proto";
+import "Reward.proto";
+
+message L2C_GetStarReward {
+  uint32 ret = 1;
+  uint32 area_id = 2;
+  repeated Item item_list = 3;
+  Reward reward = 4;
+}

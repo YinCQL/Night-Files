@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message BD2M_Match {
+  int32 ret = 1;
+  uint32 room = 2;
+  repeated int64 uids = 3;
+  int32 dungeon = 4;
+}

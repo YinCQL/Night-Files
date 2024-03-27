@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_BattleGrowGroup"
+	string m_Script = "---@class Class_BattleGrowGroup table
+---@field GroupID number 组ID
+---@field GrowID table<number, number> 词条ID
+---@field Weight table<number, number> 权重
+local util = require('Config/Data/Util')
+local title = {
+    GroupID = 1,
+    GrowID  = 2,
+    Weight  = 3,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

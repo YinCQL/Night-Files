@@ -1,0 +1,28 @@
+TextAsset Base
+	string m_Name = "Class_HeroGrow"
+	string m_Script = "---@class Class_HeroGrow table
+---@field HeroID number 角色id
+---@field Level number 等级
+---@field LevelAtt table<number, Struct_BattleAttrValue> 当前等级属性
+---@field Need number 所需经验
+---@field NeedMoney Struct_IDNum 资源消耗系数
+---@field GrowVoiceID table<number, number> 升级语音（升到该等级）
+local util = require('Config/Data/Util')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local title = {
+    HeroID      = 1,
+    Level       = 2,
+    LevelAtt    = 3,
+    Need        = 4,
+    NeedMoney   = 5,
+    GrowVoiceID = 6,
+}
+local set = {
+    LevelAtt  = util.array_set(BattleAttrValue_get),
+    NeedMoney = IDNum_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

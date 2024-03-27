@@ -1,0 +1,24 @@
+TextAsset Base
+	string m_Name = "Class_InputDes"
+	string m_Script = "---@class Class_InputDes table
+---@field ButtonID number 按钮ID
+---@field InputTouch lang 触屏输入
+---@field InputPC lang PC输入
+---@field InputGamepad lang 手柄输入
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ButtonID     = 1,
+    InputTouch   = 2,
+    InputPC      = 3,
+    InputGamepad = 4,
+}
+local set = {
+    InputTouch   = lang_get,
+    InputPC      = lang_get,
+    InputGamepad = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

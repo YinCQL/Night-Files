@@ -1,0 +1,39 @@
+TextAsset Base
+	string m_Name = "Data_ChapterSheet"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        1,
+        "ChapterSheet_SheetNamCN_1",
+        "MAIN EPISODE",
+        0,
+        "ChapterMainStory"
+    },
+    [2] = {
+        2,
+        2,
+        "ChapterSheet_SheetNamCN_2",
+        "NORMALIZATION",
+        0,
+        "ChapterMainStory"
+    },
+    [3] = {
+        3,
+        3,
+        "ChapterSheet_SheetNamCN_3",
+        "INVITATION",
+        0,
+        "ChapterMainStory"
+    },
+    [4] = {
+        4,
+        4,
+        "ChapterSheet_SheetNamCN_4",
+        "PRACTISING",
+        0,
+        "ChapterMainStory"
+    }
+}
+return require('Config/Data/Class_ChapterSheet')(data)
+"

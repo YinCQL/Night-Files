@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Data_ElementReactionBuff"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    {
+        1,
+        12000050
+    },
+    {
+        2,
+        12000054
+    },
+    {
+        3,
+        12000058
+    },
+    {
+        4,
+        12000062
+    }
+}
+return require('Config/Data/Class_ElementReactionBuff')(data)
+"

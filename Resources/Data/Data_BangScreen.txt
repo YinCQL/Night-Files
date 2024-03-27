@@ -1,0 +1,12 @@
+TextAsset Base
+	string m_Name = "Data_BangScreen"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [1] = {
+        1,
+        "MGLG3CH/A",
+        100
+    }
+}
+return require('Config/Data/Class_BangScreen')(data)
+"

@@ -1,0 +1,19 @@
+TextAsset Base
+	string m_Name = "Data_AchieveGroup"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [100] = {
+        100,
+        "AchieveGroup_AchieveGroupName_100",
+        "AchieveGroup_AchieveGroupDes_100",
+        1,
+        {
+        },
+        "AchieveGroup_FinishDes_100",
+        "",
+        {
+        }
+    }
+}
+return require('Config/Data/Class_AchieveGroup')(data)
+"

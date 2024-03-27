@@ -1,0 +1,24 @@
+TextAsset Base
+	string m_Name = "Class_ShopGoodsGroup"
+	string m_Script = "---@class Class_ShopGoodsGroup table
+---@field GoodsGroupID number 商品组ID
+---@field GoodsID number 商品ID
+---@field TypeValue number 权重值or概率值
+---@field Tag table<number, number> 商品标签
+---@field Discount table<number, Struct_IDNum> 随机折扣信息（万分比）
+local util = require('Config/Data/Util')
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    GoodsGroupID = 1,
+    GoodsID      = 2,
+    TypeValue    = 3,
+    Tag          = 4,
+    Discount     = 5,
+}
+local set = {
+    Discount = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

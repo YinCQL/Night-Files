@@ -1,0 +1,36 @@
+TextAsset Base
+	string m_Name = "Class_Suit"
+	string m_Script = "---@class Class_Suit table
+---@field SuitID number 套装ID
+---@field SuitName lang 套装名称
+---@field SuitDes lang 套装描述
+---@field SuitSkillDes table<number, Struct_SkillNameDes> 套装效果描述
+---@field SuitAttribute table<number, Struct_ConBattleAttrValue> 套装属性
+---@field SuitSkillID table<number, Struct_IDNum> 套装特效ID（加值ID）
+---@field SuitBuffID table<number, Struct_IDNum> 套装BuffID
+local util = require('Config/Data/Util')
+local lang_get               = require('Config/Data/Languages/'..languageData.currentLanguage)
+local SkillNameDes_get       = require('Config/Data/Struct_SkillNameDes')
+local ConBattleAttrValue_get = require('Config/Data/Struct_ConBattleAttrValue')
+local IDNum_get              = require('Config/Data/Struct_IDNum')
+local title = {
+    SuitID        = 1,
+    SuitName      = 2,
+    SuitDes       = 3,
+    SuitSkillDes  = 4,
+    SuitAttribute = 5,
+    SuitSkillID   = 6,
+    SuitBuffID    = 7,
+}
+local set = {
+    SuitName      = lang_get,
+    SuitDes       = lang_get,
+    SuitSkillDes  = util.array_set(SkillNameDes_get),
+    SuitAttribute = util.array_set(ConBattleAttrValue_get),
+    SuitSkillID   = util.array_set(IDNum_get),
+    SuitBuffID    = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

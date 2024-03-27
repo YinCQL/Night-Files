@@ -1,0 +1,28 @@
+TextAsset Base
+	string m_Name = "Class_PauseWindow"
+	string m_Script = "---@class Class_PauseWindow table
+---@field ID number ID
+---@field Name lang 页签中文名称
+---@field NameEN string 页签英文名称
+---@field Icon string 选择图标
+---@field PageName string 页签节点名称
+---@field Node string 界面挂点
+---@field ViewName string prefab文件
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID       = 1,
+    Name     = 2,
+    NameEN   = 3,
+    Icon     = 4,
+    PageName = 5,
+    Node     = 6,
+    ViewName = 7,
+}
+local set = {
+    Name = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

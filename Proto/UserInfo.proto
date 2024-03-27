@@ -1,0 +1,17 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "OutBase";
+
+import "HeroShow.proto";
+
+message UserInfo {
+  int64 uid = 1;
+  string name = 2;
+  int32 level = 3;
+  int32 head_id = 4;
+  int32 relation = 5;
+  HeroShow hero = 6;
+}

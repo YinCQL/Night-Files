@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cg";
+
+import "C2G_ReLogin.proto";
+
+message OS2GS_ReLogin {
+  uint32 ret = 1;
+  C2G_ReLogin req_data = 2;
+}

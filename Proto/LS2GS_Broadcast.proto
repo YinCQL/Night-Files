@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Cg";
+
+message LS2GS_Broadcast {
+  uint32 sid = 1;
+  uint32 cmd = 2;
+  bytes info = 3;
+  repeated uint64 ids = 4;
+}

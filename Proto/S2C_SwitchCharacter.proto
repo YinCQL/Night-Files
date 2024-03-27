@@ -1,0 +1,12 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+message S2C_SwitchCharacter {
+  int32 index = 1;
+  int32 group_id = 2;
+  int32 switch_idx = 3;
+}

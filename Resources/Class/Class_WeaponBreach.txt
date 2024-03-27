@@ -1,0 +1,35 @@
+TextAsset Base
+	string m_Name = "Class_WeaponBreach"
+	string m_Script = "---@class Class_WeaponBreach table
+---@field ID number 武器的道具ID
+---@field Level number 突破阶段
+---@field IntensifyLevelLimit number 突破所需装备强化等级限制
+---@field Consume table<number, Struct_IDNum> 下一级突破消耗的物品和数量
+---@field NeedMoney Struct_IDNum 下一级突破消耗的金币和数量
+---@field AllProp table<number, Struct_BattleAttrValue> 突破后获得属性
+---@field Avt string 突破后改变avt
+---@field Icon string 突破后改变icon
+---@field IconDesc string 图标
+local util = require('Config/Data/Util')
+local IDNum_get           = require('Config/Data/Struct_IDNum')
+local BattleAttrValue_get = require('Config/Data/Struct_BattleAttrValue')
+local title = {
+    ID                  = 1,
+    Level               = 2,
+    IntensifyLevelLimit = 3,
+    Consume             = 4,
+    NeedMoney           = 5,
+    AllProp             = 6,
+    Avt                 = 7,
+    Icon                = 8,
+    IconDesc            = 9,
+}
+local set = {
+    Consume   = util.array_set(IDNum_get),
+    NeedMoney = IDNum_get,
+    AllProp   = util.array_set(BattleAttrValue_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(util.array_set(metaFunc))"

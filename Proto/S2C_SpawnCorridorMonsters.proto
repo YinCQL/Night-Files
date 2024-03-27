@@ -1,0 +1,13 @@
+// Decompiled with protodec
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+syntax = "proto3";
+
+option csharp_namespace = "Battle";
+
+import "PB_BattleActor.proto";
+
+message S2C_SpawnCorridorMonsters {
+  repeated PB_BattleActor pull_monsters = 1;
+  repeated PB_BattleActor spawn_monsters = 2;
+}

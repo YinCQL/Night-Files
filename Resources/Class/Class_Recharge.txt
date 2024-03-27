@@ -1,0 +1,33 @@
+TextAsset Base
+	string m_Name = "Class_Recharge"
+	string m_Script = "---@class Class_Recharge table
+---@field GoodsID number 商品ID
+---@field RechargeRank number 充值档位（价格）
+---@field VIPExp number VIP经验
+---@field GoodsOpenDay table<number, Struct_Int3> 商品开售时间
+---@field Tag lang 标签
+---@field FirstGift table<number, Struct_IDNum> 首充奖励
+---@field ExtraGift table<number, Struct_IDNum> 额外另赠
+local util = require('Config/Data/Util')
+local Int3_get  = require('Config/Data/Struct_Int3')
+local lang_get  = require('Config/Data/Languages/'..languageData.currentLanguage)
+local IDNum_get = require('Config/Data/Struct_IDNum')
+local title = {
+    GoodsID      = 1,
+    RechargeRank = 2,
+    VIPExp       = 3,
+    GoodsOpenDay = 4,
+    Tag          = 5,
+    FirstGift    = 6,
+    ExtraGift    = 7,
+}
+local set = {
+    GoodsOpenDay = util.array_set(Int3_get),
+    Tag          = lang_get,
+    FirstGift    = util.array_set(IDNum_get),
+    ExtraGift    = util.array_set(IDNum_get),
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

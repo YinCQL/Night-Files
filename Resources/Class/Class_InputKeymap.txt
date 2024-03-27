@@ -1,0 +1,26 @@
+TextAsset Base
+	string m_Name = "Class_InputKeymap"
+	string m_Script = "---@class Class_InputKeymap table
+---@field ID number ID
+---@field Path string 按键路径
+---@field IsIcon number 是否为图标
+---@field IconPath string 图片路径
+---@field ActiveIconBg number 激活图片底图
+---@field DisplayName lang 文字名称
+local util = require('Config/Data/Util')
+local lang_get = require('Config/Data/Languages/'..languageData.currentLanguage)
+local title = {
+    ID           = 1,
+    Path         = 2,
+    IsIcon       = 3,
+    IconPath     = 4,
+    ActiveIconBg = 5,
+    DisplayName  = 6,
+}
+local set = {
+    DisplayName = lang_get,
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

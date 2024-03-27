@@ -1,0 +1,18 @@
+TextAsset Base
+	string m_Name = "Class_WindowList"
+	string m_Script = "---@class Class_WindowList table
+---@field ID number ID
+---@field WindowPath string 窗口名
+---@field WindowName string 界面路径
+local util = require('Config/Data/Util')
+local title = {
+    ID         = 1,
+    WindowPath = 2,
+    WindowName = 3,
+}
+local set = {
+}
+local metaFunc = function(data)
+	return util.metatable(data, title, set)
+end
+return util.array_set(metaFunc)"

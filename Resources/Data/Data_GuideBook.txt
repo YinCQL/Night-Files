@@ -1,0 +1,275 @@
+TextAsset Base
+	string m_Name = "Data_GuideBook"
+	string m_Script = "local util = require('Config/Data/Util')
+local data = {
+    [100000] = {
+        [1] = {
+            100000,
+            1,
+            "GuideBook_GuideName_100000_1",
+            "GuideBook_GuideDes_100000_1",
+            "Guidebook/ui_icon_guidebook_100000_1",
+            1
+        },
+        [2] = {
+            100000,
+            2,
+            "GuideBook_GuideName_100000_2",
+            "GuideBook_GuideDes_100000_2",
+            "Guidebook/ui_icon_guidebook_100000_1",
+            0
+        }
+    },
+    [100001] = {
+        [1] = {
+            100001,
+            1,
+            "GuideBook_GuideName_100001_1",
+            "GuideBook_GuideDes_100001_1",
+            "Guidebook/ui_icon_guidebook_100001_1",
+            1
+        },
+        [2] = {
+            100001,
+            2,
+            "GuideBook_GuideName_100001_2",
+            "GuideBook_GuideDes_100001_2",
+            "Guidebook/ui_icon_guidebook_100001_1",
+            0
+        }
+    },
+    [100002] = {
+        [1] = {
+            100002,
+            1,
+            "GuideBook_GuideName_100002_1",
+            "GuideBook_GuideDes_100002_1",
+            "Guidebook/ui_icon_guidebook_100002_1",
+            1
+        },
+        [2] = {
+            100002,
+            2,
+            "GuideBook_GuideName_100002_2",
+            "GuideBook_GuideDes_100002_2",
+            "Guidebook/ui_icon_guidebook_100002_2",
+            0
+        },
+        [3] = {
+            100002,
+            3,
+            "GuideBook_GuideName_100002_3",
+            "GuideBook_GuideDes_100002_3",
+            "Guidebook/ui_icon_guidebook_100002_3",
+            0
+        }
+    },
+    [100003] = {
+        [1] = {
+            100003,
+            1,
+            "GuideBook_GuideName_100003_1",
+            "GuideBook_GuideDes_100003_1",
+            "Guidebook/ui_icon_guidebook_100003_1",
+            1
+        }
+    },
+    [100004] = {
+        [1] = {
+            100004,
+            1,
+            "GuideBook_GuideName_100004_1",
+            "GuideBook_GuideDes_100004_1",
+            "Guidebook/ui_icon_guidebook_100004_1",
+            0
+        },
+        [2] = {
+            100004,
+            2,
+            "GuideBook_GuideName_100004_1",
+            "GuideBook_GuideDes_100004_2",
+            "Guidebook/ui_icon_guidebook_100004_2",
+            0
+        },
+        [3] = {
+            100004,
+            3,
+            "GuideBook_GuideName_100004_1",
+            "GuideBook_GuideDes_100004_3",
+            "Guidebook/ui_icon_guidebook_100004_3",
+            1
+        }
+    },
+    [100005] = {
+        [1] = {
+            100005,
+            1,
+            "GuideBook_GuideName_100005_1",
+            "GuideBook_GuideDes_100005_1",
+            "Guidebook/ui_icon_guidebook_100002_3",
+            0
+        },
+        [2] = {
+            100005,
+            2,
+            "GuideBook_GuideName_100005_1",
+            "GuideBook_GuideDes_100005_2",
+            "Guidebook/ui_icon_guidebook_100002_3",
+            0
+        }
+    },
+    [900001] = {
+        [1] = {
+            900001,
+            1,
+            "GuideBook_GuideName_900001_1",
+            "GuideBook_GuideDes_900001_1",
+            "Guidebook/ui_icon_guidebook_900001_1",
+            1
+        },
+        [2] = {
+            900001,
+            2,
+            "GuideBook_GuideName_900001_2",
+            "GuideBook_GuideDes_900001_2",
+            "Guidebook/ui_icon_guidebook_900001_2",
+            0
+        }
+    },
+    [900002] = {
+        [1] = {
+            900002,
+            1,
+            "GuideBook_GuideName_900002_1",
+            "GuideBook_GuideDes_900002_1",
+            "Guidebook/ui_icon_guidebook_900002_1",
+            1
+        },
+        [2] = {
+            900002,
+            2,
+            "GuideBook_GuideName_900002_2",
+            "GuideBook_GuideDes_900002_2",
+            "Guidebook/ui_icon_guidebook_900002_2",
+            0
+        }
+    },
+    [900003] = {
+        [1] = {
+            900003,
+            1,
+            "GuideBook_GuideName_900003_1",
+            "GuideBook_GuideDes_900003_1",
+            "Guidebook/ui_icon_guidebook_900003_1",
+            1
+        },
+        [2] = {
+            900003,
+            2,
+            "GuideBook_GuideName_900003_2",
+            "GuideBook_GuideDes_900003_2",
+            "Guidebook/ui_icon_guidebook_900003_2",
+            0
+        }
+    },
+    [900004] = {
+        [1] = {
+            900004,
+            1,
+            "GuideBook_GuideName_900004_1",
+            "GuideBook_GuideDes_900004_1",
+            "Guidebook/ui_icon_guidebook_900004_1",
+            1
+        },
+        [2] = {
+            900004,
+            2,
+            "GuideBook_GuideName_900004_2",
+            "GuideBook_GuideDes_900004_2",
+            "Guidebook/ui_icon_guidebook_900004_2",
+            0
+        }
+    },
+    [900005] = {
+        [1] = {
+            900005,
+            1,
+            "GuideBook_GuideName_900005_1",
+            "GuideBook_GuideDes_900005_1",
+            "Guidebook/ui_icon_guidebook_900005_1",
+            0
+        },
+        [2] = {
+            900005,
+            2,
+            "GuideBook_GuideName_900005_1",
+            "GuideBook_GuideDes_900005_2",
+            "Guidebook/ui_icon_guidebook_900005_2",
+            1
+        }
+    },
+    [900006] = {
+        [1] = {
+            900006,
+            1,
+            "GuideBook_GuideName_900006_1",
+            "GuideBook_GuideDes_900006_1",
+            "Guidebook/ui_icon_guidebook_900006_1",
+            1
+        },
+        [2] = {
+            900006,
+            2,
+            "GuideBook_GuideName_900006_1",
+            "GuideBook_GuideDes_900006_2",
+            "Guidebook/ui_icon_guidebook_900006_2",
+            1
+        }
+    },
+    [900007] = {
+        [1] = {
+            900007,
+            1,
+            "GuideBook_GuideName_900007_1",
+            "GuideBook_GuideDes_900007_1",
+            "Guidebook/ui_icon_guidebook_900007_1",
+            1
+        },
+        [2] = {
+            900007,
+            2,
+            "GuideBook_GuideName_900007_2",
+            "GuideBook_GuideDes_900007_1",
+            "Guidebook/ui_icon_guidebook_900007_2",
+            1
+        }
+    },
+    [900008] = {
+        [1] = {
+            900008,
+            1,
+            "GuideBook_GuideName_900008_1",
+            "GuideBook_GuideDes_900008_1",
+            "Guidebook/ui_icon_guidebook_900008_1",
+            1
+        },
+        [2] = {
+            900008,
+            2,
+            "GuideBook_GuideName_900008_2",
+            "GuideBook_GuideDes_900008_2",
+            "Guidebook/ui_icon_guidebook_900008_2",
+            0
+        },
+        [3] = {
+            900008,
+            3,
+            "GuideBook_GuideName_900008_3",
+            "GuideBook_GuideDes_900008_3",
+            "Guidebook/ui_icon_guidebook_900008_3",
+            0
+        }
+    }
+}
+return require('Config/Data/Class_GuideBook')(data)
+"
