@@ -1,0 +1,39 @@
+TextAsset Base
+	string m_Name = "Enum_WeaponSoundType"
+	string m_Script = "---@class Enum_WeaponSoundType table
+---@field Null number 空音效
+---@field Blunt number 钝器
+---@field Unarmed number 徒手
+---@field Club number 棍棒
+---@field Bow number 弓箭
+---@field Gun number 手枪（单发）
+---@field MachineGun number 机关枪（小连发）
+---@field MachineGunContinue number 机关枪（持续连发）
+---@field Cannon number 炮（肩扛式）
+---@field Laser number 激光
+---@field Flamethrower number 喷火器
+---@field SuperPower number 超能力
+---@field Sword number 刀剑
+---@field Gun_Assist number 手枪（单发）_辅助机
+---@field Ice number 冰
+---@field Ice_Assist number 冰_辅助机
+local enum = {
+    Null               = 0,
+    Blunt              = 1,
+    Unarmed            = 2,
+    Club               = 3,
+    Bow                = 4,
+    Gun                = 5,
+    MachineGun         = 6,
+    MachineGunContinue = 7,
+    Cannon             = 8,
+    Laser              = 9,
+    Flamethrower       = 10,
+    SuperPower         = 11,
+    Sword              = 12,
+    Gun_Assist         = 13,
+    Ice                = 14,
+    Ice_Assist         = 15,
+}
+return enum
+"

@@ -1,0 +1,19 @@
+TextAsset Base
+	string m_Name = "Enum_Quality"
+	string m_Script = "---@class Enum_Quality table
+---@field Quality1 number 白
+---@field Quality2 number 绿
+---@field Quality3 number 蓝
+---@field Quality4 number 紫
+---@field Quality5 number 橙
+---@field Quality6 number 红
+local enum = {
+    Quality1 = 1,
+    Quality2 = 2,
+    Quality3 = 3,
+    Quality4 = 4,
+    Quality5 = 5,
+    Quality6 = 6,
+}
+return enum
+"

@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_MonsterType"
+	string m_Script = "---@class Enum_MonsterType table
+---@field Mob number  小怪
+---@field Senior number 伪精英怪
+---@field Elite number 精英怪
+---@field Boss number Boss
+local enum = {
+    Mob    = 1,
+    Senior = 2,
+    Elite  = 3,
+    Boss   = 4,
+}
+return enum
+"

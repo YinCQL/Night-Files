@@ -1,0 +1,25 @@
+TextAsset Base
+	string m_Name = "Enum_CampType"
+	string m_Script = "---@class Enum_CampType table
+---@field Player number 玩家
+---@field Monster number 怪物
+---@field Neutral number 中立-友好（不会被玩家或怪物打，也不会打玩家）
+---@field Auxiliary number 辅助机
+---@field Cart number 推车关的车
+---@field Mechanic number 机关
+---@field Block number 阻挡（玩家不可攻击）
+---@field BlockPlayerOnly number 阻挡（玩家可攻击）
+---@field Max number 
+local enum = {
+    Player          = 1,
+    Monster         = 2,
+    Neutral         = 3,
+    Auxiliary       = 4,
+    Cart            = 5,
+    Mechanic        = 6,
+    Block           = 7,
+    BlockPlayerOnly = 8,
+    Max             = 9,
+}
+return enum
+"

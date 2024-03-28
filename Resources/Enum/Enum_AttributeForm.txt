@@ -1,0 +1,11 @@
+TextAsset Base
+	string m_Name = "Enum_AttributeForm"
+	string m_Script = "---@class Enum_AttributeForm table
+---@field Number number 数值
+---@field Percent number 万分比数值
+local enum = {
+    Number  = 1,
+    Percent = 2,
+}
+return enum
+"

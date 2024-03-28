@@ -1,0 +1,17 @@
+TextAsset Base
+	string m_Name = "Enum_BattleStateAttributeType"
+	string m_Script = "---@class Enum_BattleStateAttributeType table
+---@field HP number 当前血量
+---@field SAN number 当前SAN值
+---@field Tenacity number 当前韧性值
+---@field Energy number 当前能量
+---@field Shield number 当前护盾值
+local enum = {
+    HP       = 1,
+    SAN      = 2,
+    Tenacity = 3,
+    Energy   = 4,
+    Shield   = 5,
+}
+return enum
+"

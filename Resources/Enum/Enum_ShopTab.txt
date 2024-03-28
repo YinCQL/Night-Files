@@ -1,0 +1,17 @@
+TextAsset Base
+	string m_Name = "Enum_ShopTab"
+	string m_Script = "---@class Enum_ShopTab table
+---@field GoldShopTab number 黑市
+---@field GiftPackShopTab number 礼包
+---@field RechargeShopTab number 充值
+---@field FashionShopTab number 时装
+---@field ArmsShopTab number 军备
+local enum = {
+    GoldShopTab     = 1,
+    GiftPackShopTab = 2,
+    RechargeShopTab = 3,
+    FashionShopTab  = 4,
+    ArmsShopTab     = 5,
+}
+return enum
+"

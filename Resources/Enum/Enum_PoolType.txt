@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_PoolType"
+	string m_Script = "---@class Enum_PoolType table
+---@field RestrictHeroPool number 限定角色池
+---@field RestrictWeaponPool number 限定武器池
+---@field ResidentPool number 常驻池
+---@field NovicePool number 新手池
+local enum = {
+    RestrictHeroPool   = 1,
+    RestrictWeaponPool = 2,
+    ResidentPool       = 3,
+    NovicePool         = 4,
+}
+return enum
+"

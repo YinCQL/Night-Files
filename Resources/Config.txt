@@ -1,0 +1,176 @@
+TextAsset Base
+	string m_Name = "Config"
+	string m_Script = "---@class Config table
+---@field Enum_BattleAttributeType Enum_BattleAttributeType 属性
+---@field Enum_Quality Enum_Quality 品质
+---@field Enum_BagPage Enum_BagPage 背包页签
+---@field Enum_ItemSubType Enum_ItemSubType 物品子类型
+---@field Enum_EntryType Enum_EntryType 词条类型
+---@field Enum_AttributeForm Enum_AttributeForm 属性数值构成
+---@field Enum_PoolType Enum_PoolType 卡池类型
+---@field Enum_PoolSubType Enum_PoolSubType 子卡池类型
+---@field Enum_TeamSaveType Enum_TeamSaveType 队伍保存类型
+---@field Enum_ChanceType Enum_ChanceType 随机类型
+---@field Enum_CampType Enum_CampType 阵营类型
+---@field Enum_UnitTag Enum_UnitTag 单位特性标签
+---@field Enum_DungeonTag Enum_DungeonTag 关卡特性标签
+---@field Enum_DamageType Enum_DamageType 伤害类型
+---@field Enum_MonsterType Enum_MonsterType 怪物类型
+---@field Enum_BattleGrowType Enum_BattleGrowType 局内成长类型
+---@field Enum_BattleStateAttributeType Enum_BattleStateAttributeType 战斗状态属性
+---@field Enum_AvatarSoundType Enum_AvatarSoundType 造型音效材质类型
+---@field Enum_WeaponSoundType Enum_WeaponSoundType 武器音效材质类型
+---@field Enum_ElementType Enum_ElementType 一级元素类型
+---@field Enum_SubElementType Enum_SubElementType 二级元素类型
+---@field Enum_ElementReactionType Enum_ElementReactionType 元素反应类型
+---@field Enum_ConditionType Enum_ConditionType 条件类型
+---@field Enum_TimeType Enum_TimeType 时间类型
+---@field Enum_GoodsGenerateType Enum_GoodsGenerateType 商品生成类型
+---@field Enum_ShopManRefreshReset Enum_ShopManRefreshReset 商店手动刷新类型
+---@field Enum_ShopViewType Enum_ShopViewType 商店界面类型
+---@field Enum_ShopTab Enum_ShopTab 商店页签
+---@field Enum_GoodsViewType Enum_GoodsViewType 商品显示类型
+---@field Enum_GoodsCostType Enum_GoodsCostType 商品消费类型
+---@field Enum_HomeWorkerAddtion Enum_HomeWorkerAddtion 基建进驻加成
+---@field Enum_Function Enum_Function 功能
+---@field Enum_SheetID Enum_SheetID 章节页签ID
+---@field AuxMachine table<number, Class_AuxMachine> 
+---@field CampRelation table<number, Class_CampRelation> 
+---@field CharacterAddition table<number, table<number, Class_CharacterAddition>> 
+---@field CharacterSANInterval table<number, Class_CharacterSANInterval> 
+---@field ElementRelationDamage table<number, Class_ElementRelationDamage> 
+---@field ElementReactionBuff table<number, Class_ElementReactionBuff> 
+---@field Monster table<number, Class_Monster> 
+---@field MonsterAttribute table<number, Class_MonsterAttribute> 
+---@field MonsterFile table<number, Class_MonsterFile> 
+---@field SkillDamage table<number, Class_SkillDamage> 
+---@field SkillDamageFormula table<number, Class_SkillDamageFormula> 
+---@field SkillDamageGrow table<number, Class_SkillDamageGrow> 
+---@field BattleGrow table<number, table<number, Class_BattleGrow>> 
+---@field BattleGrowGroup table<number, Class_BattleGrowGroup> 
+---@field Chapter table<number, table<number, table<number, Class_Chapter>>> 
+---@field ChapterGroup table<number, Class_ChapterGroup> 
+---@field ChapterDetail table<number, Class_ChapterDetail> 
+---@field ChapterSheet table<number, Class_ChapterSheet> 
+---@field ChapterStarAward table<number, table<number, Class_ChapterStarAward>> 
+---@field DialogTable table<number, Class_DialogTable> 
+---@field Dungeon table<number, Class_Dungeon> 
+---@field DungeonButtonPreset table<number, Class_DungeonButtonPreset> 
+---@field DungeonCondition table<number, Class_DungeonCondition> 
+---@field DungeonTarget table<number, Class_DungeonTarget> 
+---@field Scene table<string, Class_Scene> 
+---@field BangScreen table<number, Class_BangScreen> 
+---@field Achieve table<number, table<number, Class_Achieve>> 
+---@field AchieveGroup table<number, Class_AchieveGroup> 
+---@field Activity table<number, Class_Activity> 
+---@field Armor table<number, Class_Armor> 
+---@field ArmorEntry table<number, Class_ArmorEntry> 
+---@field ArmorGrow table<number, table<number, Class_ArmorGrow>> 
+---@field ArmorMainAttribute table<number, table<number, Class_ArmorMainAttribute>> 
+---@field ArmorPreset table<number, table<number, Class_ArmorPreset>> 
+---@field ArmorSpecialEntryGrow table<number, table<number, Class_ArmorSpecialEntryGrow>> 
+---@field Attribute table<number, Class_Attribute> 
+---@field AtvThreeDayMissionGroup table<number, Class_AtvThreeDayMissionGroup> 
+---@field AtvThreeDayMission table<number, Class_AtvThreeDayMission> 
+---@field AtvThreeDayMissionPoint table<number, Class_AtvThreeDayMissionPoint> 
+---@field Bag table<number, Class_Bag> 
+---@field BGM table<number, Class_BGM> 
+---@field BossBattle table<number, table<number, Class_BossBattle>> 
+---@field BossBattleRandomMission table<number, Class_BossBattleRandomMission> 
+---@field BossBattleEntry table<number, Class_BossBattleEntry> 
+---@field BossBattleHighestScore table<number, table<number, Class_BossBattleHighestScore>> 
+---@field BossBattleTotalScore table<number, table<number, Class_BossBattleTotalScore>> 
+---@field BossBattleMoney table<number, table<number, Class_BossBattleMoney>> 
+---@field Buff table<number, Class_Buff> 
+---@field ButtonList table<number, Class_ButtonList> 
+---@field Condition table<number, Class_Condition> 
+---@field Drop table<number, table<number, Class_Drop>> 
+---@field DropGroup table<number, Class_DropGroup> 
+---@field EpisodeSummarize table<number, Class_EpisodeSummarize> 
+---@field FunctionUnlock table<number, Class_FunctionUnlock> 
+---@field Guidance table<number, Class_Guidance> 
+---@field GuideBook table<number, table<number, Class_GuideBook>> 
+---@field Hero table<number, Class_Hero> 
+---@field HeroAppear table<number, Class_HeroAppear> 
+---@field HeroAwake table<number, table<number, Class_HeroAwake>> 
+---@field HeroBaseAttribute table<number, Class_HeroBaseAttribute> 
+---@field HeroBattleAssist table<number, Class_HeroBattleAssist> 
+---@field HeroBreach table<number, table<number, Class_HeroBreach>> 
+---@field HeroFavorLevel table<number, table<number, Class_HeroFavorLevel>> 
+---@field HeroGrow table<number, table<number, Class_HeroGrow>> 
+---@field HeroPreset table<number, Class_HeroPreset> 
+---@field HeroSkill table<number, Class_HeroSkill> 
+---@field HeroSkillGrow table<number, table<number, Class_HeroSkillGrow>> 
+---@field HeroStory table<number, table<number, Class_HeroStory>> 
+---@field HeroVoice table<number, table<number, Class_HeroVoice>> 
+---@field HomeBuilding table<number, table<number, Class_HomeBuilding>> 
+---@field HomeBuildingBase table<number, Class_HomeBuildingBase> 
+---@field HomeBuildingSkill table<number, table<number, Class_HomeBuildingSkill>> 
+---@field HomeFormula table<number, Class_HomeFormula> 
+---@field HomeHero table<number, Class_HomeHero> 
+---@field HomeMainAttributeAdd table<number, Class_HomeMainAttributeAdd> 
+---@field HomeReceptionEvent table<number, table<number, Class_HomeReceptionEvent>> 
+---@field HomeSCPReport table<number, table<number, Class_HomeSCPReport>> 
+---@field HomeSCP table<number, Class_HomeSCP> 
+---@field HomeSCPBubble table<number, table<number, Class_HomeSCPBubble>> 
+---@field HomeSCPReception table<number, Class_HomeSCPReception> 
+---@field InputDes table<number, Class_InputDes> 
+---@field InputKeymap table<number, Class_InputKeymap> 
+---@field InterAction table<number, Class_InterAction> 
+---@field Item table<number, Class_Item> 
+---@field ItemProduce table<number, Class_ItemProduce> 
+---@field ItemStory table<number, Class_ItemStory> 
+---@field ItemSubType table<number, Class_ItemSubType> 
+---@field MachineAppear table<number, Class_MachineAppear> 
+---@field Mail table<number, Class_Mail> 
+---@field PauseWindow table<number, Class_PauseWindow> 
+---@field ProduceResolve table<number, table<number, Class_ProduceResolve>> 
+---@field ProduceSynthesis table<number, table<number, Class_ProduceSynthesis>> 
+---@field Radio table<number, table<number, Class_Radio>> 
+---@field Recharge table<number, Class_Recharge> 
+---@field RechargeRank table<number, Class_RechargeRank> 
+---@field Recruit table<number, table<number, Class_Recruit>> 
+---@field RecruitGroup table<number, Class_RecruitGroup> 
+---@field RedDotControl table<number, Class_RedDotControl> 
+---@field RoleDraw table<number, Class_RoleDraw> 
+---@field Sensitiveword table<string, Class_Sensitiveword> 
+---@field Shop table<number, Class_Shop> 
+---@field ShopBanner table<number, Class_ShopBanner> 
+---@field ShopGoods table<number, Class_ShopGoods> 
+---@field ShopGoodsGroup table<number, table<number, Class_ShopGoodsGroup>> 
+---@field SkillShow table<number, table<number, Class_SkillShow>> 
+---@field Spawn table<number, table<number, Class_Spawn>> 
+---@field StageArea table<string, Class_StageArea> 
+---@field Suit table<number, Class_Suit> 
+---@field SystemError table<number, Class_SystemError> 
+---@field TalkInfo table<number, Class_TalkInfo> 
+---@field TeamType table<number, Class_TeamType> 
+---@field UserBackGround table<number, Class_UserBackGround> 
+---@field UserLevel table<number, Class_UserLevel> 
+---@field UserPhotosBox table<number, Class_UserPhotosBox> 
+---@field UserPhotos table<number, Class_UserPhotos> 
+---@field WeaponAppear table<number, Class_WeaponAppear> 
+---@field WeaponBreach table<number, table<number, Class_WeaponBreach>> 
+---@field WeaponGrow table<number, table<number, Class_WeaponGrow>> 
+---@field WeaponPreset table<number, table<number, Class_WeaponPreset>> 
+---@field WeaponRefine table<number, table<number, Class_WeaponRefine>> 
+---@field WindowList table<number, Class_WindowList> 
+---@field Constant Class_Constant 全局常量
+---@field Language table<string, string> 语言表
+local table = setmetatable({},{
+    __index = function(table, key)
+        if key == 'Language' then
+            return setmetatable({},{
+                __index = function(table, key)
+                    return require('Config/Data/Languages/'..languageData.currentLanguage)('Language_'..key)
+                end
+            })
+        elseif string.sub(key,1,5) == 'Enum_' then
+            return require('Config/Data/'..key)
+        else
+            return require('Config/Data/Data_'..key)
+        end
+    end
+})
+return table
+"

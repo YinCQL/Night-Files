@@ -1,0 +1,11 @@
+TextAsset Base
+	string m_Name = "Enum_EntryType"
+	string m_Script = "---@class Enum_EntryType table
+---@field NormalEntry number 普通词条
+---@field SpecialEntry number 特殊词条
+local enum = {
+    NormalEntry  = 1,
+    SpecialEntry = 2,
+}
+return enum
+"

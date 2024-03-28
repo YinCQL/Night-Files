@@ -1,0 +1,19 @@
+TextAsset Base
+	string m_Name = "Enum_ElementReactionType"
+	string m_Script = "---@class Enum_ElementReactionType table
+---@field StrengthBiological number 生能
+---@field StrengthElectromagnetic number 力场
+---@field StrengthTelekinesis number 震波
+---@field BiologicalElectromagnetic number 结晶
+---@field BiologicalTelekinesis number 蜕化
+---@field ElectromagneticTelekinesis number 塑能
+local enum = {
+    StrengthBiological         = 1,
+    StrengthElectromagnetic    = 2,
+    StrengthTelekinesis        = 3,
+    BiologicalElectromagnetic  = 4,
+    BiologicalTelekinesis      = 5,
+    ElectromagneticTelekinesis = 6,
+}
+return enum
+"

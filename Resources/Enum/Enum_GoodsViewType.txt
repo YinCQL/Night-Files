@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_GoodsViewType"
+	string m_Script = "---@class Enum_GoodsViewType table
+---@field GeneralGoods number 普通道具
+---@field GiftPackGoods number 礼包
+---@field FashionGoods number 时装
+---@field RechargeGoods number 充值道具
+local enum = {
+    GeneralGoods  = 1,
+    GiftPackGoods = 2,
+    FashionGoods  = 3,
+    RechargeGoods = 4,
+}
+return enum
+"

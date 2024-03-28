@@ -1,0 +1,9 @@
+TextAsset Base
+	string m_Name = "Enum_DungeonTag"
+	string m_Script = "---@class Enum_DungeonTag table
+---@field UnlimitedHP number 无限血量
+local enum = {
+    UnlimitedHP = 1,
+}
+return enum
+"

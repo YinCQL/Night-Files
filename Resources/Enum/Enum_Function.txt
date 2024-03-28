@@ -1,0 +1,63 @@
+TextAsset Base
+	string m_Name = "Enum_Function"
+	string m_Script = "---@class Enum_Function table
+---@field MainMenu number 主界面侧栏
+---@field Mail number 邮件
+---@field Activity number 活动
+---@field Questionnaire number 问卷
+---@field Hero number 特工
+---@field Bag number 储藏室
+---@field Home number 基地建设
+---@field Recruit number 招募
+---@field Shop number 商城
+---@field Recharge number 充值
+---@field Achievement number 成就
+---@field HeroUpgrade number 角色升级
+---@field HeroBreach number 角色突破
+---@field HeroAwake number 角色觉醒
+---@field HeroFavor number 角色好感度度
+---@field WeaponBreach number 武器突破
+---@field WeaponRefine number 武器精炼
+---@field ProduceSynthesis number 合成
+---@field ProduceResolve number 分解
+---@field Bag_WeaponBagPage number 背包-武器页签
+---@field Bag_ArmorBagPage number 背包-礼装页签
+---@field Bag_MachineBagPage number 背包-辅助机页签
+---@field Bag_CultivatedBagPage number 背包-养成素材页签
+---@field Bag_UniversalBagPage number 背包-通用素材页签
+---@field Bag_TaskBagPage number 背包-任务道具页签
+---@field Bag_ImportantBagPage number 背包-贵重物品页签
+---@field MAIN_EPISODE number 主线关卡
+---@field PRACTISING number 突破演练
+local enum = {
+    MainMenu              = 1,
+    Mail                  = 2,
+    Activity              = 3,
+    Questionnaire         = 4,
+    Hero                  = 11,
+    Bag                   = 12,
+    Home                  = 13,
+    Recruit               = 14,
+    Shop                  = 15,
+    Recharge              = 16,
+    Achievement           = 21,
+    HeroUpgrade           = 101,
+    HeroBreach            = 102,
+    HeroAwake             = 103,
+    HeroFavor             = 104,
+    WeaponBreach          = 201,
+    WeaponRefine          = 202,
+    ProduceSynthesis      = 501,
+    ProduceResolve        = 502,
+    Bag_WeaponBagPage     = 1001,
+    Bag_ArmorBagPage      = 1002,
+    Bag_MachineBagPage    = 1003,
+    Bag_CultivatedBagPage = 1004,
+    Bag_UniversalBagPage  = 1005,
+    Bag_TaskBagPage       = 1006,
+    Bag_ImportantBagPage  = 1007,
+    MAIN_EPISODE          = 2001,
+    PRACTISING            = 2004,
+}
+return enum
+"

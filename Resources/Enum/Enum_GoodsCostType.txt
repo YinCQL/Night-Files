@@ -1,0 +1,11 @@
+TextAsset Base
+	string m_Name = "Enum_GoodsCostType"
+	string m_Script = "---@class Enum_GoodsCostType table
+---@field GameMoney number 游戏货币
+---@field Recharge number 充值消费
+local enum = {
+    GameMoney = 1,
+    Recharge  = 2,
+}
+return enum
+"

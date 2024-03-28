@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_TeamSaveType"
+	string m_Script = "---@class Enum_TeamSaveType table
+---@field DefaultTeam number 默认编队
+---@field StageClearRecord number 关卡通关记录
+---@field StageDefaultTeam number 关卡默认编队
+---@field IDSaveTeam number 保存ID编队
+local enum = {
+    DefaultTeam      = 1,
+    StageClearRecord = 2,
+    StageDefaultTeam = 3,
+    IDSaveTeam       = 10,
+}
+return enum
+"

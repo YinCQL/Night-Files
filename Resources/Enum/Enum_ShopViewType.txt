@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Enum_ShopViewType"
+	string m_Script = "---@class Enum_ShopViewType table
+---@field GeneralShop number 普通商店
+---@field GiftPackShop number 礼包商店
+---@field RechargeShop number 充值商店
+---@field FashionShop number 时装商店
+---@field RankShop number 分级商店
+---@field RankShop1 number 分级商店1级
+---@field RankShop2 number 分级商店2级
+---@field RankShop3 number 分级商店3级
+local enum = {
+    GeneralShop  = 100,
+    GiftPackShop = 200,
+    RechargeShop = 300,
+    FashionShop  = 400,
+    RankShop     = 500,
+    RankShop1    = 501,
+    RankShop2    = 502,
+    RankShop3    = 503,
+}
+return enum
+"

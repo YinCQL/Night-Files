@@ -1,0 +1,39 @@
+TextAsset Base
+	string m_Name = "Enum_SubElementType"
+	string m_Script = "---@class Enum_SubElementType table
+---@field Scp_Strength0 number 力能-无
+---@field Scp_Strength1 number 力能-割裂
+---@field Scp_Strength2 number 力能-穿透
+---@field Scp_Strength3 number 力能-流血
+---@field Scp_Biological0 number 生体-无
+---@field Scp_Biological1 number 生体-酸蚀
+---@field Scp_Biological2 number 生体-锈蚀
+---@field Scp_Biological3 number 生体-毒素
+---@field Scp_Electromagnetic0 number 电磁-无
+---@field Scp_Electromagnetic1 number 电磁-脉冲
+---@field Scp_Electromagnetic2 number 电磁-爆闪
+---@field Scp_Electromagnetic3 number 电磁-感电
+---@field Scp_Telekinesis0 number 念动-无
+---@field Scp_Telekinesis1 number 念动-解离
+---@field Scp_Telekinesis2 number 念动-紊乱
+---@field Scp_Telekinesis3 number 念动-失能
+local enum = {
+    Scp_Strength0        = 1,
+    Scp_Strength1        = 2,
+    Scp_Strength2        = 3,
+    Scp_Strength3        = 4,
+    Scp_Biological0      = 5,
+    Scp_Biological1      = 6,
+    Scp_Biological2      = 7,
+    Scp_Biological3      = 8,
+    Scp_Electromagnetic0 = 9,
+    Scp_Electromagnetic1 = 10,
+    Scp_Electromagnetic2 = 11,
+    Scp_Electromagnetic3 = 12,
+    Scp_Telekinesis0     = 13,
+    Scp_Telekinesis1     = 14,
+    Scp_Telekinesis2     = 15,
+    Scp_Telekinesis3     = 16,
+}
+return enum
+"

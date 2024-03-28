@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_HomeWorkerAddtion"
+	string m_Script = "---@class Enum_HomeWorkerAddtion table
+---@field SynthesisSuccessRateUp number 合成成功率加成
+---@field ByProductRateUp number 副产品加成
+---@field SurveySuccessRateUp number 调查成功率加成
+---@field InvestigateExtraStable number 调查额外安定值
+local enum = {
+    SynthesisSuccessRateUp = 1,
+    ByProductRateUp        = 2,
+    SurveySuccessRateUp    = 3,
+    InvestigateExtraStable = 4,
+}
+return enum
+"

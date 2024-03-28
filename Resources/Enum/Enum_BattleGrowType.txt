@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Enum_BattleGrowType"
+	string m_Script = "---@class Enum_BattleGrowType table
+---@field AtkSpeed number 攻速型
+---@field AtkPower number 攻击力型
+---@field Neutral number 中立-友好（不会被玩家或怪物打，也不会打玩家）
+---@field Auxiliary number 辅助机
+---@field Cart number 推车关的车
+---@field Mechanic number 机关
+---@field NeutralMechanic number 中立机关（同时打人和怪）
+---@field Max number 
+local enum = {
+    AtkSpeed        = 1,
+    AtkPower        = 2,
+    Neutral         = 3,
+    Auxiliary       = 4,
+    Cart            = 5,
+    Mechanic        = 6,
+    NeutralMechanic = 7,
+    Max             = 8,
+}
+return enum
+"

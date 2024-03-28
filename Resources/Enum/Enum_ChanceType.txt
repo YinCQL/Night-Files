@@ -1,0 +1,13 @@
+TextAsset Base
+	string m_Name = "Enum_ChanceType"
+	string m_Script = "---@class Enum_ChanceType table
+---@field WeightProbability number 权重概率
+---@field IndependentProbability number 独立概率
+---@field Selection number 手动选择
+local enum = {
+    WeightProbability      = 1,
+    IndependentProbability = 2,
+    Selection              = 3,
+}
+return enum
+"

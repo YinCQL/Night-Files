@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_ShopManRefreshReset"
+	string m_Script = "---@class Enum_ShopManRefreshReset table
+---@field NoManRefresh number 不可手动刷新
+---@field FollowShopRefresh number 跟随商店刷新
+---@field TimeAfterReset number 时间后重置
+---@field TimeAfterRecover1 number 时间后恢复1次数
+local enum = {
+    NoManRefresh      = 0,
+    FollowShopRefresh = 1,
+    TimeAfterReset    = 2,
+    TimeAfterRecover1 = 3,
+}
+return enum
+"

@@ -1,0 +1,27 @@
+TextAsset Base
+	string m_Name = "Enum_UnitTag"
+	string m_Script = "---@class Enum_UnitTag table
+---@field Float number 漂浮
+---@field Tardy number 迟缓
+---@field Endure number 霸体
+---@field Invincible number 无敌
+---@field Static number 静态
+---@field Invisible number 不可视
+---@field UnableLock number 不可锁定
+---@field DamageImmune number 免疫伤害
+---@field NegativeImmune number 免疫负面效果
+---@field FloatImmune number 不可浮空
+local enum = {
+    Float          = 1,
+    Tardy          = 2,
+    Endure         = 3,
+    Invincible     = 4,
+    Static         = 5,
+    Invisible      = 6,
+    UnableLock     = 7,
+    DamageImmune   = 8,
+    NegativeImmune = 9,
+    FloatImmune    = 10,
+}
+return enum
+"

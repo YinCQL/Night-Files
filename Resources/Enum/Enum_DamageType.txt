@@ -1,0 +1,11 @@
+TextAsset Base
+	string m_Name = "Enum_DamageType"
+	string m_Script = "---@class Enum_DamageType table
+---@field Normal number 普通
+---@field Spring number 回春
+local enum = {
+    Normal = 1,
+    Spring = 2,
+}
+return enum
+"

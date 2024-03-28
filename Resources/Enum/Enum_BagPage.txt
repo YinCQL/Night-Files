@@ -1,0 +1,21 @@
+TextAsset Base
+	string m_Name = "Enum_BagPage"
+	string m_Script = "---@class Enum_BagPage table
+---@field WeaponBagPage number 武器背包页
+---@field ArmorBagPage number 礼装背包页
+---@field MachineBagPage number 辅助机背包页
+---@field CultivatedBagPage number 养成素材背包页
+---@field UniversalBagPage number 通用素材背包页
+---@field TaskBagPage number 任务道具背包页
+---@field ImportantBagPage number 贵重物品背包页
+local enum = {
+    WeaponBagPage     = 1,
+    ArmorBagPage      = 2,
+    MachineBagPage    = 3,
+    CultivatedBagPage = 4,
+    UniversalBagPage  = 5,
+    TaskBagPage       = 6,
+    ImportantBagPage  = 7,
+}
+return enum
+"

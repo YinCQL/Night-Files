@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_SheetID"
+	string m_Script = "---@class Enum_SheetID table
+---@field MAIN_EPISODE number 主线剧情
+---@field NORMALIZATION number 常态作战
+---@field INVITATION number 邀约任务
+---@field PRACTISING number 突破演练
+local enum = {
+    MAIN_EPISODE  = 1,
+    NORMALIZATION = 2,
+    INVITATION    = 3,
+    PRACTISING    = 4,
+}
+return enum
+"

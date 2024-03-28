@@ -1,0 +1,13 @@
+TextAsset Base
+	string m_Name = "Enum_GoodsGenerateType"
+	string m_Script = "---@class Enum_GoodsGenerateType table
+---@field RandomGoods number 随机商品
+---@field FixedGoods number 固定商品
+---@field TimeLimitGoods number 限时商品
+local enum = {
+    RandomGoods    = 1,
+    FixedGoods     = 2,
+    TimeLimitGoods = 3,
+}
+return enum
+"

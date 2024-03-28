@@ -1,0 +1,25 @@
+TextAsset Base
+	string m_Name = "Enum_AvatarSoundType"
+	string m_Script = "---@class Enum_AvatarSoundType table
+---@field Meat number 肉体
+---@field Mental number 金属
+---@field Wood number 木材
+---@field Glass number 玻璃
+---@field Liquid number 液体
+---@field Ghost number 幽灵
+---@field Stone number 石头
+---@field Soil number 泥土
+---@field BossMeat number Boss肉体
+local enum = {
+    Meat     = 0,
+    Mental   = 1,
+    Wood     = 2,
+    Glass    = 3,
+    Liquid   = 4,
+    Ghost    = 5,
+    Stone    = 6,
+    Soil     = 7,
+    BossMeat = 8,
+}
+return enum
+"

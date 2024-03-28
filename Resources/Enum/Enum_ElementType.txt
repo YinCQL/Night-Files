@@ -1,0 +1,17 @@
+TextAsset Base
+	string m_Name = "Enum_ElementType"
+	string m_Script = "---@class Enum_ElementType table
+---@field Scp_Strength number 力能
+---@field Scp_Biological number 生体
+---@field Scp_Electromagnetic number 电磁
+---@field Scp_Telekinesis number 念动
+---@field Scp_Addition number 强效
+local enum = {
+    Scp_Strength        = 1,
+    Scp_Biological      = 2,
+    Scp_Electromagnetic = 3,
+    Scp_Telekinesis     = 4,
+    Scp_Addition        = 5,
+}
+return enum
+"

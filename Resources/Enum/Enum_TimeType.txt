@@ -1,0 +1,23 @@
+TextAsset Base
+	string m_Name = "Enum_TimeType"
+	string m_Script = "---@class Enum_TimeType table
+---@field DailyTime number 每日时间
+---@field WeaklyTime number 每周时间
+---@field MonthlyTime number 每月时间
+---@field YearTime number 每年时间
+---@field OBTime number 公测总时长
+---@field TimeZoneStamp number 现实时间戳（时区不同步）
+---@field TimeStamp_Eight number 现实时间戳（时区同步）
+---@field Interval number 间隔时间
+local enum = {
+    DailyTime       = 1,
+    WeaklyTime      = 2,
+    MonthlyTime     = 3,
+    YearTime        = 4,
+    OBTime          = 5,
+    TimeZoneStamp   = 6,
+    TimeStamp_Eight = 7,
+    Interval        = 8,
+}
+return enum
+"

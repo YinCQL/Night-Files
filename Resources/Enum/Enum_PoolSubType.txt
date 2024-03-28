@@ -1,0 +1,15 @@
+TextAsset Base
+	string m_Name = "Enum_PoolSubType"
+	string m_Script = "---@class Enum_PoolSubType table
+---@field MainPool number 主卡池
+---@field SRGuaranteePool number 4星保底池
+---@field SSRGuaranteePool number 5星保底池
+---@field RestrictGuaranteePool number 限定保底池
+local enum = {
+    MainPool              = 1,
+    SRGuaranteePool       = 2,
+    SSRGuaranteePool      = 3,
+    RestrictGuaranteePool = 4,
+}
+return enum
+"
