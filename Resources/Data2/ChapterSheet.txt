@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "ChapterSheet"
+	string m_Script = "{"1":{"SheetID":1,"Type":1,"Unlock":0},"2":{"SheetID":2,"Type":2,"Unlock":0},"3":{"SheetID":3,"Type":3,"Unlock":0},"4":{"SheetID":4,"Type":4,"Unlock":0}}"

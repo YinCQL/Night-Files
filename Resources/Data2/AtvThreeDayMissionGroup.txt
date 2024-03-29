@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "AtvThreeDayMissionGroup"
+	string m_Script = "{"101":{"MissionGroupID":101,"UnlockTime":{"X":7,"Y":1673294400,"Z":1697054400}},"102":{"MissionGroupID":102,"UnlockTime":{"X":7,"Y":1673380800,"Z":1697054400}},"103":{"MissionGroupID":103,"UnlockTime":{"X":7,"Y":1673467200,"Z":1697054400}}}"

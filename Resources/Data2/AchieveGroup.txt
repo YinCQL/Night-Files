@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "AchieveGroup"
+	string m_Script = "{"100":{"AchieveGroupID":100,"AchieveType":1,"FinishAward":[]}}"

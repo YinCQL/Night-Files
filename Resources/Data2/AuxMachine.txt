@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "AuxMachine"
+	string m_Script = "{"20104":{"ID":20104,"DampSpeed":12.0,"MaxSpeed":1.0,"FollowSlot1":"Follow1","FollowSlot2":"Follow2","AttackSlot":"Attack","Type":1},"20206":{"ID":20206,"DampSpeed":12.0,"MaxSpeed":1.0,"FollowSlot1":"Follow1","FollowSlot2":"Follow2","AttackSlot":"Attack","Type":2},"10310":{"ID":10310,"DampSpeed":12.0,"MaxSpeed":1.0,"FollowSlot1":"Follow1","FollowSlot2":"Follow2","AttackSlot":"Attack","Type":2}}"

@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "Bag"
+	string m_Script = "{"1":{"BagPageID":1,"CanFilter":0,"CanSort":1,"BagMaxID":"Bag_Weapon_Max"},"2":{"BagPageID":2,"CanFilter":0,"CanSort":1,"BagMaxID":"Bag_Armor_Max"},"3":{"BagPageID":3,"CanFilter":0,"CanSort":1,"BagMaxID":"Bag_Machine_Max"},"4":{"BagPageID":4,"CanFilter":1,"CanSort":0,"BagMaxID":"Bag_General_Max"},"5":{"BagPageID":5,"CanFilter":1,"CanSort":0,"BagMaxID":"Bag_General_Max"},"6":{"BagPageID":6,"CanFilter":0,"CanSort":0,"BagMaxID":"Bag_General_Max"},"7":{"BagPageID":7,"CanFilter":1,"CanSort":0,"BagMaxID":"Bag_General_Max"}}"

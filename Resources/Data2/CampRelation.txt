@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "CampRelation"
+	string m_Script = "[{"CampA":1,"CampB":2,"CanAttack":true},{"CampA":2,"CampB":1,"CanAttack":true},{"CampA":4,"CampB":2,"CanAttack":true},{"CampA":2,"CampB":5,"CanAttack":true},{"CampA":5,"CampB":2,"CanAttack":true},{"CampA":4,"CampB":1,"CanAttack":false},{"CampA":1,"CampB":4,"CanAttack":false},{"CampA":1,"CampB":6,"CanAttack":false},{"CampA":2,"CampB":6,"CanAttack":false},{"CampA":4,"CampB":6,"CanAttack":false},{"CampA":6,"CampB":1,"CanAttack":false},{"CampA":6,"CampB":2,"CanAttack":true},{"CampA":6,"CampB":4,"CanAttack":false},{"CampA":6,"CampB":7,"CanAttack":false},{"CampA":1,"CampB":8,"CanAttack":true},{"CampA":0,"CampB":1,"CanAttack":true},{"CampA":0,"CampB":2,"CanAttack":true}]"
