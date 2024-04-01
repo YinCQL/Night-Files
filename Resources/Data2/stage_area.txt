@@ -1,0 +1,100 @@
+TextAsset Base
+	string m_Name = "stage_area"
+	string m_Script = "[
+    {
+        "mapId": 1,
+        "area": "AlleyCorner1",
+        "stage": "stage1-1",
+        "shapeType": 2,
+        "shapePos": {
+            "field1": 15,
+            "field2": 2,
+            "field3": -81
+        },
+        "shapeData": [
+            4,
+            1,
+            4
+        ]
+    },
+    {
+        "mapId": 1,
+        "area": "AlleyCorner2",
+        "stage": "stage1-1",
+        "shapeType": 2,
+        "shapePos": {
+            "field1": -39,
+            "field2": 4,
+            "field3": 36
+        },
+        "shapeData": [
+            4,
+            1,
+            4
+        ]
+    },
+    {
+        "mapId": 1,
+        "area": "AlleyCorner3",
+        "stage": "stage1-1",
+        "shapeType": 2,
+        "shapePos": {
+            "field1": -31,
+            "field2": 4,
+            "field3": 23
+        },
+        "shapeData": [
+            4,
+            1,
+            4
+        ]
+    },
+    {
+        "mapId": 1,
+        "area": "AlleyCorner4",
+        "stage": "stage1-2",
+        "shapeType": 2,
+        "shapePos": {
+            "field1": 4,
+            "field2": 2,
+            "field3": 4
+        },
+        "shapeData": [
+            4,
+            1,
+            4
+        ]
+    },
+    {
+        "mapId": 1,
+        "area": "AlleyCorner5",
+        "stage": "stage1-2",
+        "shapeType": 2,
+        "shapePos": {
+            "field1": 12,
+            "field2": 2,
+            "field3": 4
+        },
+        "shapeData": [
+            4,
+            1,
+            4
+        ]
+    },
+    {
+        "mapId": 1,
+        "area": "AlleyCorner6",
+        "stage": "stage1-2",
+        "shapeType": 2,
+        "shapePos": {
+            "field1": 20,
+            "field2": 2,
+            "field3": 4
+        },
+        "shapeData": [
+            4,
+            1,
+            4
+        ]
+    }
+]"

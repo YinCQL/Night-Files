@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "RechargeRank"
+	string m_Script = "{"1":{"RechargeRank":1,"ChinaIOS":6.0,"JapanIOS":0.0,"AmericaIOS":0.0},"2":{"RechargeRank":2,"ChinaIOS":18.0,"JapanIOS":0.0,"AmericaIOS":0.0},"3":{"RechargeRank":3,"ChinaIOS":30.0,"JapanIOS":0.0,"AmericaIOS":0.0},"4":{"RechargeRank":4,"ChinaIOS":68.0,"JapanIOS":0.0,"AmericaIOS":0.0},"5":{"RechargeRank":5,"ChinaIOS":98.0,"JapanIOS":0.0,"AmericaIOS":0.0},"6":{"RechargeRank":6,"ChinaIOS":128.0,"JapanIOS":0.0,"AmericaIOS":0.0},"7":{"RechargeRank":7,"ChinaIOS":328.0,"JapanIOS":0.0,"AmericaIOS":0.0},"8":{"RechargeRank":8,"ChinaIOS":648.0,"JapanIOS":0.0,"AmericaIOS":0.0}}"

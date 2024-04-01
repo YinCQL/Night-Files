@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "ElementReactionBuff"
+	string m_Script = "[{"ElementType":1,"BuffID":12000050},{"ElementType":2,"BuffID":12000054},{"ElementType":3,"BuffID":12000058},{"ElementType":4,"BuffID":12000062}]"

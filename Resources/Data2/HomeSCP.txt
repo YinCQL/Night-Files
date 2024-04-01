@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "HomeSCP"
+	string m_Script = "{"20001":{"SCPID":20001,"SCPType":101,"FileID":2000,"HazardLevel":1,"HomeHeroAttribute":[{"Type":2001,"Min":25,"Max":99},{"Type":2002,"Min":25,"Max":99},{"Type":2003,"Min":25,"Max":99},{"Type":2004,"Min":25,"Max":99},{"Type":2005,"Min":25,"Max":99}],"InitialStable":100,"StableRecoverSpeed":-1,"SCPCoinProduce":{"ID":40800100,"Num":1}}}"

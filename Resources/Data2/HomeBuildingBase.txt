@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "HomeBuildingBase"
+	string m_Script = "{"101":{"ID":101,"BaseType":1,"Condition":0,"Open":1},"102":{"ID":102,"BaseType":2,"Condition":0,"Open":1},"103":{"ID":103,"BaseType":2,"Condition":0,"Open":1},"104":{"ID":104,"BaseType":2,"Condition":0,"Open":1},"105":{"ID":105,"BaseType":2,"Condition":0,"Open":1}}"

@@ -1,0 +1,16 @@
+TextAsset Base
+	string m_Name = "spawn"
+	string m_Script = "[
+    {
+        "spawnGroup": 1,
+        "sequence": 1,
+        "npcId": 1,
+        "spawnPosition": {
+            "field1": 0,
+            "field2": 1,
+            "field3": 8
+        },
+        "spawnRotation": 114,
+        "aiIdentify": "CommonFight"
+    }
+]"

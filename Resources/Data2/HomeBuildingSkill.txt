@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "HomeBuildingSkill"
+	string m_Script = "{"100001":{"1":{"SkillID":100001,"SkillLevel":1,"SkillEffect":[1]}},"100002":{"1":{"SkillID":100002,"SkillLevel":1,"SkillEffect":[2]}},"100003":{"1":{"SkillID":100003,"SkillLevel":1,"SkillEffect":[3,500]}},"100004":{"1":{"SkillID":100004,"SkillLevel":1,"SkillEffect":[4]}},"100005":{"1":{"SkillID":100005,"SkillLevel":1,"SkillEffect":[5,1000]}},"100006":{"1":{"SkillID":100006,"SkillLevel":1,"SkillEffect":[6,0]}}}"

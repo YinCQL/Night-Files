@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "MachineAppear"
+	string m_Script = "{"22300101":{"AppearID":22300101,"MachineID":24100101,"ItemID":0,"GetType":0,"Quality":4},"22300201":{"AppearID":22300201,"MachineID":24100201,"ItemID":0,"GetType":0,"Quality":4},"22300301":{"AppearID":22300301,"MachineID":24100301,"ItemID":0,"GetType":0,"Quality":4}}"

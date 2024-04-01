@@ -1,0 +1,3 @@
+TextAsset Base
+	string m_Name = "ShopBanner"
+	string m_Script = "{"10001":{"BannerID":10001,"ShopID":6001,"ShopGoodsID":5000100,"TimeLimit":{"X":1664446731,"Y":1697731200},"Tag":[],"Sort":0,"Open":1}}"
